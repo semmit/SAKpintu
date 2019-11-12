@@ -23,7 +23,7 @@ export class LoginMarketplaceComponent implements OnInit {
   myFunction() {
     console.log("myFunction");
     request({
-      url: "https://sp.haloteman.com/API_POS/login.php",
+      url: "https://sp.haloteman.com/API_MBR/login.php",
       method: "POST",
       headers: {
         "HTTPMethod": "POST",
