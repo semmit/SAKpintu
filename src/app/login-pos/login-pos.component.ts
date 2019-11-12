@@ -48,7 +48,7 @@ export class LoginPosComponent implements OnInit {
     });
 
     // this.userService.logout();
-    // this.routerExtensions.navigate(["/login"], { clearHistory: true });
+    // this.routerExtensions.navigate(["/pos-dashboard"], { clearHistory: true });
   }
 
   onSwipe(args: SwipeGestureEventData) {
