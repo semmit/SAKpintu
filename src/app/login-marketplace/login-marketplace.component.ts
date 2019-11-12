@@ -31,7 +31,6 @@ export class LoginMarketplaceComponent implements OnInit {
         "Authorization": "Basic"
       },
       content: JSON.stringify({
-        "Kode Toko": "111",
         "Username": "admin",
         "Password": "admin"
       })
