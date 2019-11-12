@@ -8,495 +8,139 @@
     <ActionItem [nsRouterLink]="['/login-marketplace']" text="Login" android.position="Login"></ActionItem>
 </ActionBar>
 
-<StackLayout class="fullscreen">
+<StackLayout class="fullscreen">  
     <StackLayout class="bar-search">
         <GridLayout rows="auto auto" columns="*" sdkExampleTitle sdkToggleNavButton class="search" *ngIf="search">
             <SearchBar row="0" hint="Search"></SearchBar>
         </GridLayout>
     </StackLayout>
-
-    <GridLayout class="list">
-        <Label [nsRouterLink]="['/marketplace-shorting']" col="0" class="padi"></Label>
+     
+    <GridLayout class="list">  
+        <Label [nsRouterLink]="['/marketplace-shorting']" col="0"  class="padi"></Label>
         <Label col="1" class="strowberry"></Label>
         <Label col="2" class="ikan"></Label>
         <Label col="3" class="pisang"></Label>
     </GridLayout>
-
+ 
     <GridLayout class="bar-unggulan">
         <Label class="produkunggulan" text="Produk Unggulan"></Label>
     </GridLayout>
-
-    <ScrollView orientation="horizontal" style="height: 25%">
-        <GridLayout class="m-15"
-            columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
+ 
+    <ScrollView orientation="horizontal" style="height: 30%">
+        <GridLayout class="m-15" columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
             <StackLayout col="0" width="50%" height="100%" style="margin-left: 20px">
-
-
                 <mdb-card class="card-image">
-
-                    <StackLayout
-                        style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola hijau.jpg');"
-                        class="card-image-overlay">
-                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                            <Label class="card-title" text="Title 1"></Label>
-                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                            <FlexboxLayout justifyContent="center">
-                                <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray"
-                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                            </FlexboxLayout>
-                        </mdb-card-body>
-
-                        <mdb-card class="card-image"
-                            imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                            <mdb-card class="card-image">
-
-
-                                <StackLayout
-                                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg')"
-                                    class="card-image-overlay">
-                                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                                        <Label class="card-title" text="Kedelai bola hijau Semarang"></Label>
-                                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                        <FlexboxLayout justifyContent="center">
-                                            <Button mdbWavesEffect text="Detail Product"
-                                                style="background-color: darkslategray"
-                                                [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                        </FlexboxLayout>
-                                    </mdb-card-body>
-
-                                </StackLayout>
-
-                            </mdb-card>
-
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="Kedelai bola hijau Semarang"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
                     </StackLayout>
-                    <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
-
-                        <mdb-card class="card-image">
-
-                            <StackLayout
-                                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');"
-                                class="card-image-overlay">
-                                <mdb-card-body dark="true" style="text-align: center; color: white">
-                                    <Label class="card-title" text="Title 1"></Label>
-                                    <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                    <FlexboxLayout justifyContent="center">
-                                        <Button mdbWavesEffect text="Detail Product"
-                                            style="background-color: darkslategray"
-                                            [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                    </FlexboxLayout>
-                                </mdb-card-body>
-
-                                <mdb-card class="card-image"
-                                    imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai02.jpg')">
-
-                            </StackLayout>
-                            <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
-                                <mdb-card class="card-image">
-
-
-                                    <StackLayout
-                                        style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Kedelai Bintang Merah"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-
-                                    </StackLayout>
-
-                                </mdb-card>
-
-
-                            </StackLayout>
-                            <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
-
-                                <mdb-card class="card-image">
-
-                                    <StackLayout
-                                        style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20emas.jpg');"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Title 1"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-
-                                        <mdb-card class="card-image"
-                                            imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')">
-
-                                    </StackLayout>
-                                    <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
-                                        <mdb-card class="card-image">
-
-
-                                            <StackLayout
-                                                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')"
-                                                class="card-image-overlay">
-                                                <mdb-card-body dark="true" style="text-align: center; color: white">
-                                                    <Label class="card-title" text="Kedelai Dahlia Semarang"></Label>
-                                                    <Label class="card-text" [text]="loremIpsumText"
-                                                        textWrap="true"></Label>
-
-                                                    <FlexboxLayout justifyContent="center">
-                                                        <Button mdbWavesEffect text="Detail Product"
-                                                            style="background-color: darkslategray"
-                                                            [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                    </FlexboxLayout>
-                                                </mdb-card-body>
-
-                                            </StackLayout>
-
-                                        </mdb-card>
-
-
-                                    </StackLayout>
-                                    <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
-
-                                        <mdb-card class="card-image">
-
-                                            <StackLayout
-                                                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');"
-                                                class="card-image-overlay">
-                                                <mdb-card-body dark="true" style="text-align: center; color: white">
-                                                    <Label class="card-title" text="Title 1"></Label>
-                                                    <Label class="card-text" [text]="loremIpsumText"
-                                                        textWrap="true"></Label>
-
-                                                    <FlexboxLayout justifyContent="center">
-                                                        <Button mdbWavesEffect text="Detail Product"
-                                                            style="background-color: darkslategray"
-                                                            [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                    </FlexboxLayout>
-                                                </mdb-card-body>
-
-                                                <mdb-card class="card-image"
-                                                    imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg')">
-
-                                            </StackLayout>
-                                            <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
-                                                <mdb-card class="card-image">
-
-
-                                                    <StackLayout
-                                                        style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg')"
-                                                        class="card-image-overlay">
-                                                        <mdb-card-body dark="true"
-                                                            style="text-align: center; color: white">
-                                                            <Label class="card-title" text="Kedelai bola emas"></Label>
-                                                            <Label class="card-text" [text]="loremIpsumText"
-                                                                textWrap="true"></Label>
-
-                                                            <FlexboxLayout justifyContent="center">
-                                                                <Button mdbWavesEffect text="Detail Product"
-                                                                    style="background-color: darkslategray"
-                                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                            </FlexboxLayout>
-                                                        </mdb-card-body>
-
-                                                    </StackLayout>
-
-                                                </mdb-card>
-
-
-                                            </StackLayout>
-                                            <StackLayout col="4" width="50%" height="100%" style="margin-left: 20px">
-                                                <mdb-card class="card-image">
-
-                                                    <StackLayout
-                                                        style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg');"
-                                                        class="card-image-overlay">
-                                                        <mdb-card-body dark="true"
-                                                            style="text-align: center; color: white">
-                                                            <Label class="card-title" text="Title 1"></Label>
-                                                            <Label class="card-text" [text]="loremIpsumText"
-                                                                textWrap="true"></Label>
-
-                                                            <FlexboxLayout justifyContent="center">
-                                                                <Button mdbWavesEffect text="Detail Product"
-                                                                    style="background-color: darkslategray"
-                                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                            </FlexboxLayout>
-                                                        </mdb-card-body>
-                                                    </StackLayout>
-
-                                                </mdb-card>
-
-                                            </StackLayout>
-                                            <StackLayout col="5" width="50%" height="100%" style="margin-left: 20px">
-                                                <mdb-card class="card-image"
-                                                    imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                                                    <StackLayout style="background-color: rgba(0, 0, 0, 0.5)"
-                                                        class="card-image-overlay">
-                                                        <mdb-card-body dark="true"
-                                                            style="text-align: center; color: white">
-                                                            <Label class="card-title" text="Title 1"></Label>
-                                                            <Label class="card-text" [text]="loremIpsumText"
-                                                                textWrap="true"></Label>
-
-                                                            <FlexboxLayout justifyContent="center">
-                                                                <Button mdbWavesEffect text="Detail Product"
-                                                                    style="background-color: darkslategray"
-                                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                            </FlexboxLayout>
-                                                        </mdb-card-body>
-                                                    </StackLayout>
-
-                                                </mdb-card>
-
-                                            </StackLayout>
-
-                                    </StackLayout>
-
-
-                            </StackLayout>
-
+                </mdb-card>
+          </StackLayout>
+            <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="Kedelai Bintang Merah"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
+                    </StackLayout>
+                </mdb-card>
+          </StackLayout>
+            <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="Kedelai Dahlia Semarang"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
+                    </StackLayout>
+                </mdb-card>
+          </StackLayout>
+            <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="Kedelai bola emas"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
+                    </StackLayout>
+                </mdb-card>
+          </StackLayout>
         </GridLayout>
     </ScrollView>
-    <ScrollView orientation="horizontal" style="height: 25%">
-        <GridLayout class="m-15"
-            columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
+    <ScrollView orientation="horizontal" style="height: 30%">
+        <GridLayout class="m-15" columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
             <StackLayout col="0" width="50%" height="100%" style="margin-left: 20px">
-
-                <mdb-card class="card-image"
-                    imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                    <StackLayout style="background-color: rgba(0, 0, 0, 0.5)" class="card-image-overlay">
-                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                            <Label class="card-title" text="Title 1"></Label>
-                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                            <FlexboxLayout justifyContent="center">
-                                <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray"
-                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                            </FlexboxLayout>
-                        </mdb-card-body>
-
-                        imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg')">
-
-                        <mdb-card class="card-image">
-
-
-                            <StackLayout
-                                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg')"
-                                class="card-image-overlay">
-                                <mdb-card-body dark="true" style="text-align: center; color: white">
-                                    <Label class="card-title" text="PALATA"></Label>
-                                    <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                    <FlexboxLayout justifyContent="center">
-                                        <Button mdbWavesEffect text="Detail Product"
-                                            style="background-color: darkslategray"
-                                            [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                    </FlexboxLayout>
-                                </mdb-card-body>
-
-                            </StackLayout>
-
-                        </mdb-card>
-
-
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="PALATA"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
                     </StackLayout>
-                    <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
-                        <mdb-card class="card-image"
-                            imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                            <StackLayout style="background-color: rgba(0, 0, 0, 0.5)" class="card-image-overlay">
-                                <mdb-card-body dark="true" style="text-align: center; color: white">
-                                    <Label class="card-title" text="Title 1"></Label>
-                                    <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                    <FlexboxLayout justifyContent="center">
-                                        <Button mdbWavesEffect text="Detail Product"
-                                            style="background-color: darkslategray"
-                                            [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                    </FlexboxLayout>
-                                </mdb-card-body>
-
-                                imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg')">
-
-                            </StackLayout>
-                            <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
-                                <mdb-card class="card-image">
-
-
-                                    <StackLayout
-                                        style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg')"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Kedelai Bintang Merah"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-
-                                    </StackLayout>
-
-                                </mdb-card>
-
-
-                            </StackLayout>
-                            <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
-                                <mdb-card class="card-image"
-                                    imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                                    <StackLayout style="background-color: rgba(0, 0, 0, 0.5)"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Title 1"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-
-                                        imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/ciok
-                                        o.jpg')">
-
-                                    </StackLayout>
-                                    <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
-                                        <mdb-card class="card-image">
-
-
-                                            <StackLayout
-                                                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ciok o.jpg')"
-                                                class="card-image-overlay">
-                                                <mdb-card-body dark="true" style="text-align: center; color: white">
-                                                    <Label class="card-title" text="Ciok O/Batu Tahu"></Label>
-                                                    <Label class="card-text" [text]="loremIpsumText"
-                                                        textWrap="true"></Label>
-
-                                                    <FlexboxLayout justifyContent="center">
-                                                        <Button mdbWavesEffect text="Detail Product"
-                                                            style="background-color: darkslategray"
-                                                            [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                    </FlexboxLayout>
-                                                </mdb-card-body>
-
-                                            </StackLayout>
-
-                                        </mdb-card>
-
-
-                                    </StackLayout>
-
-                            </StackLayout>
-
-                            <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
-                                <mdb-card class="card-image"
-                                    imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                                    <StackLayout style="background-color: rgba(0, 0, 0, 0.5)"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Title 1"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-                                    </StackLayout>
-
-                                </mdb-card>
-
-                            </StackLayout>
-                            <StackLayout col="4" width="50%" height="100%" style="margin-left: 20px">
-                                <mdb-card class="card-image"
-                                    imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                                    <StackLayout style="background-color: rgba(0, 0, 0, 0.5)"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Title 1"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-
-                                        imageBackground="url('https://sp.haloteman.com/_img/sampleprod/lowres/ragi
-                                        tempe.jpg')">
-
-                                        <StackLayout
-                                            style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ragi tempe.jpg')"
-                                            class="card-image-overlay">
-                                            <mdb-card-body dark="true" style="text-align: center; color: white">
-                                                <Label class="card-title" text="RAGI TEMPE"></Label>
-                                                <Label class="card-text" [text]="loremIpsumText"
-                                                    textWrap="true"></Label>
-
-                                                <FlexboxLayout justifyContent="center">
-                                                    <Button mdbWavesEffect text="Detail Product"
-                                                        style="background-color: darkslategray"
-                                                        [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                                </FlexboxLayout>
-                                            </mdb-card-body>
-
-                                        </StackLayout>
-
-                                </mdb-card>
-
-
-                            </StackLayout>
-                            <StackLayout col="5" width="50%" height="100%" style="margin-left: 20px">
-                                <mdb-card class="card-image"
-                                    imageBackground="url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')">
-
-                                    <StackLayout style="background-color: rgba(0, 0, 0, 0.5)"
-                                        class="card-image-overlay">
-                                        <mdb-card-body dark="true" style="text-align: center; color: white">
-                                            <Label class="card-title" text="Title 1"></Label>
-                                            <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-
-                                            <FlexboxLayout justifyContent="center">
-                                                <Button mdbWavesEffect text="Detail Product"
-                                                    style="background-color: darkslategray"
-                                                    [nsRouterLink]="['/marketplace-product-info']"></Button>
-                                            </FlexboxLayout>
-                                        </mdb-card-body>
-                                    </StackLayout>
-
-                                </mdb-card>
-
-                            </StackLayout>
-
+                </mdb-card>
+          </StackLayout>
+            <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="Kedelai Bintang Merah"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
                     </StackLayout>
-
-            </StackLayout>
-
-
-
+                </mdb-card>
+         </StackLayout>
+            <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ciok o.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="Ciok O/Batu Tahu"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
+                    </StackLayout>
+                </mdb-card>
+         </StackLayout>
+            <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
+                <mdb-card class="card-image">
+                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ragi tempe.jpg')" class="card-image-overlay">
+                    <mdb-card-body dark="true" style="text-align: center; color: white">
+                        <Label class="card-title" text="RAGI TEMPE"></Label>
+                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
+    
+                        <FlexboxLayout justifyContent="center">
+                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
+                        </FlexboxLayout>
+                    </mdb-card-body>
+                    </StackLayout>
+                </mdb-card>
+         </StackLayout>     
         </GridLayout>
     </ScrollView>
     <StackLayout class="bar-search">
 
     </StackLayout>
 </StackLayout>
+ 
