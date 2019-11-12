@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
 import { Page } from 'tns-core-modules/ui/page';
+import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 
 @Component({
     selector: 'ns-login-pos',
     templateUrl: './login-pos.component.html',
     styleUrls: ['./../_css/login.component.css'],
-    moduleId: module.id
 })
 export class LoginPosComponent implements OnInit {
 
@@ -19,6 +19,37 @@ export class LoginPosComponent implements OnInit {
 
     ngOnInit() {
     }
+    
+    myFunction() {
+    console.log("myFunction");
+    request({
+      url: "https://sp.haloteman.com/API_POS/login.php",
+      method: "POST",
+      headers: {
+        "HTTPMethod": "POST",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic"
+      },
+      content: JSON.stringify({
+        "Kode Toko": "111",
+        "Username": "admin",
+        "Password": "admin"
+      })
+    }).then((response: HttpResponse) => {
+      // Content property of the response is HttpContent
+      // The toString method allows you to get the response body as string.
+      const str = response.content.toString();
+      console.log(str);
+      // The toJSON method allows you to parse the received content to JSON object
+      // var obj = response.content.toJSON();
+      // The toImage method allows you to get the response body as ImageSource.
+      // var img = response.content.toImage();
+    }, (e) => {
+    });
+
+    // this.userService.logout();
+    // this.routerExtensions.navigate(["/login"], { clearHistory: true });
+  }
 
     onSwipe(args: SwipeGestureEventData) {
         // let item = <StackLayout> args.view;
