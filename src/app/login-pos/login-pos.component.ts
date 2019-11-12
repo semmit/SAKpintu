@@ -5,22 +5,22 @@ import { Page } from 'tns-core-modules/ui/page';
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 
 @Component({
-    selector: 'ns-login-pos',
-    templateUrl: './login-pos.component.html',
-    styleUrls: ['./../_css/login.component.css'],
+  selector: 'ns-login-pos',
+  templateUrl: './login-pos.component.html',
+  styleUrls: ['./../_css/login.component.css'],
 })
 export class LoginPosComponent implements OnInit {
 
-    public direction: number;
+  public direction: number;
 
-    constructor(private router: Router, private page: Page) {
-        this.page.actionBarHidden = true;
-    }
+  constructor(private router: Router, private page: Page) {
+    this.page.actionBarHidden = true;
+  }
 
-    ngOnInit() {
-    }
-    
-    myFunction() {
+  ngOnInit() {
+  }
+
+  myFunction() {
     console.log("myFunction");
     request({
       url: "https://sp.haloteman.com/API_POS/login.php",
@@ -51,39 +51,39 @@ export class LoginPosComponent implements OnInit {
     // this.routerExtensions.navigate(["/login"], { clearHistory: true });
   }
 
-    onSwipe(args: SwipeGestureEventData) {
-        // let item = <StackLayout> args.view;
+  onSwipe(args: SwipeGestureEventData) {
+    // let item = <StackLayout> args.view;
 
-        // console.log("Swipe!");
-        // console.log("Object that triggered the event: " + args.object);
-        // console.log("View that triggered the event: " + args.view);
-        // console.log("Event name: " + args.eventName);
-        // console.log("Swipe Direction: " + args.direction);
-        if (args.direction == 1 || args.direction == 2) {
-            this.router.navigate(['/login-marketplace']).then(r => 'coba');
-        }
-
-        // if (args.direction == 1) {
-        //     item.animate({
-        //         translate: {
-        //             x: 500,
-        //             y: 0
-        //         },
-        //         duration: 700
-        //     }).then(() => {
-        //         this.router.navigate(['/login-marketplace']).then(r => 'coba');
-        //     });
-        // } else if (args.direction == 4) {
-        //     item.animate({
-        //         translate: {
-        //             x: 0,
-        //             y: 500
-        //         },
-        //         duration: 700
-        //     }).then(() => {
-        //         this.router.navigate(['/login-marketplace']).then(r => 'coba');
-        //     });
-        // }
+    // console.log("Swipe!");
+    // console.log("Object that triggered the event: " + args.object);
+    // console.log("View that triggered the event: " + args.view);
+    // console.log("Event name: " + args.eventName);
+    // console.log("Swipe Direction: " + args.direction);
+    if (args.direction == 1 || args.direction == 2) {
+      this.router.navigate(['/login-marketplace']).then(r => 'coba');
     }
+
+    // if (args.direction == 1) {
+    //     item.animate({
+    //         translate: {
+    //             x: 500,
+    //             y: 0
+    //         },
+    //         duration: 700
+    //     }).then(() => {
+    //         this.router.navigate(['/login-marketplace']).then(r => 'coba');
+    //     });
+    // } else if (args.direction == 4) {
+    //     item.animate({
+    //         translate: {
+    //             x: 0,
+    //             y: 500
+    //         },
+    //         duration: 700
+    //     }).then(() => {
+    //         this.router.navigate(['/login-marketplace']).then(r => 'coba');
+    //     });
+    // }
+  }
 
 }
