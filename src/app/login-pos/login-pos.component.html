@@ -1,0 +1,35 @@
+<Page>
+    <ScrollView>
+        <StackLayout class="page page-content login" (swipe)="onSwipe($event)">
+            <StackLayout orientation="vertical">
+                <StackLayout orientation="vertical" class="logo-wrapper">
+                    <Image class="logo" src="~/app/images/gmbr.png"></Image>
+                    <StackLayout orientation="vertical" class="title-wrapper">
+                        <Label class="title" text="LOGIN PENGGUNA"></Label>
+                        <Label class="title fw-bold" text="P O S"></Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout orientation="vertical" class="form-wrapper">
+                    <StackLayout orientation="vertical" class="hint-wrapper">
+                        <Label class="hint" text="<        SWIPE        >"></Label>
+                        <Label class="hint" text="LOGIN pengguna MARKETPLACE"></Label>
+                    </StackLayout>
+                    <StackLayout orientation="vertical" class="tf-wrapper">
+                        <TextField class="tfd" hint="Kode Toko" keyboardType="email" autocorrect="false"
+                            autocapitalizationType="none"></TextField>
+                        <TextField class="tfd" hint="Username" keyboardType="email" autocorrect="false"
+                            autocapitalizationType="none"></TextField>
+                        <TextField class="tfd" hint="Password" secure="true"></TextField>
+                    </StackLayout>
+                    <StackLayout orientation="vertical" class="btn-wrapper">
+                        <Button class="btn" text="LOGIN" [nsRouterLink]="['/pos-dashboard']"
+                            pageTransition="slide"></Button>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="hint-wrapper" horizontalAlignment="center">
+                        <Label class="hint" text="Lupa Password ?"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

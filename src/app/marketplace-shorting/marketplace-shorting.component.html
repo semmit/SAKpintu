@@ -1,0 +1,46 @@
+<ActionBar class="action-bar">
+    <GridLayout>
+        <Image [nsRouterLink]="['/marketplace']" col="0" src="~/app/images/gmbr.png" class="SP"></Image>
+    </GridLayout>
+    <ActionItem
+        [nsRouterLink]="['/register-marketplace']"
+        text="Daftar"
+        android.position="text"
+    ></ActionItem>
+    <ActionItem
+        [nsRouterLink]="['/login-marketplace']"
+        text="Login"
+        android.position="Login"
+    ></ActionItem>
+</ActionBar>
+    <StackLayout class="bck"> 
+    <StackLayout class="fullscreen">  
+         
+            <GridLayout class="list">
+                    <Label class="bar-unggulan" text="Produk Unggulan"></Label>
+                    <Label class="padi" ></Label>
+            </GridLayout>
+
+        <StackLayout class="bar-item">
+            <GridLayout >
+                <Label col="0" class="item" text="item 1"></Label>
+                <Label col="1" class="item2" text="item 2"></Label>
+            </GridLayout>
+        </StackLayout>
+            <StackLayout class="bar-item2">
+            <GridLayout >
+                <Label col="0" class="item3" text="item 3"></Label>
+                <Label col="1" class="item4" text="item 4"></Label>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout class="bar-item2">
+            <GridLayout >
+                <Label col="0" class="item5" text="item 3"></Label>
+                <Label col="1" class="item6" text="item 4"></Label>
+            </GridLayout>
+        </StackLayout>
+    </StackLayout>
+        <Label class="bottom" text="<                   1     2      3                   >"></Label>
+
+</StackLayout>
+ 

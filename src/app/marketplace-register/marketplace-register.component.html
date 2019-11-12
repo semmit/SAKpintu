@@ -1,0 +1,62 @@
+<ActionBar class="action-bar" title="Registrasi">
+<NavigationButton [nsRouterLink]="['/marketplace']" pageTransition="slide" android.systemIcon="ic_menu_back"></NavigationButton>
+    <GridLayout>
+        <label col="0" class="act font-weight-bold" text="Registrasi"></label>
+        <Image col="1" src="~/app/images/gmbr.png" class="SP"></Image>
+    </GridLayout>
+</ActionBar>
+<StackLayout class="fullscreen">
+
+    <GridLayout rows="auto auto auto auto auto auto auto auto auto">
+
+        <StackLayout row="0">
+            <Label text="Silahkan melengkapi data data di bawah ini :" class="sk"></Label>
+        </StackLayout>
+        <StackLayout row="1" class="jarak">
+            <GridLayout class="barprofil7">
+            <Label class="bartext" text="Username"></Label>
+            <TextField class="inputan"></TextField>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="2" class="jarak">
+            <GridLayout class="barprofil7">
+            <Label class="bartext" text="Password"></Label>
+            <TextField class="inputan"></TextField>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="3" class="jarak">
+            <GridLayout class="barprofil7">
+            <Label class="bartext" text="Ulang Password"></Label>
+            <TextField class="inputan"></TextField>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="4" class="jarak">
+            <GridLayout class="barprofil7">
+            <Label class="bartext" text="Nama Lengkap"></Label>
+            <TextField class="inputan"></TextField>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="5" class="jarak">
+            <GridLayout class="barprofil7">
+            <Label class="bartext" text="Email"></Label>
+            <TextField class="inputan"></TextField>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="6" class="jarak">
+            <GridLayout class="barprofil7">
+            <Label class="bartext" text="No Ktp"></Label>
+            <TextField class="inputan"></TextField>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="7" class="jarak">
+        <Label class="keteranganpembayaran" textWrap="true" text="Baca Syarat & Ketentuan
+
+Saya telah membaca dan menyetujui
+Ketentuan & Peraturan yang berlaku
+pada Aplikasi SAKPINTU."></Label> 
+        </StackLayout>
+        <StackLayout row="8" class="jarak">
+            <Button [nsRouterLink]="['/marketplace-register-confirm']" class="my-button"  text="KIRIMKAN DATA SAYA"></Button>
+        </StackLayout>
+    </GridLayout>
+</StackLayout>

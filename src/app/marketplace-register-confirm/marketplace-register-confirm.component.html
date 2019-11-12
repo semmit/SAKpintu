@@ -1,0 +1,19 @@
+<ActionBar class="action-bar" title="Registrasi">
+<NavigationButton [nsRouterLink]="['/marketplace']" pageTransition="slide" android.systemIcon="ic_menu_back"></NavigationButton>
+    <GridLayout>
+        <label col="0" class="act font-weight-bold" text="Registrasi"></label>
+        <Image col="1" src="~/app/images/gmbr.png" class="SP"></Image>
+    </GridLayout>
+</ActionBar>
+<StackLayout class="fullscreen">
+        <StackLayout>
+            <Label textwrap="true" text="REGISTRASI berhasil dilakukan !
+Silahkan mengecek inbox email Anda
+untuk melakukan verifikasi data registrasis.
+
+Terima Kasih"></Label>
+        </StackLayout>
+        <StackLayout>
+            <Button mdbWavesEffect class="my-button" [nsRouterLink]="['/marketplace']" text="KIRIMKAN DATA SAYA"></Button>
+        </StackLayout>
+</StackLayout>

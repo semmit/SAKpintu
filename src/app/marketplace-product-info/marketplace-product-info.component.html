@@ -1,0 +1,44 @@
+<ActionBar class="action-bar">
+<NavigationButton [nsRouterLink]="['/marketplace']" android.systemIcon="ic_menu_back"></NavigationButton>
+    <GridLayout>
+        <Image col="0" src="~/app/images/gmbr.png" class="SP"></Image>
+    </GridLayout>
+</ActionBar>
+    <StackLayout class="bck"> 
+    <StackLayout>  
+        <GridLayout class="list">
+            <Label class="bar-namatoko" text="PENJUAL :"></Label>
+            <Label class="bar-kota" text="Gihon Sukses Makmur.Semarang"></Label>
+            <Image src="~/app/images/app_user.png" class="User"></Image>
+        </GridLayout>
+    </StackLayout>
+    <GridLayout class="judul">
+        <Label col="0" class="item" text="item 1"></Label>
+        <Label col="1" class="item2" text="Lokasi : Semarang"></Label>
+        <Label col="2" class="item3" text="Nama Produk"></Label>
+        <Label col="3" class="item4" text="Satuan"></Label>
+        <Label col="4" class="item5" text="Rp. 999.999,-"></Label>
+    </GridLayout> 
+    <Label class="fa-text2" textWrap="true" text="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Duis sollicitudin rutrum
+lobortis. Nullam imperdiet erat sed tortor
+accumsan tempus. Nam non ultrices sem, id
+fermentum quam. Vivamus libero nunc,
+tempus at malesuada sit amet, porta non
+erat. Nulla ullamcorper euismod felis eget
+ultrices. Curabitur varius ipsum quis auctor
+iaculis. Morbi risus diam, dignissim eu mi eu,
+varius interdum sem. Proin commodo urna
+lacinia venenatis cursus. Phasellus in ligula
+condimentum, aliquet turpis dictum, dictum
+nisi. Nulla placerat porta lectus."></Label>   
+    <GridLayout>
+        <GridLayout class="my-button"> 
+            <Label [nsRouterLink]="['/login-marketplace']" text="LOGIN" class="fa-text"></Label>   
+        </GridLayout>               
+        <GridLayout class="my-button2"> 
+            <Label [nsRouterLink]="['/register-marketplace']" text="DAFTAR" class="fa-text"></Label>   
+        </GridLayout> 
+    </GridLayout>         
+</StackLayout>
+     

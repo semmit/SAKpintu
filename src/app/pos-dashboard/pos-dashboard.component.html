@@ -1,0 +1,40 @@
+<ActionBar class="action-bar">
+    <GridLayout>
+        <Image col="0" src="~/app/images/gmbr.png" class="SP"></Image>           
+        <Label col="1" class="tittle" text="P O S"></Label>
+        </GridLayout>
+            <ActionItem
+        [nsRouterLink]="['/marketplace']"
+        text="Marketplace"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem
+        [nsRouterLink]="['/pos-dashboard']"
+        text="POS Dashboard"
+        android.position="popup"
+    ></ActionItem>
+
+</ActionBar>
+<StackLayout class="fullscreen">
+    <GridLayout class="bckuser">
+    <Image col="0" src="~/app/images/app_user.png" class="User"></Image>
+    </GridLayout>
+    <Label class="h1" text="Nama Toko"></Label>
+    <Label class="h2" text="Nama user"></Label>
+    <GridLayout class="my-button" [nsRouterLink]="['/pos-dataitem']" pageTransition="slide" >
+        <Image col="0" src="~/app/images/app_ico_item.png" class="fa"></Image>
+        <Label col="1" text="ITEM" class="fa-text"></Label>
+    </GridLayout>
+    <GridLayout class="my-button2">
+        <Image col="0" src="~/app/images/app_ico_customer.png" class="fa"></Image>
+        <Label col="1" text="CUSTOMER" class="fa-text"></Label>
+    </GridLayout>
+    <GridLayout class="my-button3">
+        <Image col="0" src="~/app/images/app_ico_penjualan.png" class="fa"></Image>
+        <Label col="1" text="PENJUALAN" class="fa-text"></Label>
+    </GridLayout>
+    <GridLayout class="my-button4">
+        <Image col="0" src="~/app/images/app_ico_setting.png" class="fa"></Image>
+        <Label col="1" text="SETTING" class="fa-text"></Label>
+    </GridLayout>
+</StackLayout>

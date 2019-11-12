@@ -1,0 +1,44 @@
+.fa {
+    font-family: "FontAwesome";
+}
+
+.fullscreen{
+    background-image: url('~/app/images/app_bg02.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.SP{
+    width: 15%;
+    height: 15%;
+    margin: 5%;
+    horizontal-align: right;
+}
+.action-bar{
+  background: no-repeat url('~/app/images/Header2.jpg');
+  background-origin: border-box;
+  background-position: center;
+  background-size: cover;
+}
+.act{
+  text-align: left;
+  vertical-align: center;
+  color: rgb(44, 44, 44);
+  font-size: 16%;
+}
+.my-button {
+    width: 60%;
+    android-elevation: 2;
+    background-color: #686868;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 15;
+    font-weight: bold;
+    horizontal-align: center;
+    text-color: white;
+    margin-top:5%;
+}
+//Action bar
+ActionBar .action-bar-title {
+    horizontal-align: center;
+}

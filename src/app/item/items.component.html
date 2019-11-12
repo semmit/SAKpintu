@@ -1,0 +1,25 @@
+<ActionBar title="Item" class="actionbar">
+    <ActionItem
+        [nsRouterLink]="['/marketplace']"
+        text="Marketplace"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem
+        [nsRouterLink]="['/pos-dashboard']"
+        text="POS Dashboard"
+        android.position="popup"
+    ></ActionItem>
+</ActionBar>
+
+<GridLayout class="fullscreen page">
+    <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['/item', item.id]"  class="list-group-item">
+                <Label row="0" col="0" [text]="item.name" class="item-left"></Label>
+                <Label row="0" col="1" [text]="'Rp '+item.price" class="item-right"></Label>
+                <Label row="1" col="0" [text]="item.desc" class="item-left"></Label>
+                <Label row="1" col="1" [text]="'Stok '+item.stock" class="item-right"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

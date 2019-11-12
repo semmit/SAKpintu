@@ -1,0 +1,171 @@
+.fa {
+    width:12%;
+    margin-right: 80%;
+}
+.fa-text{
+        font-size: 18;
+      text-align: center;
+    vertical-align: middle;
+}
+
+.fullscreen{
+    background-image: url('~/app/images/app_bg01.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bckuser{
+    position: absolute;
+    height:15%;
+    background-color: #4C4C4B;
+    background-position: top;
+}
+.SP {
+    width:14%;
+    margin-right: 83%;
+}
+.User{
+    position: relative;
+    width:280px;
+    height:280px;
+    background-color: #438576;
+    border-color: #808080;
+    border-radius: 100%;
+    border-width: 3;
+    color: #FFFFFF;
+}
+ActionBar .action-bar-title {
+    horizontal-align: left;
+}
+.action-bar{
+    background-color: #4C4C4B;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.tittle{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+.h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #8D8C8C;
+    vertical-align: top;
+    horizontal-align: center;
+}
+.h2 {
+    font-size: 15px;
+    color: #8D8C8C;
+    vertical-align: top;
+    horizontal-align: center;
+}
+
+.page-icon {
+    font-size: 80;
+    vertical-align: top;
+    horizontal-align: center;
+    color: white;
+    margin-top: 2%;
+}
+.my-button {
+    width:80%;
+    height:10%;
+    android-elevation: 2;
+    background-color: #E45549;
+    border-radius: 2;
+    color: #FFFFFF;
+    horizontal-align: center;
+     margin-top:7%;
+     opacity: 0.80;
+}
+.my-button2 {
+    width:80%;
+    height:10%;
+    android-elevation: 2;
+    background-color: #569C51;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 17;
+    horizontal-align: center;
+     margin-top:2%;
+     text-align: center;
+}
+.my-button3 {
+    width:80%;
+    height:10%;
+    android-elevation: 2;
+    background-color: #434659;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 17;
+    horizontal-align: center;
+    text-align: center;
+    margin-top:2%;
+}
+.my-button4 {
+    width:80%;
+    height:10%;
+    android-elevation: 2;
+    background-color: #485157;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 17;
+    horizontal-align: center;
+    text-align: center;
+    margin-top:2%;
+}
+
+.sidebackground{
+    background-color: #4C4C4B;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.side-logo{
+    width:40%;
+    height:30%;
+    horizontal-align: center;
+}
+.side-button{
+    width:80%;
+    height:80%;
+    android-elevation: 1;
+    background-color: #7D7D7D;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 12;
+    font-weight: bold;
+    opacity: 0.60;
+    text-align: center;
+    margin-left:10%;
+}
+.side-button-text{
+     font-size: 12;
+    font-weight: bold;
+    color:white;
+     margin-left: 40;
+     margin-top:30%;
+}
+.panel-keluar-aplikasi{
+    width:60%;
+    height:8%;
+    android-elevation: 2;
+    background-color: #4C4C4B;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 17;
+    font-weight: bold;
+    horizontal-align: center;
+    opacity: 0.70;
+    text-align: center;
+    margin-top:1%;
+}
+.logo-side{
+    width:60%;
+    height:60%;
+    margin-right: 80%;
+}

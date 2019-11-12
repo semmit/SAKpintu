@@ -1,0 +1,26 @@
+<ActionBar title="Item" class="actionbar">
+    <ActionItem
+        [nsRouterLink]="['/marketplace']"
+        text="Marketplace"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem
+        [nsRouterLink]="['/pos-dashboard']"
+        text="POS Dashboard"
+        android.position="popup"
+    ></ActionItem>
+</ActionBar>
+<Label class="namapenjual" text="PENJUAL : Gihones Sukses Makmur, Semarang"></Label> 
+<GridLayout
+    row="1"
+    rows="auto,*"
+    >
+    <SearchBar
+        row="0"
+        text="{{ search }}"
+        hint="search"
+        id="search"
+        tap="inputTap"
+        (loaded)="dismissKeyboard($event)"
+    ></SearchBar>
+</GridLayout>

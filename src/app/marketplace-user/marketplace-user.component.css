@@ -1,0 +1,240 @@
+.fas {
+    font-family: "Font Awesome 5 Solid", "fa-solid-900";
+    font-size: 20px;
+    vertical-align: middle;
+}
+.page-content .page-placeholder {
+    color: black;
+    font-size: '12';
+    vertical-align: center;
+    horizontal-align: center;
+}
+.page-content .page-icon {
+    font-size: 72;
+    vertical-align: top;
+    horizontal-align: center;
+    color: blue;
+    margin-top: 20%;
+}
+.bar-search {
+    width: 100%;
+    height: 20%;
+    background-color: #ecd8d8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.fullscreen {
+    background-color: #c0c0c0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.btn-search {
+    width: 18%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #41c6a8;
+    border-radius: 100;
+    color: #FFFFFF;
+    font-size: 12;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 60%;
+    margin-top: 7%;
+}
+.search {
+    width: 70%;
+    /*height: 30%;*/
+    android-elevation: 1;
+    background-color: #c2c2c2;
+    border-radius: 30;
+    color: black;
+    opacity: 0.5%;
+    margin-top: 30%;
+}
+.list {
+    width: 100%;
+    height: 10%;
+    background-color: #c0c0c0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.padi {
+    width: 18%;
+    background-image: url('~/app/images/app_ico_04.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #DCDF05;
+    border-radius: 100;
+    font-size: 12;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 60%;
+    margin-top: 7%;
+}
+.strowberry {
+    width: 18%;
+    background-image: url('~/app/images/app_ico_03.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #4bb65a;
+    border-radius: 100;
+    color: #FFFFFF;
+    font-size: 12;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 20%;
+    margin-top: 7%;
+}
+.ikan {
+    width: 18%;
+    background-image: url('~/app/images/app_ico_02.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #b6ab4b;
+    border-radius: 100;
+    color: #FFFFFF;
+    font-size: 12;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 7%;
+}
+.pisang {
+    width: 18%;
+    background-image: url('~/app/images/app_ico_01.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #41c6a8;
+    border-radius: 100;
+    color: #FFFFFF;
+    font-size: 12;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 60%;
+    margin-top: 7%;
+}
+.bar-unggulan{
+     width:100%;
+    height:5%;
+    background-color: #939393;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top:1%;
+}
+.produkunggulan{
+    font-size: 15;
+    color: #FFFFFF;
+    text-align: center;
+    margin-right: 60%;
+    margin-top:22%;
+}
+.bar-item{
+    width:100%;
+    height:20%;
+    background-color: #FCF6F6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bar-item2{
+    width:100%;
+    height:25%;
+    background-color: #FCF6F6;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.item{
+    width:48%;
+    height:95%;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-right: 50%;
+}
+.item2{
+    width:46%;
+    height:95%;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-top:2%;
+    margin-left: 48%;
+}
+.item3{
+    width:48%;
+    height:95%;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-right: 50%;
+}
+.item4{
+    width:46%;
+    height:95%;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-left: 48%;
+}
+.SP {
+    width:14%;
+    height: 14%;
+    margin-right: 82%;
+}
+.action-bar {
+    background-image: url('~/app/images/Header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Vlogo {
+    font-size: 12;
+    font-weight: bold;
+    margin-left: 79%;
+    margin-top: 40%;
+    color: black;
+}
+ActionBar .action-bar-title {
+    horizontal-align: left;
+}
+.sidedrawer.sidedrawer-left {
+    background-color: blue;
+}
+.sidedrawer.sidedrawer-left .sidedrawer-header-image {
+    color: black;
+    height: 60;
+    width: 60;
+    font-size: 60;
+    padding: 0;
+    margin-bottom: 5;
+    margin-top: 20;
+}
+.sidedrawer.sidedrawer-left .footnote {
+    color: rgba(0, 0, 255, 0.5);
+}
+.sidedrawer .sidedrawer-header {
+    background-color: black;
+}
+.sidedrawer .sidedrawer-header .sidedrawer-header-brand {
+    color: blue;
+}
+.sidedrawer .sidedrawer-content {
+    background-color: blue;
+}
+.sidedrawer .sidedrawer-content .sidedrawer-list-item {
+    padding-left: 15;
+}
+.sidedrawer .sidedrawer-content .sidedrawer-list-item Label {
+    vertical-align: center;
+    color: darkblue;
+}
+.sidedrawer .sidedrawer-content .sidedrawer-list-item .fa {
+    width: 20;
+    margin-right: 10;
+}
+.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected {
+    background-color: gray;
+}
+.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected Label {
+    color: yellow;
+}

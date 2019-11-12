@@ -1,0 +1,71 @@
+<ActionBar class="action-bar">
+<NavigationButton [nsRouterLink]="['/marketplace-user']" android.systemIcon="ic_menu_back"></NavigationButton>
+    <GridLayout>
+    <label col="0" class="act font-weight-bold" text="Daftar Order"></label>
+        <Image col="1" src="~/app/images/gmbr.png" class="SP"></Image>
+    </GridLayout>
+</ActionBar>
+<StackLayout class="fullscreen">
+<TabView id="tabViewContainer">
+    <StackLayout *tabItem="{title: 'Menunggu Konfirmasi'}">
+    <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+                <Label row="0" [text]="item.tanggal" class="item-left"></Label>
+                <Label row="1" [text]="item.name" class="item-left"></Label>
+                <Label row="2" [text]="item.description" class="item-left"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+    <Button class="my-button" text="KEMBALI"></Button> 
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Menunggu Pembayaran'}">
+          <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+                <Label row="0" [text]="item.tanggal" class="item-left"></Label>
+                <Label row="1" [text]="item.name" class="item-left"></Label>
+                <Label row="2" [text]="item.description" class="item-left"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+                <Button class="my-button" text="KEMBALI"></Button> 
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Dalam Proses'}">
+        <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+                <Label row="0" [text]="item.tanggal" class="item-left"></Label>
+                <Label row="1" [text]="item.name" class="item-left"></Label>
+                <Label row="2" [text]="item.description" class="item-left"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+                <Button class="my-button" text="KEMBALI"></Button> 
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Selesai'}">
+        <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+                <Label row="0" [text]="item.tanggal" class="item-left"></Label>
+                <Label row="1" [text]="item.name" class="item-left"></Label>
+                <Label row="2" [text]="item.description" class="item-left"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+                <Button class="my-button" text="KEMBALI"></Button> 
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Batal'}">
+       <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+                <Label row="0" [text]="item.tanggal" class="item-left"></Label>
+                <Label row="1" [text]="item.name" class="item-left"></Label>
+                <Label row="2" [text]="item.description" class="item-left"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+                <Button class="my-button" text="KEMBALI"></Button> 
+    </StackLayout>
+</TabView>       
+</StackLayout>

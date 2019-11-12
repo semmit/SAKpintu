@@ -1,0 +1,80 @@
+/* Add mobile styles for the component here.  */
+
+.fa {
+    font-family: "FontAwesome";
+}
+
+.login {
+    background-image: url('~/app/images/app_bg01.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.login .logo-wrapper {
+    margin-top: 70;
+    padding: 20 0;
+}
+
+.login .logo {
+    width: 175;
+}
+
+.login .title-wrapper {
+    margin-top: 5;
+}
+
+.login .title {
+    text-align: center;
+    font-size: 15;
+}
+
+.login .form-wrapper {
+    margin: 25 0;
+}
+
+.login .hint-wrapper {
+    margin: 10 0 0 0;
+    text-align: center;
+}
+
+.login .hint {
+    font-size: 12;
+}
+
+.login .tf-wrapper {
+    padding: 10 0;
+}
+
+.login .tf-wrapper TextField {
+    margin: 4 0;
+}
+
+.login .btn-wrapper {
+    padding: 5 0;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.login .form-wrapper .tfd {
+    font-size: 15;
+    margin: 4 0;
+    padding: 10 18;
+    width: 220;
+    background-color: #FFFFFF;
+    opacity: 0.50;
+}
+
+.login .form-wrapper .btn {
+    width: 150;
+    android-elevation: 2;
+    background-color: #354660;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 15;
+    font-weight: bold;
+    horizontal-align: center;
+    text-color: white;
+}
