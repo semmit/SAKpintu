@@ -62,20 +62,20 @@
     background-size: cover;
 }
 .padi {
-    width: 15%;
+    width: 18%;
     background-image: url('~/app/images/app_ico_04.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #D5D706;
+    background-color: #DCDF05;
     border-radius: 100;
     font-size: 12;
     font-weight: bold;
     text-align: center;
-    margin-right: 55%;
+    margin-right: 60%;
     margin-top: 7%;
 }
 .strowberry {
-    width: 15%;
+    width: 18%;
     background-image: url('~/app/images/app_ico_03.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -85,11 +85,11 @@
     font-size: 12;
     font-weight: bold;
     text-align: center;
-    margin-right: 19%;
+    margin-right: 20%;
     margin-top: 7%;
 }
 .ikan {
-    width: 15%;
+    width: 18%;
     background-image: url('~/app/images/app_ico_02.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -99,21 +99,21 @@
     font-size: 12;
     font-weight: bold;
     text-align: center;
-    margin-left: 19%;
+    margin-left: 20%;
     margin-top: 7%;
 }
 .pisang {
-    width: 15%;
+    width: 18%;
     background-image: url('~/app/images/app_ico_01.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #3FBDA1;
+    background-color: #41c6a8;
     border-radius: 100;
     color: #FFFFFF;
     font-size: 12;
     font-weight: bold;
     text-align: center;
-    margin-left: 55%;
+    margin-left: 60%;
     margin-top: 7%;
 }
 .bar-unggulan{
