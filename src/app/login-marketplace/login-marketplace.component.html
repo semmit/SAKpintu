@@ -15,13 +15,19 @@
                         <Label class="hint" text="untuk LOGIN pengguna POS"></Label>
                     </StackLayout>
                     <StackLayout orientation="vertical" class="tf-wrapper">
-                        <TextField class="tfd" hint="Username" keyboardType="email" autocorrect="false"
-                            autocapitalizationType="none"></TextField>
-                        <TextField class="tfd" hint="Password" secure="true"></TextField>
-                    </StackLayout>
-                    <StackLayout orientation="vertical" class="btn-wrapper">
-                        <Button class="btn" text="LOGIN" pageTransition="slide" (tap)="myFunction()"></Button>
-                    </StackLayout>
+                         <StackLayout class="form">
+                            <StackLayout class="input-field">
+                            <TextField class="tfd" hint="Username" keyboardType="email" autocorrect="false"
+                                autocapitalizationType="none"></TextField>
+                            </StackLayout>
+                            <StackLayout class="input-field">
+                            <TextField class="tfd" hint="Password" secure="true"></TextField>
+                            </StackLayout>
+                            </StackLayout>
+                            <StackLayout orientation="vertical" class="btn-wrapper">
+                                <Button class="btn btn-primary" text="LOGIN" pageTransition="slide" (tap)="myFunction()" [nsRouterLink]="['/marketplace-user']"></Button>
+                            </StackLayout>
+                        </StackLayout>
                     <StackLayout orientation="horizontal" class="hint-wrapper" horizontalAlignment="center">
                         <Label class="hint" text="Daftar"></Label>
                         <Label class="hint" text="  |  "></Label>
