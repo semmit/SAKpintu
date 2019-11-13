@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
 import { Page } from 'tns-core-modules/ui/page';
+import * as dialogs from "tns-core-modules/ui/dialogs";
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 
 @Component({
@@ -62,3 +63,7 @@ export class LoginMarketplaceComponent implements OnInit {
   }
 
 }
+
+dialogs.alert("Isi Dengan Benar").then(()=> {
+    console.log("Dialog closed!");
+});
