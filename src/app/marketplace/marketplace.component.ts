@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fontawesome } from 'nativescript-fontawesome';
+import { Page } from 'tns-core-modules/ui/page';
 
 @Component({
   selector: 'ns-marketplace',
@@ -9,7 +10,9 @@ import { Fontawesome } from 'nativescript-fontawesome';
 export class MarketplaceComponent implements OnInit {
   search: boolean = false;
 
-  constructor() { }
+  constructor(private page: Page) {
+    page.actionBarHidden = true;
+  }
 
   ngOnInit() {
     Fontawesome.init();
