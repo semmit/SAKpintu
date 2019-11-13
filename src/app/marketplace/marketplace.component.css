@@ -7,12 +7,12 @@
     color: black;
     font-size: '12';
     vertical-align: center;
-    horizontal-align: center;
+    /* horizontal-align: center; */
 }
 .page-content .page-icon {
     font-size: 72;
     vertical-align: top;
-    horizontal-align: center;
+    /* horizontal-align: center; */
     color: blue;
     margin-top: 20%;
 }
@@ -46,7 +46,7 @@
 .search {
     width: 70%;
     /*height: 30%;*/
-    android-elevation: 1;
+    /* android-elevation: 1; */
     background-color: #c2c2c2;
     border-radius: 30;
     color: black;
@@ -193,9 +193,9 @@
     margin-top: 40%;
     color: black;
 }
-ActionBar .action-bar-title {
-    horizontal-align: left;
-}
+/* ActionBar .action-bar-title { */
+    /* horizontal-align: left; */
+/* } */
 .sidedrawer.sidedrawer-left {
     background-color: blue;
 }
