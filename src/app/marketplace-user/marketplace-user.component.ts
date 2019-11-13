@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ns-marketplace-user',
   templateUrl: './marketplace-user.component.html',
-  styleUrls: ['./marketplace-user.component.css']
+  styleUrls: ['./../_css/marketplace.component.css']
 })
 export class MarketplaceUserComponent implements OnInit {
  search: boolean = false;
