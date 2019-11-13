@@ -9,14 +9,6 @@
 
 <ScrollView orientation="vertical">
     <StackLayout class="fullscreen">
-        <!-- <ActionBar class="action-bar" title="Registrasi">
-<NavigationButton [nsRouterLink]="['/marketplace']" pageTransition="slide" android.systemIcon="ic_menu_back"></NavigationButton>
-    <GridLayout>
-        <label col="0" class="act font-weight-bold" text="Registrasi"></label>
-        <Image col="1" src="~/app/images/gmbr.png" class="SP"></Image>
-    </GridLayout>
-</ActionBar>
-<StackLayout class="fullscreen"> -->
 
 
         <GridLayout rows="auto auto auto auto auto auto auto auto auto">
@@ -61,11 +53,9 @@
                 </GridLayout>
             </StackLayout>
             <StackLayout row="7" class="jarak">
-                <Label class="keteranganpembayaran" textWrap="true" text="Baca Syarat & Ketentuan
-
-Saya telah membaca dan menyetujui
-Ketentuan & Peraturan yang berlaku
-pada Aplikasi SAKPINTU."></Label>
+                <Label class="keteranganpembayaran" textWrap="true" text="Baca Syarat & Ketentuan"></Label>
+                <Label class="keteranganpembayaran" textWrap="true"
+                    text="Saya telah membaca dan menyetujui Ketentuan & Peraturan yang berlaku pada Aplikasi SAKPINTU."></Label>
             </StackLayout>
             <StackLayout row="8" class="jarak">
                 <Button [nsRouterLink]="['/marketplace-register-confirm']" class="my-button" text="KIRIMKAN DATA SAYA"

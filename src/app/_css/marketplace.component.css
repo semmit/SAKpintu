@@ -1,0 +1,135 @@
+.fas {
+    font-family: "Font Awesome 5 Solid", "fa-solid-900";
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.action-bar {
+    background-image: url('~/app/images/Header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fullscreen {
+    background-color: #c0c0c0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.search {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 30;
+    color: black;
+    opacity: 0.8;
+    margin: 10 0;
+}
+
+.list {
+    background-color: #E7E0E3;
+}
+
+.list-placeholder {
+    width: 50;
+    height: 50;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100;
+}
+
+.bar-unggulan {
+    width: 100%;
+    padding: 4;
+    font-size: 15;
+    text-align: center;
+}
+
+/* 
+==================================================
+==================================================
+sidedrawer
+==================================================
+==================================================
+*/
+
+.sidedrawer.sidedrawer-left {
+    background-color: blue;
+}
+
+.sidedrawer.sidedrawer-left .sidedrawer-header-image {
+    color: black;
+    height: 60;
+    width: 60;
+    font-size: 60;
+    padding: 0;
+    margin-bottom: 5;
+    margin-top: 20;
+}
+
+.sidedrawer.sidedrawer-left .footnote {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+.sidedrawer .sidedrawer-header {
+    background-color: black;
+}
+
+.sidedrawer .sidedrawer-header .sidedrawer-header-brand {
+    color: blue;
+}
+
+.sidedrawer .sidedrawer-content {
+    background-color: blue;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item {
+    padding-left: 15;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item Label {
+    vertical-align: center;
+    color: darkblue;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item .fa {
+    width: 20;
+    margin-right: 10;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected {
+    background-color: gray;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected Label {
+    color: yellow;
+}
+
+/* 
+==================================================
+==================================================
+inputan
+==================================================
+==================================================
+*/
+
+.bartext {
+    font-size: 15;
+    color: #3E3E3E;
+    text-align: left;
+}
+
+.barprofil7 {
+    width: 95%;
+    height: 5%;
+    color: #3E3E3E;
+    background-color: #9BD1B3;
+    margin-top: 3%;
+}
+
+.inputan {
+    background-color: #FFFFFF;
+    margin-left: 30%;
+}

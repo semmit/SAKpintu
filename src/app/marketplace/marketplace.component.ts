@@ -5,7 +5,7 @@ import { Page } from 'tns-core-modules/ui/page';
 @Component({
   selector: 'ns-marketplace',
   templateUrl: './marketplace.component.html',
-  styleUrls: ['./marketplace.component.css']
+  styleUrls: ['./../_css/marketplace.component.css']
 })
 export class MarketplaceComponent implements OnInit {
   search: boolean = false;
