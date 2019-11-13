@@ -2,33 +2,56 @@
     <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="15">
         <Image col="0" src="~/app/images/gmbr.png" width="60"></Image>
         <Label col="1" text="&#xf002;" (tap)=btnSearch() class="fas"></Label>
-        <Label col="2" [nsRouterLink]="['/register-marketplace']" text="Daftar" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
-        <Label col="3" [nsRouterLink]="['/login-marketplace']" text="Login" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+        <Label col="2" [nsRouterLink]="['/register-marketplace']" text="Daftar"
+            style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+        <Label col="3" [nsRouterLink]="['/login-marketplace']" text="Login"
+            style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
     </GridLayout>
     <!-- <ActionItem [nsRouterLink]="['/register-marketplace']" text="Daftar" android.position="text"></ActionItem>
     <ActionItem [nsRouterLink]="['/login-marketplace']" text="Login" android.position="Login"></ActionItem> --> -->
 </ActionBar>
 
 <StackLayout class="fullscreen">
-    <StackLayout class="bar-search">
-        <GridLayout rows="auto auto" columns="*" sdkExampleTitle sdkToggleNavButton class="search" *ngIf="search">
-            <SearchBar row="0" hint="Search"></SearchBar>
-        </GridLayout>
+    <GridLayout rows="auto auto" columns="*" sdkExampleTitle sdkToggleNavButton class="search" *ngIf="search">
+        <SearchBar row="0" hint="Masukkan pemcarian"></SearchBar>
+    </GridLayout>
+
+    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal">
+        <StackLayout orientation="horizontal" width="100%">
+            <StackLayout
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 140;">
+                <Label text="Kedelai bola hijau Semarang" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+            </StackLayout>
+            <StackLayout
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 140;">
+                <Label text="Kedelai bola hijau Semarang" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+    <StackLayout class="bar-unggulan">
+        <Label text="Kategori"></Label>
     </StackLayout>
+    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" class="list">
+        <StackLayout orientation="horizontal" horizontalAlignment="center">
+            <Label class="list-placeholder" [nsRouterLink]="['/marketplace-shorting']"
+                style="background-image: url('~/app/images/app_ico_04.png'); background-color: #FFF000; margin: 5 12;"></Label>
+            <Label class="list-placeholder"
+                style="background-image: url('~/app/images/app_ico_03.png'); background-color: #59A572; margin: 5 12;"></Label>
+            <Label class="list-placeholder"
+                style="background-image: url('~/app/images/app_ico_02.png'); background-color: #BAC56F; margin: 5 12;"></Label>
+            <Label class="list-placeholder"
+                style="background-image: url('~/app/images/app_ico_01.png'); background-color: #9ED8F6; margin: 5 12;"></Label>
+        </StackLayout>
+    </ScrollView>
 
-    <GridLayout class="list">
-        <Label [nsRouterLink]="['/marketplace-shorting']" col="0" class="padi"></Label>
-        <Label col="1" class="strowberry"></Label>
-        <Label col="2" class="ikan"></Label>
-        <Label col="3" class="pisang"></Label>
-    </GridLayout>
-
-    <GridLayout class="bar-unggulan" style="text-align: center; padding: 2; color: #fff; font-weight: bold;">
-        <Label text="PRODUK UNGGULAN"></Label>
-    </GridLayout>
-
+    <StackLayout class="bar-unggulan">
+        <Label text="Produk Unggulan"></Label>
+    </StackLayout>
     <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120; width: 100%;">
-        <StackLayout orientation="horizontal" padding="0">
+        <StackLayout orientation="horizontal">
             <GridLayout columns="auto" rows="auto,*,auto"
                 style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 125; text-align: center; margin: 2;">
                 <Label row="0" col="0" text="Kedelai bola hijau Semarang" textWrap="true"
@@ -81,7 +104,7 @@
     </ScrollView>
 
     <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120; width: 100%;">
-        <StackLayout orientation="horizontal" padding="0">
+        <StackLayout orientation="horizontal">
             <GridLayout columns="auto" rows="auto,*,auto"
                 style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 125; text-align: center; margin: 2;">
                 <Label row="0" col="0" text="PALATA" textWrap="true"
