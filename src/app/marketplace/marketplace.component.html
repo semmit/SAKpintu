@@ -8,139 +8,131 @@
     <ActionItem [nsRouterLink]="['/login-marketplace']" text="Login" android.position="Login"></ActionItem>
 </ActionBar>
 
-<StackLayout class="fullscreen">  
+<StackLayout class="fullscreen">
     <StackLayout class="bar-search">
         <GridLayout rows="auto auto" columns="*" sdkExampleTitle sdkToggleNavButton class="search" *ngIf="search">
             <SearchBar row="0" hint="Search"></SearchBar>
         </GridLayout>
     </StackLayout>
-     
-    <GridLayout class="list">  
-        <Label [nsRouterLink]="['/marketplace-shorting']" col="0"  class="padi"></Label>
+
+    <GridLayout class="list">
+        <Label [nsRouterLink]="['/marketplace-shorting']" col="0" class="padi"></Label>
         <Label col="1" class="strowberry"></Label>
         <Label col="2" class="ikan"></Label>
         <Label col="3" class="pisang"></Label>
     </GridLayout>
- 
+
     <GridLayout class="bar-unggulan">
         <Label class="produkunggulan" text="Produk Unggulan"></Label>
     </GridLayout>
- 
-    <ScrollView orientation="horizontal" style="height: 30%">
-        <GridLayout class="m-15" columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
-            <StackLayout col="0" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="Kedelai bola hijau Semarang"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-          </StackLayout>
-            <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="Kedelai Bintang Merah"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-          </StackLayout>
-            <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="Kedelai Dahlia Semarang"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-          </StackLayout>
-            <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="Kedelai bola emas"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-          </StackLayout>
-        </GridLayout>
-    </ScrollView>
-    <ScrollView orientation="horizontal" style="height: 30%">
-        <GridLayout class="m-15" columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
-            <StackLayout col="0" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="PALATA"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-          </StackLayout>
-            <StackLayout col="1" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="Kedelai Bintang Merah"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-         </StackLayout>
-            <StackLayout col="2" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ciok o.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="Ciok O/Batu Tahu"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-         </StackLayout>
-            <StackLayout col="3" width="50%" height="100%" style="margin-left: 20px">
-                <mdb-card class="card-image">
-                    <StackLayout style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ragi tempe.jpg')" class="card-image-overlay">
-                    <mdb-card-body dark="true" style="text-align: center; color: white">
-                        <Label class="card-title" text="RAGI TEMPE"></Label>
-                        <Label class="card-text" [text]="loremIpsumText" textWrap="true"></Label>
-    
-                        <FlexboxLayout justifyContent="center">
-                            <Button mdbWavesEffect text="Detail Product" style="background-color: darkslategray" [nsRouterLink]="['/marketplace-product-info']"></Button>
-                        </FlexboxLayout>
-                    </mdb-card-body>
-                    </StackLayout>
-                </mdb-card>
-         </StackLayout>     
-        </GridLayout>
-    </ScrollView>
-    <StackLayout class="bar-search">
 
+    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 150">
+        <StackLayout orientation="horizontal" padding="0">
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola hijau Semarang" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola hijau Semarang" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+
+    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 150">
+        <StackLayout orientation="horizontal" padding="0">
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="PALATA" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Ciok O/Batu Tahu" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola hijau Semarang" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+            <GridLayout columns="auto" rows="auto,*,auto"
+                style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 150; text-align: center; margin: 2;">
+                <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
+                    style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
+                <Button row="2" col="0" text="Detail" mdbWavesEffect
+                    style="width: 140; background-color: darkslategray; color: white;"
+                    [nsRouterLink]="['/marketplace-product-info']"></Button>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+
+    <StackLayout class="bar-search">
     </StackLayout>
+
 </StackLayout>
- 
