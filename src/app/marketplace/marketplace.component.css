@@ -1,7 +1,8 @@
 .fas {
     font-family: "Font Awesome 5 Solid", "fa-solid-900";
-    font-size: 20px;
+    font-size: 16px;
     vertical-align: middle;
+    text-align: right;
 }
 .page-content .page-placeholder {
     color: black;
@@ -176,10 +177,10 @@
     text-align: center;
     margin-left: 48%;
 }
-.SP {
+/* .SP {
     width: 60;
     margin-right: 75%;
-}
+} */
 .action-bar {
     background-image: url('~/app/images/Header.jpg');
     background-repeat: no-repeat;

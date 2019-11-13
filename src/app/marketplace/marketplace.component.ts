@@ -11,7 +11,7 @@ export class MarketplaceComponent implements OnInit {
   search: boolean = false;
 
   constructor(private page: Page) {
-    page.actionBarHidden = true;
+    page.actionBarHidden = false;
   }
 
   ngOnInit() {

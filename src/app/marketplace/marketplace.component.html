@@ -1,18 +1,13 @@
-<WrapLayout class="action-bar">
-    <!-- <GridLayout rows="auto" cols="auto,*,auto,auto" width="100%">
-        <Image row="0" col="0" src="~/app/images/gmbr.png" class="SP"></Image>
-        <Label row="0" col="1" class="fas" text="&#xf002;"></Label>
-        <Label row="0" col="2" class="fas" text="Daftar"></Label>
-        <Label row="0" col="3" class="fas" text="Login"></Label>
-    </GridLayout> -->
-    <GridLayout>
-        <Image col="0" src="~/app/images/gmbr.png" class="SP"></Image>
-        <Label col="1" class="fas" text="&#xf002;" (tap)=btnSearch()
-            style="text-align: right; margin-right: 10px"></Label>
+<ActionBar class="action-bar">
+    <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="15">
+        <Image col="0" src="~/app/images/gmbr.png" width="60"></Image>
+        <Label col="1" text="&#xf002;" (tap)=btnSearch() class="fas"></Label>
+        <Label col="2" [nsRouterLink]="['/register-marketplace']" text="Daftar" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+        <Label col="3" [nsRouterLink]="['/login-marketplace']" text="Login" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
     </GridLayout>
-    <ActionItem [nsRouterLink]="['/register-marketplace']" text="Daftar" android.position="text"></ActionItem>
-    <ActionItem [nsRouterLink]="['/login-marketplace']" text="Login" android.position="Login"></ActionItem>
-</WrapLayout>
+    <!-- <ActionItem [nsRouterLink]="['/register-marketplace']" text="Daftar" android.position="text"></ActionItem>
+    <ActionItem [nsRouterLink]="['/login-marketplace']" text="Login" android.position="Login"></ActionItem> --> -->
+</ActionBar>
 
 <StackLayout class="fullscreen">
     <StackLayout class="bar-search">
@@ -32,7 +27,7 @@
         <Label text="PRODUK UNGGULAN"></Label>
     </GridLayout>
 
-    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120">
+    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120; width: 100%;">
         <StackLayout orientation="horizontal" padding="0">
             <GridLayout columns="auto" rows="auto,*,auto"
                 style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 125; text-align: center; margin: 2;">
@@ -85,7 +80,7 @@
         </StackLayout>
     </ScrollView>
 
-    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120">
+    <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120; width: 100%;">
         <StackLayout orientation="horizontal" padding="0">
             <GridLayout columns="auto" rows="auto,*,auto"
                 style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; width: 125; text-align: center; margin: 2;">
