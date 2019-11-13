@@ -115,21 +115,27 @@ inputan
 ==================================================
 */
 
-.bartext {
+.form {
+    padding: 10;
+}
+
+.label {
     font-size: 15;
     color: #3E3E3E;
-    text-align: left;
+    width: 100;
+    background-color: #C9DECC;
+    vertical-align: middle;
+    padding-left: 7;
 }
 
-.barprofil7 {
-    width: 95%;
-    height: 5%;
+.input-group {
+    background-color: #C9DECC;
+    margin: 2 0;
+}
+
+.textfield {
+    font-size: 15;
     color: #3E3E3E;
-    background-color: #9BD1B3;
-    margin-top: 3%;
-}
-
-.inputan {
+    width: 100%;
     background-color: #FFFFFF;
-    margin-left: 30%;
 }
