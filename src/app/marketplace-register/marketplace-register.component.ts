@@ -16,12 +16,12 @@ export class MarketplaceRegisterComponent implements OnInit {
   }
 
   validate_registrasi() {
-    const username: <TextField>this.page.getViewById("inp_username");
-    const password: <TextField>this.page.getViewById("inp_password");
-    const namalengkap: <TextField>this.page.getViewById("inp_namalengkap");
-    const email: <TextField>this.page.getViewById("inp_email");
-    const handphone: <TextField>this.page.getViewById("inp_handphone");
-    const no_ktp: <TextField>this.page.getViewById("inp_no_ktp");
+    const username = <TextField>this.page.getViewById("inp_username");
+    const password = <TextField>this.page.getViewById("inp_password");
+    const namalengkap = <TextField>this.page.getViewById("inp_namalengkap");
+    const email = <TextField>this.page.getViewById("inp_email");
+    const handphone = <TextField>this.page.getViewById("inp_handphone");
+    const no_ktp = <TextField>this.page.getViewById("inp_no_ktp");
     request({
       url: "https://sp.haloteman.com/API_MAIN/userRegister.php",
       method: "POST",
