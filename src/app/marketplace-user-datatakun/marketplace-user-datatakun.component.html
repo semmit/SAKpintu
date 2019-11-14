@@ -1,113 +1,97 @@
 <ActionBar class="action-bar">
-<NavigationButton [nsRouterLink]="['/marketplace-user']" android.systemIcon="ic_menu_back"></NavigationButton>
-    <GridLayout>
-    <label col="0" class="act font-weight-bold" text="Atur Data Akun"></label>
-        <Image col="1" src="~/app/images/gmbr.png" class="SP"></Image>
+    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
+            android.systemIcon="ic_menu_back" class="fas v-center"></Label>
+        <Label col="1" text="Atur Data Akun" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+        <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
     </GridLayout>
 </ActionBar>
 
-<StackLayout class="fullscreen">
-<TabView id="tabViewContainer">
-    <StackLayout *tabItem="{title: 'Data Akuna'}">
-                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
-            <GridLayout class="m-15" rows="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
-                <Label class="h3 m-5" height="50" row="0"></Label>
-                <Label class="h3 m-5" height="50" row="1"></Label>
-                <Label class="h3 m-5" height="50" row="2"></Label>
-                <Label class="h3 m-5" height="50" row="3"></Label>
-                <Label class="h3 m-5" height="50" row="4"></Label>
-                <Label class="h3 m-5" height="50" row="5"></Label>
-                <Label class="h3 m-5" height="50" row="6"></Label>
-                <Label class="h3 m-5" height="50" row="7"></Label>
-                <Label class="h3 m-5" height="50" row="8"></Label>
-                <Label class="h3 m-5" height="50" row="9"></Label> 
-                <Label class="h3 m-5" height="50" row="10"></Label> 
-                <Label class="h3 m-5" height="50" row="11"></Label> 
-                <Label class="h3 m-5" height="50" row="12"></Label>
-                <Label class="h3 m-5" height="50" row="15"></Label>
-                <StackLayout class="isi" row="0" height="120">
-                    <GridLayout class="baratas">
-                        <GridLayout class="barprofil">
-                        <Label col="1" class="bartext" text="Photo Profil"></Label>               
-                        </GridLayout>
-                        <Label col="0" class="photo" ></Label>
-                      </GridLayout>
-                </StackLayout>      
-                <GridLayout class="barprofil2" row="1" height="50">
-                <Label class="bartext2" textWrap="true" text="Nama 
-Lengkap"></Label>
-                <TextField class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil3" row="2" height="100">
-                <Label class="bartext3" textWrap="true" text="Alamat"></Label>
-                <TextField class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil4" row="3" height="50">
-                <Label class="bartext4" text="Propinsi"></Label>
-                <TextField class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil5" row="4" height="50">
-                <Label class="bartext5" textWrap="true" text="Kota /
-Kabupaten"></Label>
-                <TextField class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil6" row="5" height="50">
-                <Label class="bartext6" textWrap="true" text="Kecamatan"></Label>
-                <TextField class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil7" row="6" height="50">
-                <Label  class="bartext7" textWrap="true" 
-                text="Kodepose"></Label>
-                <TextField  class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil7" row="7" height="50">
-                <Label  class="bartext7" textWrap="true" 
-                text="Telpon"></Label>
-                <TextField  class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil7" row="8" height="50">
-                <Label  class="bartext7" textWrap="true" 
-                text="Faximile"></Label>
-                <TextField  class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil7" row="9" height="50">
-                <Label  class="bartext7" textWrap="true" 
-                text="Email"></Label>
-                <TextField  class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil7" row="10" height="50">
-                <Label  class="bartext7" textWrap="true" 
-                text="Handphone"></Label>
-                <TextField  class="inputan"></TextField>
-                </GridLayout>
-                <GridLayout class="barprofil7" row="11" height="50">
-                <Label  class="bartext7" textWrap="true" 
-                text="No. KTP"></Label>
-                <TextField  class="inputan"></TextField>
-                </GridLayout>
-                <Button class="my-button" row="15" text="UPDATE DATA" [nsRouterLink]="['/marketplace']" pageTransition="slide"></Button>
-            </GridLayout>
-            </ScrollView>
-</StackLayout>
-    <StackLayout *tabItem="{title: 'Ganti Password'}">
-        <StackLayout>
-        <GridLayout class="barprofil2">
-        <Label class="bartext2" textWrap="true" text="Password 
-Lama"></Label>
-        <TextField class="inputan" secure="true"></TextField>
-        </GridLayout>
-        <GridLayout class="barprofil2">
-        <Label class="bartext2" textWrap="true" text="Password 
-Baru"></Label>
-        <TextField class="inputan" secure="true"></TextField>
-        </GridLayout>
-        <GridLayout class="barprofil2">
-        <Label class="bartext2" textWrap="true" text="Ulang
-Password Baru"></Label>
-        <TextField class="inputan" secure="true"></TextField>
-        </GridLayout>
-                <Button class="my-button" text="UPDATE DATA" [nsRouterLink]="['/marketplace']" pageTransition="slide"></Button>  
-        </StackLayout>
-    </StackLayout>
-</TabView>       
-</StackLayout>
+    <StackLayout class="fullscreen">
+        <TabView id="tabViewContainer">
+                <StackLayout *tabItem="{title: 'Data Akuna'}">
+                         <StackLayout class="form">
+                                <Label class="mt-2 mb-2 text-center" text="Silahkan melengkapi data data di bawah ini :"></Label>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Alamat" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Propinsi" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Kota / Kabupaten" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Kecamatan" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Kodepose" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Telpon" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Faximile" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Email" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Handphone" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="No. KTP" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+                                 </StackLayout>
+                                <StackLayout row="8" class="jarak">
+                                    <Button class="btn" text="UPDATE DATA"  pageTransition="slide"></Button>
+                                </StackLayout>
+                </StackLayout>
+                <StackLayout *tabItem="{title: 'Ganti Password'}">
+                        <StackLayout>
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Password Lama" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Password Baru" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout orientation="horizontal" class="input-group">
+                                        <Label class="label" text="Ulang Password Baru" textWrap="true"></Label>
+                                        <TextField class="textfield"></TextField>
+                                </StackLayout>
+
+                                <StackLayout row="8" class="jarak">
+                                    <Button class="btn" text="UPDATE DATA"  pageTransition="slide"></Button>
+                                </StackLayout>
+                    </StackLayout>
+        </TabView>
+   </StackLayout>
