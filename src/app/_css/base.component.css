@@ -49,12 +49,26 @@ label, textfield, button {
     border-radius: 100;
 }
 
-.bar-unggulan {
+.home-section-titlebar {
     width: 100%;
     padding: 4;
     font-size: 15;
     text-align: center;
     background-color: #8F8C84;
+}
+
+.home-section-list1-container {
+    height: 120;
+    width: 100%;
+}
+
+.home-section-list1-item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 125;
+    text-align: center;
+    margin: 2;
 }
 
 /* 
