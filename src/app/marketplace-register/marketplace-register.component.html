@@ -16,37 +16,37 @@
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Username" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_username" class="textfield"></TextField>
             </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Password" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_password" class="textfield"></TextField>
             </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Ulang Password" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_password" class="textfield"></TextField>
             </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_namalengkap" class="textfield"></TextField>
             </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Email" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_email" class="textfield"></TextField>
             </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Handphone" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_handphone" class="textfield"></TextField>
             </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="No. KTP" textWrap="true"></Label>
-                <TextField class="textfield"></TextField>
+                <TextField id="inp_no_ktp" class="textfield"></TextField>
             </StackLayout>
 
             <Label textWrap="true" text="Baca Syarat & Ketentuan" class="fw-bold text-small mt-2 text-center"></Label>
@@ -59,7 +59,7 @@
 
         <StackLayout row="8" class="jarak">
             <Button class="btn" [nsRouterLink]="['/marketplace-register-confirm']" text="Daftar"
-                (tap)="myFunction()"></Button>
+                (tap)="validate_registrasi()"></Button>
         </StackLayout>
 
 

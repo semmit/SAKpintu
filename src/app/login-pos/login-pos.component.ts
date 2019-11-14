@@ -22,6 +22,9 @@ export class LoginPosComponent implements OnInit {
   }
 
   validate_login_pos() {
+    const inp_kode_toko: <TextField>this.page.getViewById("inp_kode_toko");
+    const inp_username: <TextField>this.page.getViewById("inp_username");
+    const inp_password: <TextField>this.page.getViewById("inp_password");
     request({
       url: "https://sp.haloteman.com/API_POS/login.php",
       method: "POST",
@@ -31,9 +34,9 @@ export class LoginPosComponent implements OnInit {
         "Authorization": "Basic"
       },
       content: JSON.stringify({
-        // "Kode Toko": $("#login_content1Sec .inp_kode_toko").val(),
-        // "Username": $("#login_content1Sec .inp_username").val(),
-        // "Password": $("#login_content1Sec .inp_password").val(),
+        "Kode Toko": inp_kode_toko.text,
+        "Username": inp_username.text,
+        "Password": inp_password.text,
       })
     }).then((response: HttpResponse) => {
       // Content property of the response is HttpContent
