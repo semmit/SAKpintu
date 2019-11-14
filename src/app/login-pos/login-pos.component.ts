@@ -52,13 +52,10 @@ export class LoginPosComponent implements OnInit {
   }
 
   onSwipe(args: SwipeGestureEventData) {
-    // let item = <StackLayout> args.view;
-
-    // console.log("Swipe!");
     // console.log("Object that triggered the event: " + args.object);
-    console.log("View that triggered the event: " + args.view);
+    // console.log("View that triggered the event: " + args.view);
     // console.log("Event name: " + args.eventName);
-    console.log("Swipe Direction: " + args.direction);
+    // console.log("Swipe Direction: " + args.direction);
     const rootLayout = <StackLayout>getViewById(args.view, "rootLayout");
     if (args.direction == 1) {
       rootLayout.animate({
