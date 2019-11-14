@@ -4,6 +4,7 @@ import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
 import { Page, getViewById } from 'tns-core-modules/ui/page';
 import * as dialogs from "tns-core-modules/ui/dialogs";
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 
 @Component({
   selector: 'ns-login-marketplace',
@@ -54,21 +55,30 @@ export class LoginMarketplaceComponent implements OnInit {
   onSwipe(args: SwipeGestureEventData) {
     // console.log("Swipe!");
     // console.log("Object that triggered the event: " + args.object);
-    // console.log("View that triggered the event: " + args.view);
+    console.log("View that triggered the event: " + args.view);
     // console.log("Event name: " + args.eventName);
-    // console.log("Swipe Direction: " + args.direction);
-    if (args.direction == 1 || args.direction == 2) {
-      this.router.navigate(['/login-pos']).then(r => 'coba');
-      // const rootLayout = <StackLayout>getViewById(this.p,"rootLayout");
-      // rootLayout.animate({
-      //   translate: {
-      //     x: 500,
-      //     y: 0
-      //   },
-      //   duration: 700
-      // }).then(() => {
-      // this.router.navigate(['/login-pos']).then(r => 'coba');
-      // });
+    console.log("Swipe Direction: " + args.direction);
+    const rootLayout = <StackLayout>getViewById(args.view, "rootLayout");
+    if (args.direction == 1) {
+      rootLayout.animate({
+        translate: {
+          x: 500,
+          y: 0
+        },
+        duration: 700
+      }).then(() => {
+        this.router.navigate(['/login-pos']).then(r => 'coba');
+      });
+    } else if (args.direction == 2) {
+      rootLayout.animate({
+        translate: {
+          x: -500,
+          y: 0
+        },
+        duration: 700
+      }).then(() => {
+        this.router.navigate(['/login-pos']).then(r => 'coba');
+      });
     }
   }
 

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
-import { Page } from 'tns-core-modules/ui/page';
+import { Page, getViewById } from 'tns-core-modules/ui/page';
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
-import { getFrameById } from 'tns-core-modules/ui/frame/frame';
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 
 @Component({
   selector: 'ns-login-pos',
@@ -57,21 +57,30 @@ export class LoginPosComponent implements OnInit {
 
     // console.log("Swipe!");
     // console.log("Object that triggered the event: " + args.object);
-    // console.log("View that triggered the event: " + args.view);
+    console.log("View that triggered the event: " + args.view);
     // console.log("Event name: " + args.eventName);
-    // console.log("Swipe Direction: " + args.direction);
-    if (args.direction == 1 || args.direction == 2) {
-      this.router.navigate(['/login-marketplace']).then(r => 'coba');
-      // const rootLayout = getFrameById("rootLayout");
-      // rootLayout.animate({
-      //   translate: {
-      //     x: 500,
-      //     y: 0
-      //   },
-      //   duration: 700
-      // }).then(() => {
-      //   this.router.navigate(['/login-marketplace']).then(r => 'coba');
-      // });
+    console.log("Swipe Direction: " + args.direction);
+    const rootLayout = <StackLayout>getViewById(args.view, "rootLayout");
+    if (args.direction == 1) {
+      rootLayout.animate({
+        translate: {
+          x: 500,
+          y: 0
+        },
+        duration: 700
+      }).then(() => {
+        this.router.navigate(['/login-marketplace']).then(r => 'coba');
+      });
+    } else if (args.direction == 2) {
+      rootLayout.animate({
+        translate: {
+          x: -500,
+          y: 0
+        },
+        duration: 700
+      }).then(() => {
+        this.router.navigate(['/login-marketplace']).then(r => 'coba');
+      });
     }
   }
 
