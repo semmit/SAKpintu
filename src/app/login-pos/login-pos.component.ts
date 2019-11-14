@@ -59,20 +59,14 @@ export class LoginPosComponent implements OnInit {
     const rootLayout = <StackLayout>getViewById(args.view, "rootLayout");
     if (args.direction == 1) {
       rootLayout.animate({
-        translate: {
-          x: 500,
-          y: 0
-        },
+        translate: { x: 500, y: 0 },
         duration: 700
       }).then(() => {
         this.router.navigate(['/login-marketplace']).then(r => 'coba');
       });
     } else if (args.direction == 2) {
       rootLayout.animate({
-        translate: {
-          x: -500,
-          y: 0
-        },
+        translate: { x: -500, y: 0 },
         duration: 700
       }).then(() => {
         this.router.navigate(['/login-marketplace']).then(r => 'coba');
