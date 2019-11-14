@@ -73,7 +73,3 @@ export class LoginMarketplaceComponent implements OnInit {
   }
 
 }
-
-dialogs.alert("Isi Dengan Benar").then(() => {
-  console.log("Dialog closed!");
-});
