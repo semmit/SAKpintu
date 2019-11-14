@@ -13,6 +13,7 @@ import { TextField } from "tns-core-modules/ui/text-field";
 export class MarketplaceRegisterComponent implements OnInit {
 
   constructor(private router: Router, private page: Page) {
+    this.page.actionBarHidden = false;
   }
 
   ngOnInit() {
