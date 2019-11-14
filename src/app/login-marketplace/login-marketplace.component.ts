@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
-import { Page, getViewById } from 'tns-core-modules/ui/page';
+import { Page, getViewById, EventData } from 'tns-core-modules/ui/page';
 import * as dialogs from "tns-core-modules/ui/dialogs";
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { TextField } from "tns-core-modules/ui/text-field";
 
 @Component({
   selector: 'ns-login-marketplace',
@@ -22,7 +23,9 @@ export class LoginMarketplaceComponent implements OnInit {
   ngOnInit() {
   }
 
-  validate_login_mkp() {
+  validate_login_mkp(args: EventData) {
+    const inp_username = <TextField>this.page.getViewById("inp_password");
+    const inp_password = <TextField>this.page.getViewById("inp_password");
     request({
       url: "https://sp.haloteman.com/API_MBR/login.php",
       method: "POST",
@@ -32,8 +35,8 @@ export class LoginMarketplaceComponent implements OnInit {
         "Authorization": "Basic"
       },
       content: JSON.stringify({
-        "Username": $("#login_content1Sec .inp_username").val(),
-        "Password": $("#login_content1Sec .inp_password").val(),
+        "Username": inp_username.text,
+        "Password": inp_password.text,
       })
     }).then((response: HttpResponse) => {
       // Content property of the response is HttpContent
