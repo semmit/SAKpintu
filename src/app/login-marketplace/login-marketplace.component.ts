@@ -32,8 +32,8 @@ export class LoginMarketplaceComponent implements OnInit {
         "Authorization": "Basic"
       },
       content: JSON.stringify({
-        "Username": "admin",
-        "Password": "admin"
+        "Username": $("#login_content1Sec .inp_username").val(),
+        "Password": $("#login_content1Sec .inp_password").val(),
       })
     }).then((response: HttpResponse) => {
       // Content property of the response is HttpContent
