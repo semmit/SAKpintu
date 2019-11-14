@@ -11,11 +11,11 @@
     <StackLayout row="3" orientation="vertical">
         <Label class="text-small text-center" text="<        SWIPE        >"></Label>
         <Label class="text-small text-center" text="untuk Login ke MARKETPLACE"></Label>
-        <TextField class="textfield-2 mt-4" hint="Kode Toko" keyboardType="email" autocorrect="false"
+        <TextField id="inp_kode_toko" class="textfield-2 mt-4" hint="Kode Toko" keyboardType="email" autocorrect="false"
             autocapitalizationType="none"></TextField>
-        <TextField class="textfield-2" hint="Username" keyboardType="email" autocorrect="false"
+        <TextField id="inp_username" class="textfield-2" hint="Username" keyboardType="email" autocorrect="false"
             autocapitalizationType="none"></TextField>
-        <TextField class="textfield-2" hint="Password" secure="true"></TextField>
+        <TextField id="inp_password" class="textfield-2" hint="Password" secure="true"></TextField>
         <Button class="btn mt-4" text="LOGIN" pageTransition="slide" (tap)="validate_login_pos()"
             [nsRouterLink]="['/pos-dashboard']"></Button>
         <StackLayout orientation="horizontal" class="mt-2" horizontalAlignment="center">
