@@ -23,7 +23,7 @@ export class LoginMarketplaceComponent implements OnInit {
   ngOnInit() {
   }
 
-  validate_login_mkp(args: EventData) {
+  validate_login_mkp() {
     const inp_username = <TextField>this.page.getViewById("inp_password");
     const inp_password = <TextField>this.page.getViewById("inp_password");
     request({
