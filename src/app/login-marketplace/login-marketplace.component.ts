@@ -23,7 +23,6 @@ export class LoginMarketplaceComponent implements OnInit {
   }
 
   validate_login_mkp() {
-    console.log("myFunction");
     request({
       url: "https://sp.haloteman.com/API_MBR/login.php",
       method: "POST",
