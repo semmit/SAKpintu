@@ -24,7 +24,7 @@ export class LoginMarketplaceComponent implements OnInit {
   }
 
   validate_login_mkp() {
-    const inp_username = <TextField>this.page.getViewById("inp_password");
+    const inp_username = <TextField>this.page.getViewById("inp_username");
     const inp_password = <TextField>this.page.getViewById("inp_password");
     request({
       url: "https://sp.haloteman.com/API_MBR/login.php",
