@@ -4,6 +4,7 @@ import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
 import { Page, getViewById } from 'tns-core-modules/ui/page';
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { TextField } from "tns-core-modules/ui/text-field";
 
 @Component({
   selector: 'ns-login-pos',
@@ -22,9 +23,9 @@ export class LoginPosComponent implements OnInit {
   }
 
   validate_login_pos() {
-    const inp_kode_toko: <TextField>this.page.getViewById("inp_kode_toko");
-    const inp_username: <TextField>this.page.getViewById("inp_username");
-    const inp_password: <TextField>this.page.getViewById("inp_password");
+    const inp_kode_toko = <TextField>this.page.getViewById("inp_kode_toko");
+    const inp_username = <TextField>this.page.getViewById("inp_username");
+    const inp_password = <TextField>this.page.getViewById("inp_password");
     request({
       url: "https://sp.haloteman.com/API_POS/login.php",
       method: "POST",
