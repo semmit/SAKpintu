@@ -1,27 +1,30 @@
-<GridLayout id="rootLayout" class="bg-full" rows="2*,auto,*,auto,*" columns="*" (swipe)="onSwipe($event)">
-    <StackLayout row="0">
-    </StackLayout>
-    <StackLayout row="1">
-        <Image class="logo" src="~/app/images/gmbr.png" width="175"></Image>
-        <Label class="text-center mt-2" text="LOGIN PENGGUNA" style="font-size: 15"></Label>
-        <Label class="text-center fw-bold" text="MARKETPLACE" style="font-size: 15"></Label>
-    </StackLayout>
-    <StackLayout row="2">
-    </StackLayout>
-    <StackLayout row="3" orientation="vertical">
-        <Label class="text-small text-center" text="<        SWIPE        >"></Label>
-        <Label class="text-small text-center" text="untuk Login ke POS"></Label>
-        <TextField id="inp_username" class="textfield-2 mt-4" hint="Username" keyboardType="email" autocorrect="false"
-            autocapitalizationType="none"></TextField>
-        <TextField id="inp_password" class="textfield-2" hint="Password" secure="true"></TextField>
-        <Button class="btn mt-4" text="LOGIN" (tap)="validate_login_mkp()"></Button>
-        <!--[nsRouterLink]="['/marketplace-user']-->
-        <StackLayout orientation="horizontal" class="mt-2" horizontalAlignment="center">
-            <Label class="text-small" text="Daftar"></Label>
-            <Label class="text-small" text="  |  "></Label>
-            <Label class="text-small" text="Lupa Password ?"></Label>
+<!-- ditambah WrapLayout biar klo di swipe ga putih -->
+<WrapLayout class="bg-full">
+    <GridLayout id="rootLayout" class="bg-full" rows="2*,auto,*,auto,*" columns="*" (swipe)="onSwipe($event)">
+        <StackLayout row="0">
         </StackLayout>
-    </StackLayout>
-    <StackLayout row="4">
-    </StackLayout>
-</GridLayout>
+        <StackLayout row="1">
+            <Image class="logo" src="~/app/images/gmbr.png" width="175"></Image>
+            <Label class="text-center mt-2" text="LOGIN PENGGUNA" style="font-size: 15"></Label>
+            <Label class="text-center fw-bold" text="MARKETPLACE" style="font-size: 15"></Label>
+        </StackLayout>
+        <StackLayout row="2">
+        </StackLayout>
+        <StackLayout row="3" orientation="vertical">
+            <Label class="text-small text-center" text="<        SWIPE        >"></Label>
+            <Label class="text-small text-center" text="untuk Login ke POS"></Label>
+            <TextField id="inp_username" class="textfield-2 mt-4" hint="Username" keyboardType="email"
+                autocorrect="false" autocapitalizationType="none"></TextField>
+            <TextField id="inp_password" class="textfield-2" hint="Password" secure="true"></TextField>
+            <Button class="btn mt-4" text="LOGIN" (tap)="validate_login_mkp()"></Button>
+            <!--[nsRouterLink]="['/marketplace-user']-->
+            <StackLayout orientation="horizontal" class="mt-2" horizontalAlignment="center">
+                <Label class="text-small" text="Daftar"></Label>
+                <Label class="text-small" text="  |  "></Label>
+                <Label class="text-small" text="Lupa Password ?"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout row="4">
+        </StackLayout>
+    </GridLayout>
+</WrapLayout>
