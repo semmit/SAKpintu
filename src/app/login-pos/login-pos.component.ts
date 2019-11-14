@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
 import { Page } from 'tns-core-modules/ui/page';
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
+import { getFrameById } from 'tns-core-modules/ui/frame/frame';
 
 @Component({
   selector: 'ns-login-pos',
@@ -61,29 +62,17 @@ export class LoginPosComponent implements OnInit {
     // console.log("Swipe Direction: " + args.direction);
     if (args.direction == 1 || args.direction == 2) {
       this.router.navigate(['/login-marketplace']).then(r => 'coba');
+      // const rootLayout = getFrameById("rootLayout");
+      // rootLayout.animate({
+      //   translate: {
+      //     x: 500,
+      //     y: 0
+      //   },
+      //   duration: 700
+      // }).then(() => {
+      //   this.router.navigate(['/login-marketplace']).then(r => 'coba');
+      // });
     }
-
-    // if (args.direction == 1) {
-    //     item.animate({
-    //         translate: {
-    //             x: 500,
-    //             y: 0
-    //         },
-    //         duration: 700
-    //     }).then(() => {
-    //         this.router.navigate(['/login-marketplace']).then(r => 'coba');
-    //     });
-    // } else if (args.direction == 4) {
-    //     item.animate({
-    //         translate: {
-    //             x: 0,
-    //             y: 500
-    //         },
-    //         duration: 700
-    //     }).then(() => {
-    //         this.router.navigate(['/login-marketplace']).then(r => 'coba');
-    //     });
-    // }
   }
 
 }
