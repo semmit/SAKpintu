@@ -142,6 +142,15 @@ inputan
     background-color: #FFFFFF;
 }
 
+.textfield-2 {
+    font-size: 15;
+    margin: 4 0;
+    padding: 10 18;
+    width: 220;
+    background-color: #FFFFFF;
+    opacity: 0.50;
+}
+
 .btn {
     width: 150;
     height: 40;

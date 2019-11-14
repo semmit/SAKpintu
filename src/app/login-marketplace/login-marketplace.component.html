@@ -1,40 +1,29 @@
-<Page>
-    <ScrollView>
-        <StackLayout class="page page-content login" (swipe)="onSwipe($event)">
-            <StackLayout orientation="vertical">
-                <StackLayout orientation="vertical" class="logo-wrapper">
-                    <Image class="logo" src="~/app/images/gmbr.png"></Image>
-                    <StackLayout orientation="vertical" class="title-wrapper">
-                        <Label class="title" text="LOGIN PENGGUNA"></Label>
-                        <Label class="title fw-bold" text="MARKETPLACE"></Label>
-                    </StackLayout>
+<ScrollView orientation="vertical">
+    <StackLayout class="page page-content login" (swipe)="onSwipe($event)">
+        <StackLayout orientation="vertical">
+            <StackLayout orientation="vertical" class="logo-wrapper">
+                <Image class="logo" src="~/app/images/gmbr.png"></Image>
+                <StackLayout orientation="vertical" class="title-wrapper">
+                    <Label class="title" text="LOGIN PENGGUNA"></Label>
+                    <Label class="title fw-bold" text="MARKETPLACE"></Label>
                 </StackLayout>
-                <StackLayout orientation="vertical" class="form-wrapper">
-                    <StackLayout orientation="vertical" class="hint-wrapper">
-                        <Label class="hint" text="<        SWIPE        >"></Label>
-                        <Label class="hint" text="untuk LOGIN pengguna POS"></Label>
-                    </StackLayout>
-                    <StackLayout orientation="vertical" class="tf-wrapper">
-                         <StackLayout class="form">
-                            <StackLayout class="input-field">
-                            <TextField class="tfd" hint="Username" keyboardType="email" autocorrect="false"
-                                autocapitalizationType="none"></TextField>
-                            </StackLayout>
-                            <StackLayout class="input-field">
-                            <TextField class="tfd" hint="Password" secure="true"></TextField>
-                            </StackLayout>
-                            </StackLayout>
-                            <StackLayout orientation="vertical" class="btn-wrapper">
-                                <Button class="btn btn-primary" text="LOGIN" pageTransition="slide" (tap)="myFunction()" [nsRouterLink]="['/marketplace-user']"></Button>
-                            </StackLayout>
-                        </StackLayout>
-                    <StackLayout orientation="horizontal" class="hint-wrapper" horizontalAlignment="center">
-                        <Label class="hint" text="Daftar"></Label>
-                        <Label class="hint" text="  |  "></Label>
-                        <Label class="hint" text="Lupa Password ?"></Label>
-                    </StackLayout>
+            </StackLayout>
+            <StackLayout orientation="vertical" class="mt-4">
+                <StackLayout orientation="vertical" horizontalAlignment="center">
+                    <Label class="hint text-center" text="<        SWIPE        >"></Label>
+                    <Label class="hint text-center" text="untuk Login ke POS"></Label>
+                </StackLayout>
+                <TextField class="textfield-2 mt-4" hint="Username" keyboardType="email" autocorrect="false"
+                    autocapitalizationType="none"></TextField>
+                <TextField class="textfield-2" hint="Password" secure="true"></TextField>
+                <Button class="btn mt-4" text="LOGIN" pageTransition="slide" (tap)="myFunction()"
+                    [nsRouterLink]="['/marketplace-user']"></Button>
+                <StackLayout orientation="horizontal" class="mt-4" horizontalAlignment="center">
+                    <Label class="hint" text="Daftar"></Label>
+                    <Label class="hint" text="  |  "></Label>
+                    <Label class="hint" text="Lupa Password ?"></Label>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-    </ScrollView>
-</Page>
+    </StackLayout>
+</ScrollView>
