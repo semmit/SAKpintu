@@ -37,24 +37,26 @@ label, textfield, button {
     margin: 10 0;
 }
 
-.list {
-    background-color: #E7E0E3;
-}
-
-.list-placeholder {
-    width: 50;
-    height: 50;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 100;
-}
-
 .home-section-titlebar {
     width: 100%;
     padding: 4;
     font-size: 15;
     text-align: center;
     background-color: #8F8C84;
+}
+
+.home-section-list2-container {
+    background-color: #E7E0E3;
+}
+
+.home-section-list2-item {
+    width: 50;
+    height: 50;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100;
+    margin: 10 12;
+    box-shadow:  15 15 15 #000;
 }
 
 .home-section-list1-container {
@@ -68,7 +70,7 @@ label, textfield, button {
     background-size: cover;
     width: 170;
     text-align: center;
-    margin: 5 10; 
+    margin: 5 10;
 }
 
 /* 
