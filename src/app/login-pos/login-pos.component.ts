@@ -20,7 +20,7 @@ export class LoginPosComponent implements OnInit {
   ngOnInit() {
   }
 
-  myFunction() {
+  validate_login_pos() {
     console.log("myFunction");
     request({
       url: "https://sp.haloteman.com/API_POS/login.php",

@@ -1,29 +1,27 @@
-<ScrollView orientation="vertical">
-    <StackLayout class="page page-content login" (swipe)="onSwipe($event)">
-        <StackLayout orientation="vertical">
-            <StackLayout orientation="vertical" class="logo-wrapper">
-                <Image class="logo" src="~/app/images/gmbr.png"></Image>
-                <StackLayout orientation="vertical" class="title-wrapper">
-                    <Label class="title" text="LOGIN PENGGUNA"></Label>
-                    <Label class="title fw-bold" text="P O S"></Label>
-                </StackLayout>
-            </StackLayout>
-            <StackLayout orientation="vertical" class="mt-4">
-                <StackLayout orientation="vertical" horizontalAlignment="center">
-                    <Label class="hint text-center" text="<        SWIPE        >"></Label>
-                    <Label class="hint text-center" text="untuk Login ke MARKETPLACE"></Label>
-                </StackLayout>
-                <TextField class="textfield-2 mt-4" hint="Kode Toko" keyboardType="email" autocorrect="false"
-                    autocapitalizationType="none"></TextField>
-                <TextField class="textfield-2" hint="Username" keyboardType="email" autocorrect="false"
-                    autocapitalizationType="none"></TextField>
-                <TextField class="textfield-2" hint="Password" secure="true"></TextField>
-                <Button class="btn mt-4" text="LOGIN" [nsRouterLink]="['/pos-dashboard']"
-                    pageTransition="slide"></Button>
-                <StackLayout orientation="horizontal" class="mt-4" horizontalAlignment="center">
-                    <Label class="hint" text="Lupa Password ?"></Label>
-                </StackLayout>
-            </StackLayout>
+<GridLayout class="bg-full" rows="2*,auto,*,auto,*" columns="*" (swipe)="onSwipe($event)">
+    <StackLayout row="0">
+    </StackLayout>
+    <StackLayout row="1">
+        <Image class="logo" src="~/app/images/gmbr.png" width="175"></Image>
+        <Label class="text-center mt-2" text="LOGIN PENGGUNA" style="font-size: 15"></Label>
+        <Label class="text-center fw-bold" text="MARKETPLACE" style="font-size: 15"></Label>
+    </StackLayout>
+    <StackLayout row="2">
+    </StackLayout>
+    <StackLayout row="3" orientation="vertical" horizontalAlignment="center">
+        <Label class="text-small text-center" text="<        SWIPE        >"></Label>
+        <Label class="text-small text-center" text="untuk Login ke MARKETPLACE"></Label>
+        <TextField class="textfield-2 mt-4" hint="Kode Toko" keyboardType="email" autocorrect="false"
+            autocapitalizationType="none"></TextField>
+        <TextField class="textfield-2" hint="Username" keyboardType="email" autocorrect="false"
+            autocapitalizationType="none"></TextField>
+        <TextField class="textfield-2" hint="Password" secure="true"></TextField>
+        <Button class="btn mt-4" text="LOGIN" pageTransition="slide" (tap)="validate_login_pos()"
+            [nsRouterLink]="['/pos-dashboard']"></Button>
+        <StackLayout orientation="horizontal" class="mt-2" horizontalAlignment="center">
+            <Label class="text-small" text="Lupa Password ?"></Label>
         </StackLayout>
     </StackLayout>
-</ScrollView>
+    <StackLayout row="4">
+    </StackLayout>
+</GridLayout>

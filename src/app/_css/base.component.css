@@ -14,6 +14,13 @@ label, textfield, button {
     background-size: cover;
 }
 
+.bg-full {
+    background-image: url('~/app/images/app_bg01.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
 .fullscreen {
     background-color: #c0c0c0;
     background-repeat: no-repeat;
@@ -148,7 +155,7 @@ inputan
     padding: 10 18;
     width: 220;
     background-color: #FFFFFF;
-    opacity: 0.50;
+    opacity: 0.6;
 }
 
 .btn {
@@ -206,6 +213,10 @@ font
 
 .fw-bold {
     font-weight: bold;
+}
+
+.text-small {
+    font-size: 12;
 }
 
 /*

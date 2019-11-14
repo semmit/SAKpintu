@@ -21,7 +21,7 @@ export class LoginMarketplaceComponent implements OnInit {
   ngOnInit() {
   }
 
-  myFunction() {
+  validate_login_mkp() {
     console.log("myFunction");
     request({
       url: "https://sp.haloteman.com/API_MBR/login.php",
