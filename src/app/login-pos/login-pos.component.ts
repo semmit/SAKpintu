@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
 import { Page, getViewById } from 'tns-core-modules/ui/page';
+import * as dialogs from "tns-core-modules/ui/dialogs";
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { TextField } from "tns-core-modules/ui/text-field";
+import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
   selector: 'ns-login-pos',
@@ -15,7 +17,7 @@ export class LoginPosComponent implements OnInit {
 
   public direction: number;
 
-  constructor(private router: Router, private page: Page) {
+  constructor(private router: Router, private page: Page, private routerExtensions: RouterExtensions) {
     this.page.actionBarHidden = true;
   }
 
@@ -40,14 +42,14 @@ export class LoginPosComponent implements OnInit {
         "Password": inp_password.text,
       })
     }).then((response: HttpResponse) => {
-      // Content property of the response is HttpContent
-      // The toString method allows you to get the response body as string.
-      const str = response.content.toString();
-      console.log(str);
-      // The toJSON method allows you to parse the received content to JSON object
-      // var obj = response.content.toJSON();
-      // The toImage method allows you to get the response body as ImageSource.
-      // var img = response.content.toImage();
+      let data = response.content.toJSON();
+      console.log(response.statusCode);
+      if (response.statusCode !== 200) {
+        alert({ title: "Perhatian", message: "Koneksi ulang ke server tidak berhasil, silahkan mencoba beberapa saat lagi.. ", okButtonText: "OK" }); return;
+      } else if (typeof data["success"] !== "undefined" && data["success"] === 0) {
+        alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
+      }
+      this.routerExtensions.navigate(["/pos-dashboard"], { clearHistory: true });
     }, (e) => {
     });
 

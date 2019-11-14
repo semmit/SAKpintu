@@ -18,8 +18,7 @@
             <TextField id="inp_username" class="textfield-2" hint="Username" keyboardType="email" autocorrect="false"
                 autocapitalizationType="none"></TextField>
             <TextField id="inp_password" class="textfield-2" hint="Password" secure="true"></TextField>
-            <Button class="btn mt-4" text="LOGIN" pageTransition="slide" (tap)="validate_login_pos()"
-                [nsRouterLink]="['/pos-dashboard']"></Button>
+            <Button class="btn mt-4" text="LOGIN" pageTransition="slide" (tap)="validate_login_pos()"></Button>
             <StackLayout orientation="horizontal" class="mt-2" horizontalAlignment="center">
                 <Label class="text-small" text="Lupa Password ?"></Label>
             </StackLayout>
