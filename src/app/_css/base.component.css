@@ -66,9 +66,9 @@ label, textfield, button {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: 125;
+    width: 170;
     text-align: center;
-    margin: 2;
+    margin: 5 10; 
 }
 
 /* 
