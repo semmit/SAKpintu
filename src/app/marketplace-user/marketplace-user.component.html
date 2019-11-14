@@ -1,7 +1,7 @@
 <ActionBar class="action-bar">
-     <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="15">
+    <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="15">
         <Image col="0" src="~/app/images/gmbr.png" width="60"></Image>
-        <Label col="1" class="fas" text="&#xf002;" (tap)=btnSearch() style="text-align: right; margin-right: 10px"></Label>
+        <Label col="1" text="&#xf002;" (tap)=btnSearch() class="fas v-center text-right"></Label>
     </GridLayout>
     <ActionItem
         [nsRouterLink]="['/marketplace-user-datatakun']"
@@ -34,7 +34,7 @@
         android.position="popup"
     ></ActionItem>
 </ActionBar>
-    
+
 <ScrollView orientation="vertical">
     <StackLayout class="fullscreen">
         <GridLayout rows="auto auto" columns="*" sdkExampleTitle sdkToggleNavButton class="search" *ngIf="search">
@@ -56,7 +56,7 @@
         </ScrollView>
 
         <StackLayout class="bar-unggulan">
-            <Label text="Kategori"></Label>
+            <Label class="text-light" text="Kategori"></Label>
         </StackLayout>
         <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" class="list">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
@@ -80,7 +80,7 @@
         </ScrollView>
 
         <StackLayout class="bar-unggulan">
-            <Label text="Produk Unggulan"></Label>
+            <Label class="text-light" text="Produk Unggulan"></Label>
         </StackLayout>
         <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120; width: 100%;">
             <StackLayout orientation="horizontal" horizontalAlignment="center">

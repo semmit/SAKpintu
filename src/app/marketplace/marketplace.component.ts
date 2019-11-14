@@ -8,7 +8,8 @@ import { Page } from 'tns-core-modules/ui/page';
   styleUrls: ['./../_css/marketplace.component.css']
 })
 export class MarketplaceComponent implements OnInit {
-  search: boolean = false;
+  display_search: boolean = false;
+  display_membermenu: boolean = true;
 
   constructor(private page: Page) {
     page.actionBarHidden = false;
@@ -18,11 +19,11 @@ export class MarketplaceComponent implements OnInit {
     Fontawesome.init();
   }
 
-  btnSearch() {
-    if (this.search === true) {
-      this.search = false;
+  tap_btnSearch() {
+    if (this.display_search === true) {
+      this.display_search = false;
     } else {
-      this.search = true;
+      this.display_search = true;
     }
   }
 

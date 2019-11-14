@@ -1,8 +1,10 @@
+label, textfield, button {
+    color: #3e3e3e;
+}
+
 .fas {
     font-family: "Font Awesome 5 Solid", "fa-solid-900";
-    font-size: 16px;
-    vertical-align: middle;
-    text-align: right;
+    font-size: 18px;
 }
 
 .action-bar {
@@ -45,6 +47,7 @@
     padding: 4;
     font-size: 15;
     text-align: center;
+    background-color: #8F8C84;
 }
 
 /* 
@@ -121,11 +124,11 @@ inputan
 
 .label {
     font-size: 15;
-    color: #3E3E3E;
     width: 100;
     background-color: #C9DECC;
     vertical-align: middle;
     padding-left: 7;
+    text-align: left;
 }
 
 .input-group {
@@ -135,7 +138,50 @@ inputan
 
 .textfield {
     font-size: 15;
-    color: #3E3E3E;
     width: 100%;
     background-color: #FFFFFF;
+}
+
+/* 
+==================================================
+==================================================
+addon
+==================================================
+==================================================
+*/
+
+.v-center {
+    vertical-align: middle;
+}
+
+.text-light {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mt-1 {
+    margin-top: 5;
+}
+
+.mt-2 {
+    margin-top: 10;
+}
+
+.mt-3 {
+    margin-top: 15;
 }

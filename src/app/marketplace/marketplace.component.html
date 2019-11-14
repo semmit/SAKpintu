@@ -1,21 +1,49 @@
 <ActionBar class="action-bar">
     <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="15">
         <Image col="0" src="~/app/images/gmbr.png" width="60"></Image>
-        <Label col="1" text="&#xf002;" (tap)=btnSearch() class="fas"></Label>
+        <Label col="1" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"></Label>
         <Label col="2" [nsRouterLink]="['/register-marketplace']" text="Daftar"
             style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
         <Label col="3" [nsRouterLink]="['/login-marketplace']" text="Login"
             style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
     </GridLayout>
-    <!-- <ActionItem [nsRouterLink]="['/register-marketplace']" text="Daftar" android.position="text"></ActionItem>
-    <ActionItem [nsRouterLink]="['/login-marketplace']" text="Login" android.position="Login"></ActionItem> --> -->
+    <ActionItem *ngIf="display_membermenu"
+        [nsRouterLink]="['/marketplace-user-datatakun']"
+        text="Atur Data Akun"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem *ngIf="display_membermenu"
+        [nsRouterLink]="['/marketplace-user-datatoko']"
+        text="Atur Data Toko"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem *ngIf="display_membermenu"
+        [nsRouterLink]="['/marketplace-user-keranjang']"
+        text="Keranjang"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem *ngIf="display_membermenu"
+        [nsRouterLink]="['/marketplace-user-daftarorder']"
+        text="Daftar Order"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem *ngIf="display_membermenu"
+        [nsRouterLink]="['/login-marketplace']"
+        text="Bantuan"
+        android.position="popup"
+    ></ActionItem>
+    <ActionItem *ngIf="display_membermenu"
+        [nsRouterLink]="['/login-marketplace']"
+        text="Logout"
+        android.position="popup"
+    ></ActionItem>
 </ActionBar>
 
 <ScrollView orientation="vertical">
     <StackLayout class="fullscreen">
-        <GridLayout rows="auto auto" columns="*" sdkExampleTitle sdkToggleNavButton class="search" *ngIf="search">
-            <SearchBar row="0" hint="Masukkan pemcarian"></SearchBar>
-        </GridLayout>
+        <StackLayout sdkExampleTitle sdkToggleNavButton class="search" *ngIf="display_search">
+            <SearchBar row="0" hint="Masukkan pencarian"></SearchBar>
+        </StackLayout>
 
         <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
@@ -32,7 +60,7 @@
         </ScrollView>
 
         <StackLayout class="bar-unggulan">
-            <Label text="Kategori"></Label>
+            <Label class="text-light" text="Kategori"></Label>
         </StackLayout>
         <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" class="list">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
@@ -56,7 +84,7 @@
         </ScrollView>
 
         <StackLayout class="bar-unggulan">
-            <Label text="Produk Unggulan"></Label>
+            <Label class="text-light" text="Produk Unggulan"></Label>
         </StackLayout>
         <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" style="height: 120; width: 100%;">
             <StackLayout orientation="horizontal" horizontalAlignment="center">

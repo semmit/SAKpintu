@@ -69,12 +69,9 @@
 
 .login .form-wrapper .btn {
     width: 150;
-    android-elevation: 2;
     background-color: #354660;
     border-radius: 2;
     color: #FFFFFF;
     font-size: 15;
     font-weight: bold;
-    horizontal-align: center;
-    text-color: white;
 }
