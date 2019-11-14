@@ -41,9 +41,14 @@ export class LoginMarketplaceComponent implements OnInit {
       })
     }).then((response: HttpResponse) => {
       let data = response.content.toJSON();
-      console.log(response.statusCode);
-      if (response.statusCode !== 200) {
-        alert({ title: "Perhatian", message: "Koneksi ulang ke server tidak berhasil, silahkan mencoba beberapa saat lagi.. ", okButtonText: "OK" }); return;
+      if (response.statusCode == 404) {
+        alert({ title: "Perhatian", message: "Maaf terjadi kegagalan akses ke server (" + response.statusCode + ")", okButtonText: "OK" }); return;
+      } else if (response.statusCode !== 200) {
+        if (typeof data["message"] !== "undefined") {
+          alert({ title: "Perhatian", message: data["message"] + " (" + data["code"] + ")", okButtonText: "OK" }); return;
+        } else {
+          alert({ title: "Perhatian", message: "Koneksi ulang ke server tidak berhasil, silahkan mencoba beberapa saat lagi..  (" + response.statusCode + ")", okButtonText: "OK" }); return;
+        }
       } else if (typeof data["success"] !== "undefined" && data["success"] === 0) {
         alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
       }
