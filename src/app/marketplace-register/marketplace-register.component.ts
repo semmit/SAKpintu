@@ -4,7 +4,7 @@ import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tn
 @Component({
   selector: 'ns-marketplace-register',
   templateUrl: './marketplace-register.component.html',
-  styleUrls: ['./../_css/marketplace.component.css']
+  styleUrls: ['./../_css/base.component.css']
 })
 export class MarketplaceRegisterComponent implements OnInit {
 

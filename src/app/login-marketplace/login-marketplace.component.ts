@@ -8,7 +8,7 @@ import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tn
 @Component({
   selector: 'ns-login-marketplace',
   templateUrl: './login-marketplace.component.html',
-  styleUrls: ['./../_css/login.component.css'],
+  styleUrls: ['./../_css/login.component.css', './../_css/base.component.css'],
 })
 export class LoginMarketplaceComponent implements OnInit {
 
@@ -64,6 +64,6 @@ export class LoginMarketplaceComponent implements OnInit {
 
 }
 
-dialogs.alert("Isi Dengan Benar").then(()=> {
-    console.log("Dialog closed!");
+dialogs.alert("Isi Dengan Benar").then(() => {
+  console.log("Dialog closed!");
 });

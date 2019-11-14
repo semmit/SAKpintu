@@ -7,7 +7,7 @@ import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tn
 @Component({
   selector: 'ns-login-pos',
   templateUrl: './login-pos.component.html',
-  styleUrls: ['./../_css/login.component.css'],
+  styleUrls: ['./../_css/login.component.css', './../_css/base.component.css'],
 })
 export class LoginPosComponent implements OnInit {
 

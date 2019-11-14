@@ -66,12 +66,3 @@
     background-color: #FFFFFF;
     opacity: 0.50;
 }
-
-.login .form-wrapper .btn {
-    width: 150;
-    background-color: #354660;
-    border-radius: 2;
-    color: #FFFFFF;
-    font-size: 15;
-    font-weight: bold;
-}

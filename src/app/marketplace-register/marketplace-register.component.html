@@ -49,7 +49,7 @@
                 <TextField class="textfield"></TextField>
             </StackLayout>
 
-            <Label textWrap="true" text="Syarat & Ketentuan"></Label>
+            <Label textWrap="true" text="Syarat & Ketentuan" class="mt-2"></Label>
             <StackLayout orientation="horizontal" class="">
                 <Label text="&#xf058;" class="fas v-center text-right"></Label>
                 <Label textWrap="true"
@@ -58,7 +58,7 @@
         </StackLayout>
 
         <StackLayout row="8" class="jarak">
-            <Button [nsRouterLink]="['/marketplace-register-confirm']" class="my-button" text="KIRIMKAN DATA SAYA"
+            <Button class="btn" [nsRouterLink]="['/marketplace-register-confirm']" text="Daftar"
                 (tap)="myFunction()"></Button>
         </StackLayout>
 

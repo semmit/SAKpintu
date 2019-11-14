@@ -1,5 +1,5 @@
 label, textfield, button {
-    color: #3e3e3e;
+    color: #4e4e4e;
 }
 
 .fas {
@@ -140,6 +140,17 @@ inputan
     font-size: 15;
     width: 100%;
     background-color: #FFFFFF;
+}
+
+.btn {
+    width: 150;
+    height: 40;
+    padding: 0;
+    background-color: #354660;
+    border-radius: 2;
+    color: #FFFFFF;
+    font-size: 15;
+    font-weight: bold;
 }
 
 /* 
