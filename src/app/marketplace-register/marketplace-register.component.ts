@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { Page, getViewById } from 'tns-core-modules/ui/page';
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { TextField } from "tns-core-modules/ui/text-field";
@@ -10,18 +12,19 @@ import { TextField } from "tns-core-modules/ui/text-field";
 })
 export class MarketplaceRegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private page: Page) {
+  }
 
   ngOnInit() {
   }
 
   validate_registrasi() {
-    const username: <TextField>this.page.getViewById("inp_username");
-    const password: <TextField>this.page.getViewById("inp_password");
-    const namalengkap: <TextField>this.page.getViewById("inp_namalengkap");
-    const email: <TextField>this.page.getViewById("inp_email");
-    const handphone: <TextField>this.page.getViewById("inp_handphone");
-    const no_ktp: <TextField>this.page.getViewById("inp_no_ktp");
+    const username = <TextField>this.page.getViewById("inp_username");
+    const password = <TextField>this.page.getViewById("inp_password");
+    const namalengkap = <TextField>this.page.getViewById("inp_namalengkap");
+    const email = <TextField>this.page.getViewById("inp_email");
+    const handphone = <TextField>this.page.getViewById("inp_handphone");
+    const no_ktp = <TextField>this.page.getViewById("inp_no_ktp");
     request({
       url: "https://sp.haloteman.com/API_MAIN/userRegister.php",
       method: "POST",
@@ -31,12 +34,12 @@ export class MarketplaceRegisterComponent implements OnInit {
         "Authorization": "Basic"
       },
       content: JSON.stringify({
-                "username": username.text,
-                "password": password.text,
-                "namalengkap": namalengkap.text,
-                "email": email.text,
-                "handphone": handphone.text,
-                "no_ktp": no_ktp.text,
+        "username": username.text,
+        "password": password.text,
+        "namalengkap": namalengkap.text,
+        "email": email.text,
+        "handphone": handphone.text,
+        "no_ktp": no_ktp.text,
       })
     }).then((response: HttpResponse) => {
       // Content property of the response is HttpContent
