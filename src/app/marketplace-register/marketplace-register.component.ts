@@ -24,11 +24,12 @@ export class MarketplaceRegisterComponent implements OnInit {
         "Authorization": "Basic"
       },
       content: JSON.stringify({
-        "Username": ("#username"),
-        "Password": ("#password"),
-        "email": ("email"),
-        "handphone": ("handphone"),
-        "no_ktp": ("no_ktp")
+                "username": $("#username").val(),
+                "password": $("#password").val(),
+                "namalengkap": $("#namalengkap").val(),
+                "email": $("#email").val(),
+                "handphone": $("#handphone").val(),
+                "no_ktp": $("#no_ktp").val()
       })
     }).then((response: HttpResponse) => {
       // Content property of the response is HttpContent
