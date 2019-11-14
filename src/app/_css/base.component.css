@@ -125,14 +125,14 @@ inputan
 .label {
     font-size: 15;
     width: 100;
-    background-color: #C9DECC;
+    color: #fff;
     vertical-align: middle;
     padding-left: 7;
     text-align: left;
 }
 
 .input-group {
-    background-color: #C9DECC;
+    background-color: #8F8C84;
     margin: 2 0;
 }
 
