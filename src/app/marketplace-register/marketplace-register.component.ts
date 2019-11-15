@@ -43,14 +43,21 @@ export class MarketplaceRegisterComponent implements OnInit {
         "no_ktp": no_ktp.text,
       })
     }).then((response: HttpResponse) => {
-      // Content property of the response is HttpContent
-      // The toString method allows you to get the response body as string.
-      const str = response.content.toString();
-      console.log(str);
-      // The toJSON method allows you to parse the received content to JSON object
-      // var obj = response.content.toJSON();
-      // The toImage method allows you to get the response body as ImageSource.
-      // var img = response.content.toImage();
+      let data = response.content.toJSON();
+      if (response.statusCode == 404) {
+        alert({ title: "Perhatian", message: "Maaf terjadi kegagalan akses ke server (" + response.statusCode + ")", okButtonText: "OK" }); return;
+      } else if (response.statusCode !== 200) {
+        if (typeof data["responseJSON"] !== "undefined") {
+          alert({ title: "Perhatian", message: data["responseJSON"]["message"] + " (" + data["responseJSON"]["code"] + ")", okButtonText: "OK" }); return;
+        } else {
+          alert({ title: "Perhatian", message: "Koneksi ulang ke server tidak berhasil, silahkan mencoba beberapa saat lagi..  (" + response.statusCode + ")", okButtonText: "OK" }); return;
+        }
+      } else if (typeof data["success"] !== "undefined" && data["success"] === 0) {
+        alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
+      }
+      this.router.navigate(['/marketplace']).then(()=>{
+        alert({ title: "Informasi", message: "Silahkan cek inbox email Anda untuk mengkonfirmasi pendaftaran", okButtonText: "OK" }); return;
+      });
     }, (e) => {
     });
 
