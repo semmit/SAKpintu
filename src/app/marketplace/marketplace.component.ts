@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Fontawesome } from 'nativescript-fontawesome';
 import { Page } from 'tns-core-modules/ui/page';
+import { loginStatusService } from "../shared/loginStatusService";
 
 @Component({
   selector: 'ns-marketplace',
@@ -9,10 +10,14 @@ import { Page } from 'tns-core-modules/ui/page';
 })
 export class MarketplaceComponent implements OnInit {
   display_search: boolean = false;
-  display_membermenu: boolean = true;
+  display_membermenu: boolean = false;
+  subscribe_currentStatus;
 
-  constructor(private page: Page) {
-    page.actionBarHidden = false;
+  constructor(private page: Page, private loginStatus: loginStatusService) {
+    this.page.actionBarHidden = false;
+    this.subscribe_currentStatus = this.loginStatus.currentStatus.subscribe(next => {
+      this.display_membermenu = next;
+    });
   }
 
   ngOnInit() {

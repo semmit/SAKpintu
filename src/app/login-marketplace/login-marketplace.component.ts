@@ -7,6 +7,7 @@ import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tn
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { TextField } from "tns-core-modules/ui/text-field";
 import { RouterExtensions } from 'nativescript-angular/router';
+import { loginStatusService } from "../shared/loginStatusService";
 
 @Component({
   selector: 'ns-login-marketplace',
@@ -17,7 +18,7 @@ export class LoginMarketplaceComponent implements OnInit {
 
   public direction: number;
 
-  constructor(private router: Router, private page: Page, private routerExtensions: RouterExtensions) {
+  constructor(private router: Router, private page: Page, private routerExtensions: RouterExtensions, private loginStatus: loginStatusService) {
     this.page.actionBarHidden = true;
   }
 
@@ -53,6 +54,7 @@ export class LoginMarketplaceComponent implements OnInit {
         alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
       }
       this.routerExtensions.navigate(["/marketplace"], { clearHistory: true });
+      this.loginStatus.changeStatus(true);
     }, (e) => {
     });
 
