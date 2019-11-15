@@ -1,9 +1,10 @@
 <ActionBar class="action-bar">
-    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
+    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="10">
         <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
-            android.systemIcon="ic_menu_back" class="fas v-center"></Label>
-        <Label col="1" text="Registrasi" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
-        <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
+            android.systemIcon="ic_menu_back" class="fas v-center" style="padding: 10 15 10 0;"></Label>
+        <Label col="1" text="Registrasi" class="v-center" style="font-size: 16px; padding: 10 15 10 0;"></Label>
+        <!-- LOGO di KANAN -->
+        <Image col="2" src="~/app/images/gmbr.png" width="60" style="padding: 10 0 10 15;"></Image>
     </GridLayout>
 </ActionBar>
 

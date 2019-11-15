@@ -1,42 +1,26 @@
 <ActionBar class="action-bar">
-    <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="15">
-        <Image col="0" src="~/app/images/gmbr.png" width="60"></Image>
-        <Label col="1" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"></Label>
-        <Label col="2" [nsRouterLink]="['/register-marketplace']" text="Daftar"
-            style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
-        <Label col="3" [nsRouterLink]="['/login-marketplace']" text="Login"
-            style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+    <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="10">
+        <Image col="0" src="~/app/images/gmbr.png" width="60" style="padding: 10 15 10 0;"></Image>
+        <!-- LOGO di KIRI -->
+        <Label col="1" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
+            style="padding: 10 0 10 15;"></Label>
+        <Label col="2" [nsRouterLink]="['/register-marketplace']" pageTransition="slide" text="Daftar" class="v-center"
+            style="font-size: 16px; padding: 10 0 10 15;"></Label>
+        <Label col="3" [nsRouterLink]="['/login-marketplace']" pageTransition="slide" text="Login" class="v-center"
+            style="font-size: 16px; padding: 10 0 10 15;"></Label>
     </GridLayout>
-    <ActionItem *ngIf="display_membermenu"
-        [nsRouterLink]="['/marketplace-user-datatakun']"
-        text="Atur Data Akun"
-        android.position="popup"
-    ></ActionItem>
-    <ActionItem *ngIf="display_membermenu"
-        [nsRouterLink]="['/marketplace-user-datatoko']"
-        text="Atur Data Toko"
-        android.position="popup"
-    ></ActionItem>
-    <ActionItem *ngIf="display_membermenu"
-        [nsRouterLink]="['/marketplace-user-keranjang']"
-        text="Keranjang"
-        android.position="popup"
-    ></ActionItem>
-    <ActionItem *ngIf="display_membermenu"
-        [nsRouterLink]="['/marketplace-user-daftarorder']"
-        text="Daftar Order"
-        android.position="popup"
-    ></ActionItem>
-    <ActionItem *ngIf="display_membermenu"
-        [nsRouterLink]="['/login-marketplace']"
-        text="Bantuan"
-        android.position="popup"
-    ></ActionItem>
-    <ActionItem *ngIf="display_membermenu"
-        [nsRouterLink]="['/login-marketplace']"
-        text="Logout"
-        android.position="popup"
-    ></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatakun']" text="Atur Data Akun"
+        android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatoko']" text="Atur Data Toko"
+        android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-keranjang']" text="Keranjang"
+        android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-daftarorder']" text="Daftar Order"
+        android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/login-marketplace']" text="Bantuan"
+        android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/login-marketplace']" text="Logout"
+        android.position="popup"></ActionItem>
 </ActionBar>
 
 <ScrollView orientation="vertical">
@@ -89,7 +73,8 @@
         <ScrollView class="home-section-list1-container" scrollBarIndicatorVisible="false" orientation="horizontal">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola hijau Semarang" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -97,7 +82,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai Dahlia Semarang" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -105,7 +91,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -113,7 +100,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai%20bola%20hijau.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola hijau Semarang" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -121,7 +109,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -129,7 +118,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -142,7 +132,8 @@
         <ScrollView class="home-section-list1-container" scrollBarIndicatorVisible="false" orientation="horizontal">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="PALATA" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -150,7 +141,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai04.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -158,7 +150,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ciok o.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ciok o.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Ciok O/Batu Tahu" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -166,7 +159,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ragi tempe.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/ragi tempe.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="RAGI TEMPE" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -174,7 +168,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/palata.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="PALATA" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -182,7 +177,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -195,7 +191,8 @@
         <ScrollView class="home-section-list1-container" scrollBarIndicatorVisible="false" orientation="horizontal">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -203,7 +200,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -211,7 +209,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai03.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai Bintang Merah" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
@@ -219,7 +218,8 @@
                         [nsRouterLink]="['/marketplace-product-info']"></Button>
                 </GridLayout>
                 <GridLayout columns="auto" rows="auto,*,auto"
-                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');" class="home-section-list1-item">
+                    style="background-image: url('https://sp.haloteman.com/_img/sampleprod/lowres/kedelai bola emas.jpg');"
+                    class="home-section-list1-item">
                     <Label row="0" col="0" text="Kedelai bola emas" textWrap="true"
                         style="width: 100%; background-color: rgba(255,255,255, 0.8);"></Label>
                     <Button row="2" col="0" text="Detail" mdbWavesEffect
