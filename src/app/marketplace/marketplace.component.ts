@@ -24,6 +24,14 @@ export class MarketplaceComponent implements OnInit {
     Fontawesome.init();
   }
 
+  ngOnDestroy() {
+    // prevent memory leak when component destroyed
+    this.subscribe_currentStatus.unsubscribe();
+  }
+  
+  tap_btnLogout() {
+  }
+  
   tap_btnSearch() {
     if (this.display_search === true) {
       this.display_search = false;

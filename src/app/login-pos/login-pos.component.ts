@@ -68,21 +68,24 @@ export class LoginPosComponent implements OnInit {
     // console.log("Event name: " + args.eventName);
     // console.log("Swipe Direction: " + args.direction);
     const rootLayout = <StackLayout>getViewById(args.view, "rootLayout");
-    if (args.direction == 1) {
-      rootLayout.animate({
-        translate: { x: 500, y: 0 },
-        duration: 700
-      }).then(() => {
-        this.router.navigate(['/login-marketplace']).then(r => 'coba');
-      });
-    } else if (args.direction == 2) {
-      rootLayout.animate({
-        translate: { x: -500, y: 0 },
-        duration: 700
-      }).then(() => {
-        this.router.navigate(['/login-marketplace']).then(r => 'coba');
-      });
+    if (args.direction == 1 || args.direction == 2) {
+      this.router.navigate(['/login-marketplace']).then(r => 'coba');
     }
+    // if (args.direction == 1) {
+    //   rootLayout.animate({
+    //     translate: { x: 500, y: 0 },
+    //     duration: 700
+    //   }).then(() => {
+    //     this.router.navigate(['/login-marketplace']).then(r => 'coba');
+    //   });
+    // } else if (args.direction == 2) {
+    //   rootLayout.animate({
+    //     translate: { x: -500, y: 0 },
+    //     duration: 700
+    //   }).then(() => {
+    //     this.router.navigate(['/login-marketplace']).then(r => 'coba');
+    //   });
+    // }
   }
 
 }
