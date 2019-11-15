@@ -3,6 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { FocusDirective } from "./shared/FocusDirective";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
@@ -16,7 +17,7 @@ import { PosDataitemComponent } from './pos-dataitem/pos-dataitem.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { MdbInputModule,MdbFooterModule, MdbCardModule, MdbWavesEffectModule } from 'mdb-angular-mobile';
+import { MdbInputModule, MdbFooterModule, MdbCardModule, MdbWavesEffectModule } from 'mdb-angular-mobile';
 import { MarketplaceRegisterComponent } from './marketplace-register/marketplace-register.component';
 import { MarketplaceRegisterConfirmComponent } from './marketplace-register-confirm/marketplace-register-confirm.component';
 import { MarketplaceProductInfoComponent } from './marketplace-product-info/marketplace-product-info.component';
@@ -42,7 +43,7 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
         AppRoutingModule,
         NativeScriptMaterialCardViewModule,
         FontAwesomeModule,
-        
+
         MdbInputModule,
         MdbFooterModule,
         MdbCardModule,
@@ -50,6 +51,7 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
     ],
     declarations: [
         AppComponent,
+        FocusDirective,
         ItemsComponent,
         ItemDetailComponent,
         PosDashboardComponent,

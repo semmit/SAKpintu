@@ -7,16 +7,16 @@
         <Label col="2" [nsRouterLink]="['/register-marketplace']" pageTransition="slide" text="Daftar" class="v-center"
             style="font-size: 16px; padding: 10 0 10 15;"></Label>
         <Label col="3" [nsRouterLink]="['/login-marketplace']" pageTransition="slide" text="Login" class="v-center"
-            style="font-size: 16px; padding: 10 0 10 15;"></Label>
+            focus="#FFF100" style="font-size: 16px; padding: 10 0 10 15;"></Label>
     </GridLayout>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatakun']" pageTransition="slide" text="Atur Data Akun"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatoko']" pageTransition="slide" text="Atur Data Toko"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-keranjang']" pageTransition="slide" text="Keranjang"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-daftarorder']" pageTransition="slide" text="Daftar Order"
-        android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatakun']" pageTransition="slide"
+        text="Atur Data Akun" android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatoko']" pageTransition="slide"
+        text="Atur Data Toko" android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-keranjang']" pageTransition="slide"
+        text="Keranjang" android.position="popup"></ActionItem>
+    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-daftarorder']" pageTransition="slide"
+        text="Daftar Order" android.position="popup"></ActionItem>
     <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/login-marketplace']" pageTransition="slide" text="Bantuan"
         android.position="popup"></ActionItem>
     <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/login-marketplace']" pageTransition="slide" text="Logout"
