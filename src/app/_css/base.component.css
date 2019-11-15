@@ -149,13 +149,14 @@ inputan
     font-size: 14.5;
     width: 110;
     color: #fff;
+    background-color: #8F8C84;
     vertical-align: middle;
-    padding: 0 7;
+    padding: 10 7;
     text-align: left;
 }
 
 .input-group {
-    background-color: #8F8C84;
+    /* background-color: #8F8C84; */
     margin: 2 0;
 }
 
@@ -163,6 +164,7 @@ inputan
     font-size: 15;
     width: 100%;
     background-color: #FFFFFF;
+    opacity: 0.7;
 }
 
 .textfield-2 {
@@ -171,7 +173,7 @@ inputan
     padding: 10 18;
     width: 220;
     background-color: #FFFFFF;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .btn {
