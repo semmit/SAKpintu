@@ -3,11 +3,13 @@
         <Image col="0" src="~/app/images/gmbr.png" width="60" style="padding: 10 15 10 5;"></Image>
         <!-- LOGO di KIRI -->
         <Label col="1" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
-            style="padding: 10 5 10 20;"></Label>
+            style="padding: 5 7; margin-left: 15; "></Label>
         <Label col="2" *ngIf="!display_membermenu" [nsRouterLink]="['/register-marketplace']" text="Daftar"
-            class="v-center" style="font-size: 16px; padding: 10 5 10 15;"></Label>
+            class="v-center"
+            style="font-size: 16px; padding: 5 7; margin-left: 15; background-color: rgba(255,255,255,0.1); border-width: 1; border-color: #888; border-radius: 50%;"></Label>
         <Label col="3" *ngIf="!display_membermenu" [nsRouterLink]="['/login-marketplace']" text="Login" class="v-center"
-            focus="#FFF100" style="font-size: 16px; padding: 10 5 10 15;"></Label>
+            focus="#FFF100"
+            style="font-size: 16px; padding: 5 7; margin-left: 10; background-color: rgba(255,255,255,0.1); border-width: 1;border-color: #888; border-radius: 50%;"></Label>
     </GridLayout>
     <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatakun']" text="Atur Data Akun"
         android.position="popup"></ActionItem>
@@ -66,7 +68,8 @@
             </StackLayout>
         </ScrollView>
 
-        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center" class="home-section-titlebar mt-0">
+        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center"
+            class="home-section-titlebar mt-0">
             <Label col="1" class="text-light" text="PROMO"></Label>
             <Label col="2" class="fas v-center text-light mr-5" text="&#xf002;"></Label>
         </GridLayout>
@@ -129,7 +132,8 @@
             </StackLayout>
         </ScrollView>
 
-        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center" class="home-section-titlebar mt-0">
+        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center"
+            class="home-section-titlebar mt-2">
             <Label col="1" class="text-light" text="PRODUK UNGGULLAN"></Label>
             <Label col="2" class="fas v-center text-light mr-5" text="&#xf002;"></Label>
         </GridLayout>
@@ -192,6 +196,12 @@
             </StackLayout>
         </ScrollView>
 
+
+        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center"
+            class="home-section-titlebar mt-2">
+            <Label col="1" class="text-light" text="PRODUK TERLARIS"></Label>
+            <Label col="2" class="fas v-center text-light mr-5" text="&#xf002;"></Label>
+        </GridLayout>
         <ScrollView class="home-section-list1-container" scrollBarIndicatorVisible="false" orientation="horizontal">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
                 <GridLayout columns="auto" rows="auto,*,auto"
@@ -233,30 +243,33 @@
             </StackLayout>
         </ScrollView>
 
-        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center" class="home-section-titlebar mt-0">
+        <GridLayout columns="auto,*,auto" rows="auto" orientation="horizontal" horizontalAlignment="center"
+            class="home-section-titlebar mt-2">
             <Label col="1" class="text-light" text="PENJUAL TERLARIS"></Label>
             <Label col="2" class="fas v-center text-light mr-5" text="&#xf002;"></Label>
         </GridLayout>
         <ScrollView scrollBarIndicatorVisible="false" orientation="horizontal" class="home-section-list2-container">
             <StackLayout orientation="horizontal" horizontalAlignment="center">
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #59A572;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #59A572;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #59A572;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #BAC56F;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #9ED8F6;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #FFF000;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #FFF000;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #FFF000;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
                 <Label class="home-section-list2-item"
-                    style="background-image: url('~/app/images/app_user.png'); background-color: #FFF000;"></Label>
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                <Label class="home-section-list2-item"
+                    style="background-image: url('~/app/images/app_user.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
             </StackLayout>
         </ScrollView>
 
