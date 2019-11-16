@@ -8,6 +8,7 @@ label, textfield, button {
 }
 
 .action-bar {
+    padding-top: 28;
     background-image: url('~/app/images/Header.jpg');
     background-repeat: no-repeat;
     background-position: center;
