@@ -1,19 +1,17 @@
 <ActionBar class="action-bar">
-        <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
-                <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" android.systemIcon="ic_menu_back"
-                        class="fas v-center"></Label>
-                <Label col="1" text="Atur Data Akun"
-                        style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
-                <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
-        </GridLayout>
+    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide" class="fas v-center"></Label>
+        <Label col="1" text="Atur Data Akun" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+        <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
+    </GridLayout>
 </ActionBar>
 
-<StackLayout class="bg-full">
-        <TabView id="tabViewContainer">
-                <StackLayout *tabItem="{title: 'Data Akuna'}">
+<StackLayout class="bg-full-2">
+<TabView id="tabViewContainer">
+    <StackLayout *tabItem="{title: 'Data Toko'}">
+                <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                         <StackLayout class="form">
-                                <Label class="mt-2 mb-2 text-center"
-                                        text="Silahkan melengkapi data data di bawah ini :"></Label>
+                                <Label class="mt-2 mb-2 text-center" text="Silahkan melengkapi data data di bawah ini :"></Label>
 
                                 <StackLayout orientation="horizontal" class="input-group">
                                         <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
@@ -69,11 +67,13 @@
                                         <Label class="label" text="No. KTP" textWrap="true"></Label>
                                         <TextField class="textfield"></TextField>
                                 </StackLayout>
-                        </StackLayout>
-                        <StackLayout row="8" class="jarak">
-                                <Button class="btn" text="UPDATE DATA"></Button>
-                        </StackLayout>
-                </StackLayout>
+                               
+                                <StackLayout row="8" class="jarak">
+                                    <Button class="btn" text="UPDATE DATA"  pageTransition="slide"></Button>
+                                </StackLayout>
+                          </StackLayout>
+            </ScrollView>
+</StackLayout>
                 <StackLayout *tabItem="{title: 'Ganti Password'}">
                         <StackLayout class="form">
                                 <StackLayout orientation="horizontal" class="input-group">
@@ -92,9 +92,9 @@
                                 </StackLayout>
 
                                 <StackLayout row="8" class="jarak">
-                                        <Button class="btn" text="UPDATE DATA"></Button>
+                                    <Button class="btn" text="UPDATE DATA"  pageTransition="slide"></Button>
                                 </StackLayout>
-                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
         </TabView>
-</StackLayout>
+   </StackLayout>
