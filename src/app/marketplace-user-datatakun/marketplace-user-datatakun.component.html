@@ -1,79 +1,82 @@
 <ActionBar class="action-bar">
-    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
-        <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide" class="fas v-center"></Label>
-        <Label col="1" text="Atur Data Akun" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
-        <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
-    </GridLayout>
+        <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
+                <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
+                        class="fas v-center"></Label>
+                <Label col="1" text="Atur Data Akun"
+                        style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+                <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
+        </GridLayout>
 </ActionBar>
 
 <StackLayout class="bg-full-2">
-<TabView id="tabViewContainer">
-    <StackLayout *tabItem="{title: 'Data Toko'}">
-                <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
-                        <StackLayout class="form">
-                                <Label class="mt-2 mb-2 text-center" text="Silahkan melengkapi data data di bawah ini :"></Label>
+        <TabView id="tabViewContainer">
+                <StackLayout *tabItem="{title: 'Data Toko'}">
+                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                                <StackLayout class="form">
+                                        <Label class="mt-2 mb-2 text-center"
+                                                text="Silahkan melengkapi data data di bawah ini :"></Label>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Alamat" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Alamat" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Propinsi" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Propinsi" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Kota / Kabupaten" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Kota / Kabupaten" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Kecamatan" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Kecamatan" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Kodepose" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Kodepose" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Telpon" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Telpon" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Faximile" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Faximile" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Email" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Email" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="Handphone" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
-                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="Handphone" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
 
-                                <StackLayout orientation="horizontal" class="input-group">
-                                        <Label class="label" text="No. KTP" textWrap="true"></Label>
-                                        <TextField class="textfield"></TextField>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label" text="No. KTP" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout row="8" class="jarak">
+                                                <Button class="btn" text="UPDATE DATA" pageTransition="slide"></Button>
+                                        </StackLayout>
                                 </StackLayout>
-                               
-                                <StackLayout row="8" class="jarak">
-                                    <Button class="btn" text="UPDATE DATA"  pageTransition="slide"></Button>
-                                </StackLayout>
-                          </StackLayout>
-            </ScrollView>
-</StackLayout>
+                        </ScrollView>
+                </StackLayout>
                 <StackLayout *tabItem="{title: 'Ganti Password'}">
                         <StackLayout class="form">
                                 <StackLayout orientation="horizontal" class="input-group">
@@ -92,9 +95,9 @@
                                 </StackLayout>
 
                                 <StackLayout row="8" class="jarak">
-                                    <Button class="btn" text="UPDATE DATA"  pageTransition="slide"></Button>
+                                        <Button class="btn" text="UPDATE DATA" pageTransition="slide"></Button>
                                 </StackLayout>
-                    </StackLayout>
+                        </StackLayout>
                 </StackLayout>
         </TabView>
-   </StackLayout>
+</StackLayout>

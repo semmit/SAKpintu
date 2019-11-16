@@ -55,13 +55,10 @@ export class MarketplaceRegisterComponent implements OnInit {
       } else if (typeof data["success"] !== "undefined" && data["success"] === 0) {
         alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
       }
-      this.router.navigate(['/marketplace']).then(()=>{
+      this.router.navigate(['/marketplace']).then(() => {
         alert({ title: "Informasi", message: "Silahkan cek inbox email Anda untuk mengkonfirmasi pendaftaran", okButtonText: "OK" }); return;
       });
     }, (e) => {
     });
-
-    // this.userService.logout();
-    // this.routerExtensions.navigate(["/login"], { clearHistory: true });
   }
 }

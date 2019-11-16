@@ -1,22 +1,24 @@
 <ActionBar class="action-bar">
     <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
-        <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide" class="fas v-center"></Label>
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
+            class="fas v-center"></Label>
         <Label col="1" text="Keranjang" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
         <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
     </GridLayout>
 </ActionBar>
 
 <StackLayout class="bg-full-2">
-<TabView id="tabViewContainer">
-    <StackLayout *tabItem="{title: 'Produk'}">
+    <TabView id="tabViewContainer">
+        <StackLayout *tabItem="{title: 'Produk'}">
 
-        <StackLayout class="home-section-titlebar">
-            <Label class="text-light" text="PENJUAL : Gihon Sukses Makmur, Semarang"></Label>
-        </StackLayout> 
+            <StackLayout class="home-section-titlebar">
+                <Label class="text-light" text="PENJUAL : Gihon Sukses Makmur, Semarang"></Label>
+            </StackLayout>
 
-           <StackLayout>
+            <StackLayout>
                 <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
-                    <GridLayout class="m-15" rows="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
+                    <GridLayout class="m-15"
+                        rows="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
                         <Label class="h3 m-5" height="50" row="0" text="item1"></Label>
                         <Label class="h3 m-5" height="50" row="1" text="item2"></Label>
                         <Label class="h3 m-5" height="50" row="2" text="item3"></Label>
@@ -24,107 +26,107 @@
                         <Label class="h3 m-5" height="50" row="4" text="item5"></Label>
                         <Label class="h3 m-5" height="50" row="5" text="item5"></Label>
                         <Label class="h3 m-5" height="50" row="6" text="item5"></Label>
-                    </GridLayout>     
+                    </GridLayout>
                 </ScrollView>
-            </StackLayout> 
+            </StackLayout>
 
             <StackLayout orientation="horizontal" class="input-group">
-                    <Label class="label" text="TOTAL  :" textWrap="true"></Label>
-                    <TextField class="textfield"></TextField>
+                <Label class="label" text="TOTAL  :" textWrap="true"></Label>
+                <TextField class="textfield"></TextField>
             </StackLayout>
-            
-            <Label textWrap="true" witdth="250" class="text-small" 
-            text="Biaya ongkos kirim akan di informasikan setelah order dikonfirmasi oleh Pihak Penjual dan Pihak Ekspedisi"></Label> 
-                    
+
+            <Label textWrap="true" witdth="250" class="text-small"
+                text="Biaya ongkos kirim akan di informasikan setelah order dikonfirmasi oleh Pihak Penjual dan Pihak Ekspedisi"></Label>
+
             <StackLayout row="8" class="jarak">
-                            <Button class="btn" text="BERIKUTNYA"  pageTransition="slide"></Button>
-            </StackLayout>             
-            
-    </StackLayout>
+                <Button class="btn" text="BERIKUTNYA" pageTransition="slide"></Button>
+            </StackLayout>
+
+        </StackLayout>
 
         <StackLayout *tabItem="{title: 'Pengiriman'}">
-           <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+            <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                 <StackLayout class="form">
-                
-                <StackLayout orientation="horizontal" class="input-group">
-                    <Label class="label" text="Metode" textWrap="true"></Label>
-                    <TextField class="textfield"></TextField>
-                </StackLayout>
-                
-                <StackLayout orientation="horizontal" class="input-group">
-                    <Label class="label" text="Ke Alamat" textWrap="true"></Label>
-                    <TextField class="textfield"></TextField>
-                </StackLayout> 
-                
-                <StackLayout class="home-section-titlebar">
-                    <Label class="text-light" text="Penerima"></Label>
-                </StackLayout> 
-                
-                <StackLayout orientation="horizontal" class="input-group">
-                    <Label class="label" text="Nama Toko" textWrap="true"></Label>
-                    <TextField class="textfield"></TextField>
-                </StackLayout>
 
-                <StackLayout orientation="horizontal" class="input-group">
-                    <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
-                    <TextField class="textfield"></TextField>
-                </StackLayout>
+                    <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Metode" textWrap="true"></Label>
+                        <TextField class="textfield"></TextField>
+                    </StackLayout>
 
-                <StackLayout orientation="horizontal" class="input-group">
+                    <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Ke Alamat" textWrap="true"></Label>
+                        <TextField class="textfield"></TextField>
+                    </StackLayout>
+
+                    <StackLayout class="home-section-titlebar">
+                        <Label class="text-light" text="Penerima"></Label>
+                    </StackLayout>
+
+                    <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Nama Toko" textWrap="true"></Label>
+                        <TextField class="textfield"></TextField>
+                    </StackLayout>
+
+                    <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Nama Lengkap" textWrap="true"></Label>
+                        <TextField class="textfield"></TextField>
+                    </StackLayout>
+
+                    <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Alamat" textWrap="true"></Label>
                         <TextField class="textfield"></TextField>
-                </StackLayout>
+                    </StackLayout>
 
-                <StackLayout orientation="horizontal" class="input-group">
+                    <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Propinsi" textWrap="true"></Label>
                         <TextField class="textfield"></TextField>
-                </StackLayout>
+                    </StackLayout>
 
-                <StackLayout orientation="horizontal" class="input-group">
+                    <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Kota / Kabupaten" textWrap="true"></Label>
                         <TextField class="textfield"></TextField>
-                </StackLayout>
+                    </StackLayout>
 
-                <StackLayout orientation="horizontal" class="input-group">
+                    <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Kecamatan" textWrap="true"></Label>
                         <TextField class="textfield"></TextField>
-                </StackLayout>
+                    </StackLayout>
 
-                <StackLayout orientation="horizontal" class="input-group">
+                    <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Kodepose" textWrap="true"></Label>
                         <TextField class="textfield"></TextField>
-                </StackLayout> 
-                
-                <StackLayout orientation="horizontal" class="input-group">
+                    </StackLayout>
+
+                    <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Telpon" textWrap="true"></Label>
                         <TextField class="textfield"></TextField>
-                </StackLayout>   
-                
-                <StackLayout row="8" class="jarak">
-                        <Button class="btn" text="BERIKUTNYA"  pageTransition="slide"></Button>
-                </StackLayout>
-              </StackLayout>
-            </ScrollView>
-    </StackLayout>
+                    </StackLayout>
 
-    <StackLayout *tabItem="{title: 'Sistem Pembayaran'}">
-        
-        <StackLayout orientation="horizontal" class="input-group">
+                    <StackLayout row="8" class="jarak">
+                        <Button class="btn" text="BERIKUTNYA" pageTransition="slide"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout *tabItem="{title: 'Sistem Pembayaran'}">
+
+            <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Metode" textWrap="true"></Label>
                 <TextField class="textfield"></TextField>
-        </StackLayout>
+            </StackLayout>
 
-        <StackLayout orientation="horizontal" class="input-group">
+            <StackLayout orientation="horizontal" class="input-group">
                 <Label class="label" text="Bank" textWrap="true"></Label>
                 <TextField class="textfield"></TextField>
-        </StackLayout>
+            </StackLayout>
 
-         <Label textWrap="true" witdth="250" class="text-small" 
-            text="PENTING ! Total nominal yang harus dibayar akan diinformasikan setelah order diterima dan dikonfirmasi oleh Pihak Penjual dan Pihak Ekspedisi. Konfirmasi akan diinformasikan via email/sms/notifikasi pada Aplikasi SAKPINTU. Segera lakukan pembayaran untuk menghindari pembatalan otomatis oleh sistem."></Label>
-        <StackLayout row="8" class="jarak">
-            <Button class="btn" text="KIRIM ORDER"  pageTransition="slide"></Button>
+            <Label textWrap="true" witdth="250" class="text-small"
+                text="PENTING ! Total nominal yang harus dibayar akan diinformasikan setelah order diterima dan dikonfirmasi oleh Pihak Penjual dan Pihak Ekspedisi. Konfirmasi akan diinformasikan via email/sms/notifikasi pada Aplikasi SAKPINTU. Segera lakukan pembayaran untuk menghindari pembatalan otomatis oleh sistem."></Label>
+            <StackLayout row="8" class="jarak">
+                <Button class="btn" text="KIRIM ORDER" pageTransition="slide"></Button>
+            </StackLayout>
+
         </StackLayout>
-         
-    </StackLayout>
-</TabView>       
+    </TabView>
 </StackLayout>

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
-import { Page, getViewById } from 'tns-core-modules/ui/page';
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Page, getViewById, EventData } from 'tns-core-modules/ui/page';
+import * as application from "tns-core-modules/application";
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { TextField } from "tns-core-modules/ui/text-field";
@@ -18,8 +18,9 @@ export class LoginMarketplaceComponent implements OnInit {
 
   public direction: number;
 
-  constructor(private router: Router, private page: Page, private routerExtensions: RouterExtensions, private loginStatus: loginStatusService) {
+  constructor(private router: Router, private page: Page, private _ngZone: NgZone, private loginStatus: loginStatusService) {
     this.page.actionBarHidden = true;
+    this.page.on(application.AndroidApplication.activityBackPressedEvent, this.onBackButtonTap, this);
   }
 
   ngOnInit() {
@@ -53,7 +54,7 @@ export class LoginMarketplaceComponent implements OnInit {
       } else if (typeof data["success"] !== "undefined" && data["success"] === 0) {
         alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
       }
-      this.routerExtensions.navigate(["/marketplace"], { clearHistory: true });
+      this.router.navigate(['/marketplace']).then(r => 'coba');
       this.loginStatus.changeStatus(true);
     }, (e) => {
     });
@@ -85,6 +86,12 @@ export class LoginMarketplaceComponent implements OnInit {
     //     this.router.navigate(['/login-pos']).then(r => 'coba');
     //   });
     // }
+  }
+
+  onBackButtonTap(data: EventData) {
+    this._ngZone.run(() => {
+      this.router.navigate(['/marketplace']).then(r => 'coba');
+    });
   }
 
 }

@@ -28,7 +28,7 @@ export class MarketplaceComponent implements OnInit {
     // prevent memory leak when component destroyed
     this.subscribe_currentStatus.unsubscribe();
   }
-  
+
   tap_btnSearch() {
     if (this.display_search === true) {
       this.display_search = false;
@@ -40,5 +40,5 @@ export class MarketplaceComponent implements OnInit {
   tap_btnLogout() {
     this.loginStatus.changeStatus(false);
   }
-  
+
 }

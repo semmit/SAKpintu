@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from "@angular/router";
 import { SwipeGestureEventData } from 'tns-core-modules/ui/gestures';
-import { Page, getViewById } from 'tns-core-modules/ui/page';
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Page, getViewById, EventData } from 'tns-core-modules/ui/page';
+import * as application from "tns-core-modules/application";
 import { request, getFile, getImage, getJSON, getString, HttpResponse } from "tns-core-modules/http";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { TextField } from "tns-core-modules/ui/text-field";
-import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
   selector: 'ns-login-pos',
@@ -17,10 +16,12 @@ export class LoginPosComponent implements OnInit {
 
   public direction: number;
 
-  constructor(private router: Router, private page: Page, private routerExtensions: RouterExtensions) {
+  constructor(private router: Router, private page: Page, private _ngZone: NgZone) {
     this.page.actionBarHidden = true;
+    this.page.on(application.AndroidApplication.activityBackPressedEvent, this.onBackButtonTap, this);
   }
 
+  ngZone() { }
   ngOnInit() {
   }
 
@@ -54,12 +55,11 @@ export class LoginPosComponent implements OnInit {
       } else if (typeof data["success"] !== "undefined" && data["success"] === 0) {
         alert({ title: "Perhatian", message: data["message"], okButtonText: "OK" }); return;
       }
-      this.routerExtensions.navigate(["/pos-dashboard"], { clearHistory: true });
+      this.router.navigate(['/pos-dashboard']).then(r => 'coba');
     }, (e) => {
     });
 
     // this.userService.logout();
-    // this.routerExtensions.navigate(["/pos-dashboard"], { clearHistory: true });
   }
 
   onSwipe(args: SwipeGestureEventData) {
@@ -86,6 +86,12 @@ export class LoginPosComponent implements OnInit {
     //     this.router.navigate(['/login-marketplace']).then(r => 'coba');
     //   });
     // }
+  }
+
+  onBackButtonTap(data: EventData) {
+    this._ngZone.run(() => {
+      this.router.navigate(['/marketplace']).then(r => 'coba');
+    });
   }
 
 }
