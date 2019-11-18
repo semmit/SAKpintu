@@ -29,27 +29,28 @@
 
                 <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Deskripsi Item" textWrap="true"></Label>
-                        <TextField class="textfield" mdbInput label="Deskripsi Item" text="{{ item.desc }}"></TextField>
+                        <TextField class="textfield" text="{{ item.desc }}"></TextField>
                 </StackLayout>
 
                 <StackLayout orientation="horizontal" class="input-group">
-                        <Label class="label" text="Satuan" textWrap="true"></Label>
-                        <TextField class="textfield" mdbInput label="Satuan" text="{{ item.satuan }}"></TextField>
+                        <Label col="1" class="label" text="Satuan" textWrap="true"></Label>
+                        <TextField col="2" class="textfield" text="{{ item.satuan }}"></TextField>
+                        <Label col="3" class="fas v-center text-light mr-3" text="&#xf002;"></Label>
                 </StackLayout>
 
                 <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Harga" textWrap="true"></Label>
-                        <TextField class="textfield" mdbInput label="Harga" text="{{ item.price }}"></TextField>
+                        <TextField class="textfield" text="{{ item.price }}"></TextField>
                 </StackLayout>
 
                 <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Stok Awal" textWrap="true"></Label>
-                        <TextField class="textfield" mdbInput label="Stok Awal" text="{{ item.stock }}"></TextField>
+                        <TextField class="textfield" text="{{ item.stock }}"></TextField>
                 </StackLayout>
 
                 <StackLayout orientation="horizontal" class="input-group">
                         <Label class="label" text="Logo Slip" textWrap="true"></Label>
-                        <image class="img-user v-center" src="~/app/images/app_user.png" width="50"> </image>
+                        <image class="img-user v-center" src="~/app/images/app_user.png" width="100"> </image>
                 </StackLayout>
 
                 <StackLayout>
