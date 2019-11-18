@@ -1,4 +1,12 @@
-<ActionBar title="Item" class="actionbar">
+<ActionBar class="action-bar">
+    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="10">
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['//pos-dashboard']"
+            android.systemIcon="ic_menu_back" class="fas v-center" style="padding: 10 15 10 5;"></Label>
+        <Label col="1" text="Item" class="v-center" style="font-size: 16px; padding: 10 15 10 5;"></Label>
+        <!-- LOGO di KANAN -->
+        <Label col="2" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
+            style="padding: 5 7; margin-left: 15; "></Label>
+    </GridLayout>
     <ActionItem
         [nsRouterLink]="['/marketplace']"
         text="Marketplace"
@@ -11,7 +19,7 @@
     ></ActionItem>
 </ActionBar>
 
-<GridLayout class="fullscreen page">
+<StackLayout class="bg-full-2">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
             <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['/item', item.id]"  class="list-group-item">
@@ -22,4 +30,4 @@
             </GridLayout>
         </ng-template>
     </ListView>
-</GridLayout>
+</StackLayout>
