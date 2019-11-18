@@ -1,0 +1,20 @@
+<ActionBar class="action-bar">
+    <NavigationButton (tap)="onBackTap()" android.systemIcon="ic_menu_back"></NavigationButton>
+    <Label class="action-bar-title" text="Home" position="left"></Label>
+</ActionBar>
+
+<GridLayout class="fullscreen">
+    <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+                <Label row="0" [text]="item.tanggal" class="item-left"></Label>
+                <Label row="1" [text]="item.name" class="item-left"></Label>
+                <Label row="2" [text]="item.location" class="item-left"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+    <FlexboxLayout justifyContent="flex-end" id="addButtonContainer"
+        left="0">
+        <Button class="add-button" row="0" col="1" text="+" (tap)="navigateAdd()"></Button>
+    </FlexboxLayout>
+</GridLayout>
