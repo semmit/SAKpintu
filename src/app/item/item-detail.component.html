@@ -1,7 +1,11 @@
-<ActionBar title="Item" class="actionbar">
-<NavigationButton [nsRouterLink]="['/pos-dataitem']" android.systemIcon="ic_menu_back"></NavigationButton>
-     <GridLayout>
-        <Label col="2" class="fas" text="&#xf002;" (tap)=btnSearch() style="text-align: right; margin-right: 10px"></Label>
+<ActionBar class="action-bar">
+    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="10">
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['//pos-dataitem']"
+            android.systemIcon="ic_menu_back" class="fas v-center" style="padding: 10 15 10 5;"></Label>
+        <Label col="1" text="Item" class="v-center" style="font-size: 16px; padding: 10 15 10 5;"></Label>
+        <!-- LOGO di KANAN -->
+         <Label col="2" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
+            style="padding: 5 7; margin-left: 15; "></Label>
     </GridLayout>
     <ActionItem
         [nsRouterLink]="['/marketplace']"
@@ -14,54 +18,50 @@
         android.position="popup"
     ></ActionItem>
 </ActionBar>
-<FlexboxLayout flexDirection="column" class="fullscreen page">
-                
-    <StackLayout style="margin-top: 50px;">
-                <GridLayout class="barprofil2" row="0" height="50">
-                <Label class="bartext2" textWrap="true" text="Kode Item"></Label>
-                <TextField class="inputan" mdbInput label="Kode Item" text="{{ item.id }}"></TextField>
-                </GridLayout>
-    </StackLayout>
-    <StackLayout style="margin-top: 50px;">
-                <GridLayout class="barprofil2" row="0" height="50">
-                <Label class="bartext2" textWrap="true" text="Deskripsi Item"></Label>
-                <TextField class="inputan" mdbInput label="Deskripsi Item" text="{{ item.desc }}"></TextField>
-                </GridLayout>
-    </StackLayout>
-    <StackLayout style="margin-top: 50px;">
-                <GridLayout class="barprofil2" row="0" height="50">
-                <Label class="bartext3" textWrap="true" text="Satuan"></Label>
-                <TextField class="inputan" mdbInput label="Satuan" text="{{ item.satuan }}"></TextField>
-                <Label class="fas" text="&#xf002;" style="text-align: right; margin-right: 10px"></Label>
-                </GridLayout>
-    </StackLayout>
-    <StackLayout style="margin-top: 50px;">
-                <GridLayout class="barprofil2" row="0" height="50">
-                <Label class="bartext3" textWrap="true" text="Harga"></Label>
-                <TextField class="inputan" mdbInput label="Harga" text="{{ item.price }}"></TextField>
-                </GridLayout>
-    </StackLayout>
-    <StackLayout style="margin-top: 50px;">
-                <GridLayout class="barprofil2" row="0" height="50">
-                <Label class="bartext3" textWrap="true" text="Stok Awal"></Label>
-                <TextField class="inputan" mdbInput label="Stok Awal" text="{{ item.stock }}"></TextField>
-                </GridLayout>
-    </StackLayout>
-    <StackLayout class="isi" row="14" height="120">
-                    <GridLayout class="baratas">
-                        <GridLayout class="baritemphoto">
-                        <Label col="1" class="bartext" text="Logo Slip"></Label>               
-                        </GridLayout>
-                        <Label col="0" class="photo" ></Label>
-                      </GridLayout>
+
+<ScrollView orientation="vertical">
+<StackLayout class="bg-full-2">
+           <StackLayout class="form">                     
+                <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Kode Item" textWrap="true"></Label>
+                        <TextField class="textfield" text="{{ item.id }}"></TextField>
                 </StackLayout>
-    <StackLayout>
-        <MDBFooter>
-            <StackLayout orientation="horizontal" width="100%">
-                <Label text="Hapus" width="20%" height="100px" backgroundColor="lightgray"></Label>
-                <Label text="Simpan" width="50%" height="100px" backgroundColor="gray"></Label>
-                <Label text="Kembali" width="30%" height="100px" backgroundColor="lightgray" [nsRouterLink]="['/items']"></Label>
-            </StackLayout>
-        </MDBFooter>
-    </StackLayout>
-</FlexboxLayout>
+
+                <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Deskripsi Item" textWrap="true"></Label>
+                        <TextField class="textfield" mdbInput label="Deskripsi Item" text="{{ item.desc }}"></TextField>
+                </StackLayout>
+
+                <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Satuan" textWrap="true"></Label>
+                        <TextField class="textfield" mdbInput label="Satuan" text="{{ item.satuan }}"></TextField>
+                </StackLayout>
+
+                <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Harga" textWrap="true"></Label>
+                        <TextField class="textfield" mdbInput label="Harga" text="{{ item.price }}"></TextField>
+                </StackLayout>
+
+                <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Stok Awal" textWrap="true"></Label>
+                        <TextField class="textfield" mdbInput label="Stok Awal" text="{{ item.stock }}"></TextField>
+                </StackLayout>
+
+                <StackLayout orientation="horizontal" class="input-group">
+                        <Label class="label" text="Logo Slip" textWrap="true"></Label>
+                        <image class="img-user v-center" src="~/app/images/app_user.png" width="50"> </image>
+                </StackLayout>
+
+                <StackLayout>
+                    <MDBFooter>
+                        <StackLayout orientation="horizontal" width="100%">
+                            <Label text="Hapus" width="20%" height="100px" backgroundColor="lightgray"></Label>
+                            <Label text="Simpan" width="50%" height="100px" backgroundColor="gray"></Label>
+                            <Label text="Kembali" width="30%" height="100px" backgroundColor="lightgray" [nsRouterLink]="['/items']"></Label>
+                        </StackLayout>
+                    </MDBFooter>
+                </StackLayout>
+
+                </StackLayout>
+</StackLayout>
+</ScrollView>
