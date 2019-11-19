@@ -8,13 +8,11 @@ import { FocusDirective } from "./shared/FocusDirective";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
-import { PosDataitemComponent } from './pos-dataitem/pos-dataitem.component';
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 
 import { NativeScriptMaterialCardViewModule } from 'nativescript-material-cardview/angular';
 import { LoginPosComponent } from './login-pos/login-pos.component';
 import { LoginMarketplaceComponent } from './login-marketplace/login-marketplace.component';
-import { UserLoginComponent } from './user-login/user-login.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';

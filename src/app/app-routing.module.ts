@@ -7,7 +7,6 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 import { PosDashboardComponent } from "./pos-dashboard/pos-dashboard.component";
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 
-import { UserLoginComponent } from "./user-login/user-login.component";
 import { LoginPosComponent } from "~/app/login-pos/login-pos.component";
 import { LoginMarketplaceComponent } from "~/app/login-marketplace/login-marketplace.component";
 
