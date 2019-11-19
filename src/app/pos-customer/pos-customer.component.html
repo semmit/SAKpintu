@@ -19,18 +19,18 @@
     ></ActionItem>
 </ActionBar>
 
-<GridLayout class="bg-full-2">
+<StackLayout class="bg-full-2">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
-            <StackLayout rows="auto, auto" [nsRouterLink]="['../item', item.id]" class="list-group-item">
+            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['./detail-customer', item.id]" class="list-group-item">
                 <Label row="0" [text]="item.namatoko" class="item-left"></Label>
                 <Label row="1" [text]="item.namalengkap" class="item-left"></Label>
                 <Label row="2" [text]="item.nohandphone" class="item-left"></Label>
-            </StackLayout>
+            </GridLayout>
         </ng-template>
     </ListView>
     <FlexboxLayout justifyContent="flex-end" id="addButtonContainer"
         left="0">
         <Button class="add-btn" row="0" col="1" text="+" (tap)="navigateAdd()"></Button>
     </FlexboxLayout>
-</GridLayout>
+</StackLayout>
