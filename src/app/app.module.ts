@@ -5,7 +5,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FocusDirective } from "./shared/FocusDirective";
 
-import { csmsitem_datalist } from "./pos_csmsitem/csmsitem_datalist";
 import { pos_csmsitem_daftar } from "./pos_csmsitem/pos_csmsitem_daftar.component";
 import { pos_csmsitem_form } from "./pos_csmsitem/pos_csmsitem_form.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
@@ -56,7 +55,6 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
         FocusDirective,
         pos_csmsitem_daftar,
         pos_csmsitem_form,
-        csmsitem_datalist,
         PosDashboardComponent,
         PosCustomerComponent,
         LoginPosComponent,

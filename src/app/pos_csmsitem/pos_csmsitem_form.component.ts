@@ -19,6 +19,6 @@ export class pos_csmsitem_form implements OnInit {
 
     ngOnInit(): void {
         const id = +this.route.snapshot.params.id;
-        this.dataset = this.datalist.getdatalist(id);
+        this.dataset = this.datalist.getdataset(id);
     }
 }
