@@ -35,15 +35,13 @@ const routes: Routes = [
     { path: "register-marketplace", component: MarketplaceRegisterComponent },
     { path: "marketplace", component: MarketplaceComponent },
     { path: "marketplace-product-info", component: MarketplaceProductInfoComponent },
+    { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
     { path: "marketplace-shorting", component: MarketplaceShortingComponent },
     { path: "marketplace-user", component: MarketplaceUserComponent },
     { path: "marketplace-user-datatakun", component: MarketplaceUserDataAkunComponent },
     { path: "marketplace-user-datatoko", component: MarketplaceUserDataTokoComponent },
     { path: "marketplace-user-keranjang", component: MarketplaceUserKeranjangComponent },
     { path: "marketplace-user-daftarorder", component: MarketplaceUserDaftarOrderComponent },
-    { path: "pos-dashboard", component: PosDashboardComponent },
-    { path: "pos-dataitem", component:ItemsComponent },
-    { path: "pos-dataitem/:id", component:ItemDetailComponent },
 ];
 
 @NgModule({
