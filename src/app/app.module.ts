@@ -5,8 +5,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FocusDirective } from "./shared/FocusDirective";
 
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 

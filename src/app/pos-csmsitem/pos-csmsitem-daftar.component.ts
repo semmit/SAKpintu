@@ -8,7 +8,7 @@ import { ItemService } from "./pos-csmsitem-service-dao";
     templateUrl: "./pos-csmsitem-daftar.component.html",
     styleUrls: ['./../_css/base.component.css']
 })
-export class POScsmsItemDaftarComponent implements OnInit {
+export class pos_csmsitem_daftar implements OnInit {
     items: Array<Item>;
 
     constructor(private itemService: ItemService) { }

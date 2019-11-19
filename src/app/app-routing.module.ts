@@ -2,8 +2,8 @@ import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
+import { pos_csmsitem_daftar } from "./pos-csmsitem/pos-csmsitem-daftar.component";
+import { pos_csmsitem_form } from "./pos-csmsitem/pos-csmsitem-form.component";
 import { PosDashboardComponent } from "./pos-dashboard/pos-dashboard.component";
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 
@@ -23,8 +23,8 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
 
 const routes: Routes = [
     { path: "", redirectTo: "/marketplace", pathMatch: "full" },
-    { path: "items", component: ItemsComponent },
-    { path: "item/:id", component: ItemDetailComponent },
+    { path: "pos_csmsitem_daftar", component: pos_csmsitem_daftar },
+    { path: "pos_csmsitem_form/:id", component: pos_csmsitem_form },
     { path: "pos-dashboard", component: PosDashboardComponent },
     { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
     { path: "pos-customer", component: PosCustomerComponent },

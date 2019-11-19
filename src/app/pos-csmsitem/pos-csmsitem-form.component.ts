@@ -9,7 +9,7 @@ import { ItemService } from "./pos-csmsitem-service-dao";
     templateUrl: "./pos-csmsitem-form.component.html",
     styleUrls: ['./../_css/base.component.css']
 })
-export class POScsmsItemFormComponent implements OnInit {
+export class pos_csmsitem_form implements OnInit {
     item: Item;
 
     constructor(
