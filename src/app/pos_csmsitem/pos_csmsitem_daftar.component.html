@@ -1,23 +1,20 @@
 <ActionBar class="action-bar">
     <GridLayout rows="auto" columns="auto, *, auto" paddingRight="10">
-        <Label col="0" text="&#xf104;" [nsRouterLink]="['//pos-dashboard']"
-            android.systemIcon="ic_menu_back" class="fas v-center" style="padding: 10 15 10 5;"></Label>
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['//pos-dashboard']" android.systemIcon="ic_menu_back"
+            class="fas v-center" style="padding: 10 15 10 5;"></Label>
         <Label col="1" text="csmsitem_dataset" class="v-center" style="font-size: 16px; padding: 10 15 10 5;"></Label>
         <!-- LOGO di KANAN -->
         <Label col="2" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
             style="padding: 5 7; margin-left: 15; "></Label>
     </GridLayout>
-    <ActionItem
-        [nsRouterLink]="['/pos-dashboard']"
-        text="POS Dashboard"
-        android.position="popup"
-    ></ActionItem>
+    <ActionItem [nsRouterLink]="['/pos-dashboard']" text="POS Dashboard" android.position="popup"></ActionItem>
 </ActionBar>
 
-<!-- <StackLayout class="bg-full-2">
+<StackLayout class="bg-full-2">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
-            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['/pos_csmsitem_form', csmsitem_datalist.id]"  class="list-group-item">
+            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['/pos_csmsitem_form', csmsitem_datalist.id]"
+                class="list-group-item">
                 <Label row="0" col="0" [text]="item.name" class="item-left"></Label>
                 <Label row="0" col="1" [text]="'Rp '+item.price" class="item-right"></Label>
                 <Label row="1" col="0" [text]="item.desc" class="item-left"></Label>
@@ -25,4 +22,4 @@
             </GridLayout>
         </ng-template>
     </ListView>
-</StackLayout> -->
+</StackLayout>
