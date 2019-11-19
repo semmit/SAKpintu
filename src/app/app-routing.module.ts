@@ -35,7 +35,6 @@ const routes: Routes = [
     { path: "register-marketplace", component: MarketplaceRegisterComponent },
     { path: "marketplace", component: MarketplaceComponent },
     { path: "marketplace-product-info", component: MarketplaceProductInfoComponent },
-    { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
     { path: "marketplace-shorting", component: MarketplaceShortingComponent },
     { path: "marketplace-user", component: MarketplaceUserComponent },
     { path: "marketplace-user-datatakun", component: MarketplaceUserDataAkunComponent },
