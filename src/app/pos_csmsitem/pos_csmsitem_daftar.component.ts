@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
-import { Item } from "./pos_csmsitem_service-int";
-import { ItemService } from "./pos_csmsitem_service-dao";
+import { csmsitem_dataset } from "./csmsitem_dataset";
+import { csmsitem_datalist } from "./csmsitem_datalist";
 
 @Component({
     selector: "ns-pos_csmsitem_daftar",
@@ -9,9 +9,9 @@ import { ItemService } from "./pos_csmsitem_service-dao";
     styleUrls: ['./../_css/base.component.css']
 })
 export class pos_csmsitem_daftar implements OnInit {
-    items: Array<Item>;
+    items: Array<csmsitem_dataset>;
 
-    constructor(private itemService: ItemService) { }
+    constructor(private itemService: csmsitem_datalist) { }
 
     ngOnInit(): void {
         this.items = this.itemService.getItems();

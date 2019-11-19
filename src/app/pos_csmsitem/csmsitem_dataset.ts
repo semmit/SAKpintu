@@ -1,4 +1,4 @@
-export interface Item {
+export interface csmsitem_dataset {
     id: number;
     name: string;
     desc: string;

@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
-import { Item } from "./pos_csmsitem_service-int";
-import { ItemService } from "./pos_csmsitem_service-dao";
+import { csmsitem_dataset } from "./csmsitem_dataset";
+import { csmsitem_datalist } from "./csmsitem_datalist";
 
 @Component({
     selector: "ns-pos_csmsitem_form",
@@ -10,10 +10,10 @@ import { ItemService } from "./pos_csmsitem_service-dao";
     styleUrls: ['./../_css/base.component.css']
 })
 export class pos_csmsitem_form implements OnInit {
-    item: Item;
+    item: csmsitem_dataset;
 
     constructor(
-        private itemService: ItemService,
+        private itemService: csmsitem_datalist,
         private route: ActivatedRoute
     ) { }
 

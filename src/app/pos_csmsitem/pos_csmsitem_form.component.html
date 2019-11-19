@@ -2,7 +2,7 @@
     <GridLayout rows="auto" columns="auto, *, auto" paddingRight="10">
         <Label col="0" text="&#xf104;" [nsRouterLink]="['//pos-dataitem']"
             android.systemIcon="ic_menu_back" class="fas v-center" style="padding: 10 15 10 5;"></Label>
-        <Label col="1" text="Item" class="v-center" style="font-size: 16px; padding: 10 15 10 5;"></Label>
+        <Label col="1" text="csmsitem_dataset" class="v-center" style="font-size: 16px; padding: 10 15 10 5;"></Label>
         <!-- LOGO di KANAN -->
          <Label col="2" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
             style="padding: 5 7; margin-left: 15; "></Label>
@@ -23,12 +23,12 @@
 <StackLayout class="bg-full-2">
            <StackLayout class="form">                     
                 <StackLayout orientation="horizontal" class="input-group">
-                        <Label class="label" text="Kode Item" textWrap="true"></Label>
+                        <Label class="label" text="Kode csmsitem_dataset" textWrap="true"></Label>
                         <TextField class="textfield" text="{{ item.id }}"></TextField>
                 </StackLayout>
 
                 <StackLayout orientation="horizontal" class="input-group">
-                        <Label class="label" text="Deskripsi Item" textWrap="true"></Label>
+                        <Label class="label" text="Deskripsi csmsitem_dataset" textWrap="true"></Label>
                         <TextField class="textfield" text="{{ item.desc }}"></TextField>
                 </StackLayout>
 
