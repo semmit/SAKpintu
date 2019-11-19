@@ -28,7 +28,6 @@ const routes: Routes = [
     { path: "pos-dashboard", component: PosDashboardComponent },
     { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
     { path: "pos-customer", component: PosCustomerComponent },
-    { path: "login", component: UserLoginComponent },
     { path: "login-pos", component: LoginPosComponent },
     { path: "login-marketplace", component: LoginMarketplaceComponent },
     { path: "register-marketplace", component: MarketplaceRegisterComponent },
