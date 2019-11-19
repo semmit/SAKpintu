@@ -1,11 +1,9 @@
 import { Injectable } from "@angular/core";
 import { csmsitem_dataset } from "./csmsitem_dataset";
 
-@Injectable({
-    providedIn: "root",
-})
+@Injectable({ providedIn: 'root' })
 export class csmsitem_datalist {
-    private items = new Array<csmsitem_dataset>(
+    private datalist = new Array<csmsitem_dataset>(
         { id: 1, name: "Nama csmsitem_dataset", desc: "aaaaabbbbb yeesss", price: "999999", satuan: "pcs", stock: "999999" },
         { id: 2, name: "Nama csmsitem_dataset", desc: "aaaaabbbbb yeesss", price: "999999", satuan: "pcs", stock: "999999" },
         { id: 3, name: "Nama csmsitem_dataset", desc: "aaaaabbbbb yeesss", price: "999999", satuan: "pcs", stock: "999999" },
@@ -23,11 +21,11 @@ export class csmsitem_datalist {
         { id: 15, name: "Nama csmsitem_dataset", desc: "aaaaabbbbb yeesss", price: "999999", satuan: "pcs", stock: "999999" },
     );
 
-    getItems(): Array<csmsitem_dataset> {
-        return this.items;
+    getdatalist(): Array<csmsitem_dataset> {
+        return this.datalist;
     }
 
-    getItem(id: number): csmsitem_dataset {
-        return this.items.filter((item) => item.id === id)[0];
+    getdataset(id: number): csmsitem_dataset {
+        return this.datalist.filter((datalist) => datalist.id === id)[0];
     }
 }

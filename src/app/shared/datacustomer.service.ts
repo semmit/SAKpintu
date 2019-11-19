@@ -7,9 +7,7 @@ export interface IDataCustomer {
     nohandphone: string;
 }
 
-@Injectable({
-    providedIn: "root"
-})
+@Injectable({ providedIn: 'root' })
 export class DataCustomer {
 
     private items = new Array<IDataCustomer>(

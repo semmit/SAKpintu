@@ -7,9 +7,7 @@ export interface IDataItem {
     description: string;
 }
 
-@Injectable({
-    providedIn: "root"
-})
+@Injectable({ providedIn: 'root' })
 export class DataService {
 
     private items = new Array<IDataItem>(

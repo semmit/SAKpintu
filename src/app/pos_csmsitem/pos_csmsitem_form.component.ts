@@ -10,15 +10,15 @@ import { csmsitem_datalist } from "./csmsitem_datalist";
     styleUrls: ['./../_css/base.component.css']
 })
 export class pos_csmsitem_form implements OnInit {
-    item: csmsitem_dataset;
+    dataset: csmsitem_dataset;
 
     constructor(
-        private itemService: csmsitem_datalist,
+        private datalist: csmsitem_datalist,
         private route: ActivatedRoute
     ) { }
 
     ngOnInit(): void {
         const id = +this.route.snapshot.params.id;
-        this.item = this.itemService.getItem(id);
+        this.dataset = this.datalist.getdatalist(id);
     }
 }
