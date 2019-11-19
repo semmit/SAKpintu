@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-import { Item } from "./pos-csmsitem-service-int";
+import { Item } from "./pos_csmsitem_service-int";
 
 @Injectable({
     providedIn: "root",

@@ -5,8 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FocusDirective } from "./shared/FocusDirective";
 
-import { pos_csmsitem_daftar } from "./pos-csmsitem/pos-csmsitem-daftar.component";
-import { pos_csmsitem_form } from "./pos-csmsitem/pos-csmsitem-form.component";
+import { pos_csmsitem_daftar } from "./pos_csmsitem/pos_csmsitem_daftar.component";
+import { pos_csmsitem_form } from "./pos_csmsitem/pos_csmsitem_form.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 

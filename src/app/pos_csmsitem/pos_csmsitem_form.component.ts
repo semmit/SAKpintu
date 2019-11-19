@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
-import { Item } from "./pos-csmsitem-service-int";
-import { ItemService } from "./pos-csmsitem-service-dao";
+import { Item } from "./pos_csmsitem_service-int";
+import { ItemService } from "./pos_csmsitem_service-dao";
 
 @Component({
     selector: "ns-pos-csmsitem-form",
