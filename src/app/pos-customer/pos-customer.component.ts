@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { DataService, IDataItem } from "../shared/data.service";
+import { DataCustomer, IDataCustomer } from "../shared/datacustomer.service";
 
 @Component({
     selector: "ns-pos-customer",
@@ -10,9 +10,9 @@ import { DataService, IDataItem } from "../shared/data.service";
   	moduleId: module.id,
 })
 export class PosCustomerComponent implements OnInit {
-    items: Array<IDataItem>;
+    items: Array<IDataCustomer>;
 
-    constructor(private _itemService: DataService) { }
+    constructor(private _itemService: DataCustomer) { }
 
     ngOnInit(): void {
         this.items = this._itemService.getItems();
