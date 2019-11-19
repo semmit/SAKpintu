@@ -5,7 +5,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'ns-pos-dataitem',
   templateUrl: './pos-dataitem.component.html',
-  styleUrls: ['./pos-dataitem.component.css'],
+  styleUrls: ['./../_css/base.component.css'],
   moduleId: module.id,
 })
 export class PosDataitemComponent implements OnInit {

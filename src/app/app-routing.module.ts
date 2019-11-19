@@ -20,23 +20,25 @@ import { MarketplaceUserKeranjangComponent } from "./marketplace-user-keranjang/
 import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftarorder/marketplace-user-daftarorder.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/marketplace", pathMatch: "full" },
-    { path: "items", component: ItemsComponent },
-    { path: "item/:id", component: ItemDetailComponent },
-    { path: "pos-dashboard", component: PosDashboardComponent },
+    { path: "", redirectTo: "/pos-dataitem", pathMatch: "full" },
+    // { path: "items", component: ItemsComponent },
+    // { path: "item/:id", component: ItemDetailComponent },
     { path: "login", component: UserLoginComponent },
     { path: "login-pos", component: LoginPosComponent },
     { path: "login-marketplace", component: LoginMarketplaceComponent },
     { path: "register-marketplace", component: MarketplaceRegisterComponent },
     { path: "marketplace", component: MarketplaceComponent },
     { path: "marketplace-product-info", component: MarketplaceProductInfoComponent },
-    { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
+    // { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
     { path: "marketplace-shorting", component: MarketplaceShortingComponent },
     { path: "marketplace-user", component: MarketplaceUserComponent },
     { path: "marketplace-user-datatakun", component: MarketplaceUserDataAkunComponent },
     { path: "marketplace-user-datatoko", component: MarketplaceUserDataTokoComponent },
     { path: "marketplace-user-keranjang", component: MarketplaceUserKeranjangComponent },
     { path: "marketplace-user-daftarorder", component: MarketplaceUserDaftarOrderComponent },
+    { path: "pos-dashboard", component: PosDashboardComponent },
+    { path: "pos-dataitem", component:ItemsComponent },
+    { path: "pos-dataitem/:id", component:ItemDetailComponent },
 ];
 
 @NgModule({
