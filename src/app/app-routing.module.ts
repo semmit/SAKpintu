@@ -2,9 +2,9 @@ import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
+import { PosDashboardComponent } from "./pos-dashboard/pos-dashboard.component";
 import { pos_csmsitem_daftar } from "./pos_csmsitem/pos_csmsitem_daftar.component";
 import { pos_csmsitem_form } from "./pos_csmsitem/pos_csmsitem_form.component";
-import { PosDashboardComponent } from "./pos-dashboard/pos-dashboard.component";
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 
 import { LoginPosComponent } from "~/app/login-pos/login-pos.component";
@@ -23,10 +23,9 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
 
 const routes: Routes = [
     { path: "", redirectTo: "/marketplace", pathMatch: "full" },
+    { path: "pos-dashboard", component: PosDashboardComponent },
     { path: "pos_csmsitem_daftar", component: pos_csmsitem_daftar },
     { path: "pos_csmsitem_form/:id", component: pos_csmsitem_form },
-    { path: "pos-dashboard", component: PosDashboardComponent },
-    { path: "pos-dataitem", redirectTo: "/items", pathMatch: "full" },
     { path: "pos-customer", component: PosCustomerComponent },
     { path: "login-pos", component: LoginPosComponent },
     { path: "login-marketplace", component: LoginMarketplaceComponent },

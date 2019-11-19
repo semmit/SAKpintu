@@ -22,7 +22,7 @@
 <StackLayout class="bg-full-2">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
-            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['/pos-csmsitem', pos-csmsitem-service-int.id]"  class="list-group-item">
+            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['/pos-csmsitem', pos_csmsitem_service-int.id]"  class="list-group-item">
                 <Label row="0" col="0" [text]="item.name" class="item-left"></Label>
                 <Label row="0" col="1" [text]="'Rp '+item.price" class="item-right"></Label>
                 <Label row="1" col="0" [text]="item.desc" class="item-left"></Label>

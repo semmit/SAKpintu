@@ -5,8 +5,8 @@ import { Item } from "./pos_csmsitem_service-int";
 import { ItemService } from "./pos_csmsitem_service-dao";
 
 @Component({
-    selector: "ns-pos-csmsitem-form",
-    templateUrl: "./pos-csmsitem-form.component.html",
+    selector: "ns-pos_csmsitem_form",
+    templateUrl: "./pos_csmsitem_form.component.html",
     styleUrls: ['./../_css/base.component.css']
 })
 export class pos_csmsitem_form implements OnInit {
