@@ -9,6 +9,7 @@ import { pos_csmsitem_daftar } from "./pos_csmsitem/pos_csmsitem_daftar.componen
 import { pos_csmsitem_form } from "./pos_csmsitem/pos_csmsitem_form.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
+import { PosDataItemComponent } from './pos-dataitem/pos-dataitem.component';
 
 import { NativeScriptMaterialCardViewModule } from 'nativescript-material-cardview/angular';
 import { LoginPosComponent } from './login-pos/login-pos.component';
@@ -57,6 +58,7 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
         pos_csmsitem_form,
         PosDashboardComponent,
         PosCustomerComponent,
+        PosDataItemComponent,
         LoginPosComponent,
         LoginMarketplaceComponent,
         MarketplaceComponent,
