@@ -2,8 +2,7 @@
         <GridLayout rows="auto" columns="auto, *, auto" paddingRight="10">
                 <Label col="0" text="&#xf104;" [nsRouterLink]="['//pos-dashboard']" android.systemIcon="ic_menu_back"
                         class="fas v-center" style="padding: 10 15 10 5;"></Label>
-                <Label col="1" text="ITEM" class="v-center"
-                        style="font-size: 16px; padding: 10 15 10 5;"></Label>
+                <Label col="1" text="ITEM" class="v-center" style="font-size: 16px; padding: 10 15 10 5;"></Label>
         </GridLayout>
         <ActionItem [nsRouterLink]="['/pos-dashboard']" text="POS Dashboard" android.position="popup"></ActionItem>
 </ActionBar>
@@ -62,7 +61,8 @@
                                                 <Label text="Simpan" width="50%" height="100px"
                                                         backgroundColor="gray"></Label>
                                                 <Label text="Kembali" width="30%" height="100px"
-                                                        backgroundColor="lightgray" [nsRouterLink]="['/items']"></Label>
+                                                        backgroundColor="lightgray"
+                                                        [nsRouterLink]="['/pos_csmsitem_daftar']"></Label>
                                         </StackLayout>
                                 </MDBFooter>
                         </StackLayout>
