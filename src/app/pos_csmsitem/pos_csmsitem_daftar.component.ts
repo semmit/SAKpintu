@@ -6,7 +6,6 @@ import { csmsitem_dataset } from "./csmsitem_dataset";
     selector: "ns-pos_csmsitem_daftar",
     templateUrl: "./pos_csmsitem_daftar.component.html",
     styleUrls: ['./../_css/base.component.css'],
-    moduleId: module.id,
 })
 export class pos_csmsitem_daftar implements OnInit {
     items: Array<csmsitem_dataset>;
