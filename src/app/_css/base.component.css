@@ -170,6 +170,16 @@ inputan
     text-align: left;
 }
 
+.label-2 {
+    font-size: 14.5;
+    width: 110;
+    color: #fff;
+    background-color: #6AC596;
+    vertical-align: middle;
+    padding: 10 7;
+    text-align: left;
+}
+
 .input-group {
     /* background-color: #8F8C84; */
     margin: 2 0;
