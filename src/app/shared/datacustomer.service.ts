@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-export interface IDataCustomer {
+export interface IDataItem {
     id: number;
     namatoko: string;
     namalengkap: string;
@@ -8,9 +8,9 @@ export interface IDataCustomer {
 }
 
 @Injectable({ providedIn: 'root' })
-export class DataCustomer {
+export class DataService {
 
-    private items = new Array<IDataCustomer>(
+    private items = new Array<IDataItem>(
         {
             id: 1,
             namatoko: "Nama Toko",
@@ -61,11 +61,11 @@ export class DataCustomer {
         },
     );
 
-    getItems(): Array<IDataCustomer> {
+    getItems(): Array<IDataItem> {
         return this.items;
     }
 
-    getItem(id: number): IDataCustomer {
+    getItem(id: number): IDataItem {
         return this.items.filter((item) => item.id === id)[0];
     }
 }
