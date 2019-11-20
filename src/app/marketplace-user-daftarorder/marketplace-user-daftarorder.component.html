@@ -6,7 +6,10 @@
     </GridLayout>
 </ActionBar>
 <StackLayout class="bg-full">
-<TabView id="tabViewContainer">
+<TabView selectedTabTextColor="white" 
+         tabBackgroundColor="#6A6A6A"
+         tabTextFontSize="16"
+         androidSelectedTabBackgroundColor="green">
     <StackLayout *tabItem="{title: 'Menunggu Konfirmasi'}">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
