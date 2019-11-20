@@ -6,6 +6,7 @@ import { PosDashboardComponent } from "./pos-dashboard/pos-dashboard.component";
 import { pos_csmsitem_daftar } from "./pos_csmsitem/pos_csmsitem_daftar.component";
 import { pos_csmsitem_form } from "./pos_csmsitem/pos_csmsitem_form.component";
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
+import { PosDataItemComponent } from './pos-dataitem/pos-dataitem.component';
 
 import { LoginPosComponent } from "~/app/login-pos/login-pos.component";
 import { LoginMarketplaceComponent } from "~/app/login-marketplace/login-marketplace.component";
@@ -27,6 +28,7 @@ const routes: Routes = [
     { path: "pos_csmsitem_daftar", component: pos_csmsitem_daftar },
     { path: "pos_csmsitem_form/:id", component: pos_csmsitem_form },
     { path: "pos-customer", component: PosCustomerComponent },
+    { path: "pos-dataitem", component: PosDataItemComponent },
     { path: "login-pos", component: LoginPosComponent },
     { path: "login-marketplace", component: LoginMarketplaceComponent },
     { path: "register-marketplace", component: MarketplaceRegisterComponent },
