@@ -19,18 +19,91 @@
     ></ActionItem>
 </ActionBar>
 
-<StackLayout class="bg-full-2">
-    <ListView [items]="items" class="list-group">
-        <ng-template let-item="item">
-            <GridLayout columns="*, *" rows="auto, auto" [nsRouterLink]="['./detail-customer', DataCustomer.id]" class="list-group-item">
-                <Label row="0" [text]="item.namatoko" class="item-left"></Label>
-                <Label row="1" [text]="item.namalengkap" class="item-left"></Label>
-                <Label row="2" [text]="item.nohandphone" class="item-left"></Label>
-            </GridLayout>
-        </ng-template>
-    </ListView>
-    <FlexboxLayout justifyContent="flex-end" id="addButtonContainer"
-        left="0">
-        <Button class="add-btn" row="0" col="1" text="+" (tap)="navigateAdd()"></Button>
-    </FlexboxLayout>
+<StackLayout class="fullscreen">
+        <TabView selectedTabTextColor="white" 
+         tabBackgroundColor="#6A6A6A"
+         tabTextFontSize="16"
+         androidSelectedTabBackgroundColor="green" class="fas">
+            
+                <StackLayout *tabItem="{title: '&#xf03a; LIST', textTransform: 'lowercase'}">
+                     <SearchBar hint="Search" 
+                        color="black" backgroundColor="#C5A205"
+                        textFieldHintColor="whitesmoke"
+                        textFieldBackgroundColor="whitesmoke">
+                    </SearchBar>
+                        <ListView [items]="items" class="list-group">
+                            <ng-template let-item="item">
+                                <GridLayout rows="auto, auto" [nsRouterLink]="['./item', item.id]" class="list-group-item">
+                                    <Label row="0" [text]="item.namatoko" class="item-left"></Label>
+                                    <Label row="1" [text]="item.namalengkap" class="item-left"></Label>
+                                    <Label row="2" [text]="item.nohandphone" class="item-left"></Label>
+                                </GridLayout>
+                            </ng-template>
+                        </ListView>
+                                <StackLayout>
+                                        <MDBFooter>
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="fas v-center" text="&#xf039;" width="10%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf100;" width="30%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf104;" width="30%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf105;" width="30%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf101;" width="10%" height="100px" backgroundColor="lightgray" [nsRouterLink]="['/items']"></Label>
+                                            </StackLayout>
+                                        </MDBFooter>
+                                    </StackLayout>
+                </StackLayout>
+                <StackLayout *tabItem="{title: '&#xf46d; FORM', textTransform: 'lowercase'}">
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Nama Toko" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Nama Lengkap" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Alamat" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Propinsi" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Kota / Kabupaten" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Kecamatan" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Kodepose" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Telpon" textWrap="true"></Label>
+                                                <TextField class="textfield"></TextField>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                        <MDBFooter>
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="fas v-center" text="&#xf039;" width="10%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf067;" width="40%" height="100px" backgroundColor="yellow"></Label>
+                                                <Label class="fas v-center" text="&#xf0c7;" width="40%" height="100px" backgroundColor="green"></Label>
+                                                <Label class="fas v-center" text="&#xf2ed;" width="10%" height="100px" backgroundColor="red" [nsRouterLink]="['/items']"></Label>
+                                            </StackLayout>
+                                        </MDBFooter>
+                                    </StackLayout>
+                </StackLayout>
+        </TabView>
 </StackLayout>
