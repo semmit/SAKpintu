@@ -5,14 +5,16 @@ import { csmsitem_dataset } from "./csmsitem_dataset";
 @Component({
     selector: "ns-pos_csmsitem_daftar",
     templateUrl: "./pos_csmsitem_daftar.component.html",
-    styleUrls: ['./../_css/base.component.css']
+    styleUrls: ['./../_css/base.component.css'],
+    moduleId: module.id,
 })
 export class pos_csmsitem_daftar implements OnInit {
-    datalist: Array<csmsitem_dataset>;
+    items: Array<csmsitem_dataset>;
 
-    constructor(private main_datalist: csmsitem_datalist) { }
+    constructor(private _csmsitem_datalist: csmsitem_datalist) { }
 
     ngOnInit(): void {
-        this.datalist = this.main_datalist.getdatalist();
+        this.items = this._csmsitem_datalist.getdatalist();
+        // console.log(this.items);
     }
 }
