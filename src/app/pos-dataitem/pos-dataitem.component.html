@@ -1,0 +1,109 @@
+<ActionBar class="action-bar">
+        <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
+                <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
+                        class="fas v-center"></Label>
+                <Label col="1" text="Atur Data Akun"
+                        style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+                <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
+        </GridLayout>
+</ActionBar>
+
+<StackLayout class="fullscreen">
+        <TabView selectedTabTextColor="white" 
+         tabBackgroundColor="#6A6A6A"
+         tabTextFontSize="16"
+         androidSelectedTabBackgroundColor="green" class="fas">
+                <StackLayout *tabItem="{title: '&#xf03a; LIST', textTransform: 'lowercase'}">
+                     <SearchBar hint="Search" 
+                        color="black" backgroundColor="#C5A205"
+                        textFieldHintColor="whitesmoke"
+                        textFieldBackgroundColor="whitesmoke">
+                    </SearchBar>
+                    
+                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                            <ListView [items]="items" class="list-group">
+                                <ng-template let-item="item">
+                                    <GridLayout columns="*, *" rows="auto, auto" class="list-group-item">
+                                        <Label row="0" col="0" [text]="item.name" class="item-left"></Label>
+                                        <Label row="0" col="1" [text]="'Rp '+item.price" class="item-right"></Label>
+                                        <Label row="1" col="0" [text]="item.desc" class="item-left"></Label>
+                                        <Label row="1" col="1" [text]="'Stok '+item.stock" class="item-right"></Label>
+                                    </GridLayout>
+                                </ng-template>
+                            </ListView>
+                        </ScrollView>
+                        
+                                <StackLayout>
+                                        <MDBFooter>
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="fas v-center" text="&#xf039;" width="10%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf100;" width="30%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf104;" width="30%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf105;" width="30%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf101;" width="10%" height="100px" backgroundColor="lightgray" [nsRouterLink]="['/items']"></Label>
+                                            </StackLayout>
+                                        </MDBFooter>
+                                    </StackLayout>
+                </StackLayout>
+                <StackLayout *tabItem="{title: '&#xf46d; FORM', textTransform: 'lowercase'}"  >
+                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                               <StackLayout class="form">                     
+                                    <StackLayout orientation="horizontal" class="input-group">
+                                            <Label class="label-2" text="Kode" textWrap="true"></Label>
+                                            <TextField class="textfield" text="{{ item.id }}"></TextField>
+                                    </StackLayout>
+
+                                    <StackLayout orientation="horizontal" class="input-group">
+                                            <Label class="label-2" text="Deskripsi" textWrap="true"></Label>
+                                            <TextField class="textfield" text="{{ item.desc }}"></TextField>
+                                    </StackLayout>
+
+                                    <StackLayout orientation="horizontal" class="input-group">
+                                            <Label class="label-2" text="Satuan" textWrap="true"></Label>
+                                            <TextField class="textfield" text="{{ item.satuan }}"></TextField>
+                                    </StackLayout>
+
+                                    <StackLayout orientation="horizontal" class="input-group">
+                                            <Label class="label-2" text="Harga" textWrap="true"></Label>
+                                            <TextField class="textfield" text="{{ item.price }}"></TextField>
+                                    </StackLayout>
+
+                                    <StackLayout orientation="horizontal" class="input-group">
+                                            <Label class="label-2" text="Stok Awal" textWrap="true"></Label>
+                                            <TextField class="textfield" text="{{ item.stock }}"></TextField>
+                                    </StackLayout>
+
+                                    <StackLayout orientation="horizontal" class="input-group">
+                                            <Label class="label-2" text="Logo Slip" textWrap="true"></Label>
+                                            <image class="img-user v-center" src="~/app/images/box-png-icon-22.png" width="80"> </image>
+                                            <Label class="label-2 fas" text="&#xf00d;"></Label>
+                                            <Label class="label fas" text="&#xf302;"></Label>
+                                    </StackLayout>
+
+                                    <StackLayout orientation="horizontal" horizontalAlignment="center">
+                                        <Label class="home-section-list2-item"
+                                                style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                        <Label class="home-section-list2-item"
+                                                style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                        <Label class="home-section-list2-item"
+                                                style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                        <Label class="home-section-list2-item"
+                                                style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                        <MDBFooter>
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="fas v-center" text="&#xf039;" width="10%" height="100px" backgroundColor="lightgray"></Label>
+                                                <Label class="fas v-center" text="&#xf067;" width="40%" height="100px" backgroundColor="yellow"></Label>
+                                                <Label class="fas v-center" text="&#xf0c7;" width="40%" height="100px" backgroundColor="green"></Label>
+                                                <Label class="fas v-center" text="&#xf2ed;" width="10%" height="100px" backgroundColor="red" [nsRouterLink]="['/items']"></Label>
+                                            </StackLayout>
+                                        </MDBFooter>
+                                    </StackLayout>
+
+                                </StackLayout>
+                        </ScrollView>
+                </StackLayout>
+        </TabView>
+</StackLayout>
