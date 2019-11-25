@@ -31,6 +31,7 @@
                         textFieldHintColor="whitesmoke"
                         textFieldBackgroundColor="whitesmoke">
                     </SearchBar>
+                    <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                         <ListView [items]="items" class="list-group">
                             <ng-template let-item="item">
                                 <GridLayout rows="auto, auto" [nsRouterLink]="['./item', item.id]" class="list-group-item">
@@ -40,6 +41,7 @@
                                 </GridLayout>
                             </ng-template>
                         </ListView>
+                        </ScrollView>
                                 <GridLayout row="2" col="0" rows="auto" columns="*,*,*,*,*" orientation="horizontal">
                                         <Button row="0" col="0" text="&#xf039;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
