@@ -25,7 +25,7 @@ export class PosDataItemComponent implements OnInit {
 
     ngOnInit(): void {
         this.items = this._itemService.getItems();
-        this.changeTabs(0);
+        this.changeTabs(1); // tampilan tab daftar saat awal buka halaman
     }
 }
 
