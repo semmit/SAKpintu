@@ -42,10 +42,10 @@
                 <!-- </TabStrip> -->
 
 
-                <TabContentItem class="form-tabcontent" style="background-color: seashell; color: olive;">
-                        <StackLayout>
-                                <SearchBar hint="Search"></SearchBar>
-                                <GridLayout>
+               <TabContentItem class="form-tabcontent" style="background-color: seashell; color: olive;">
+                        <GridLayout rows="*, auto" width="100%">
+                                <StackLayout  row="0" orientation="vertical">
+                                        <SearchBar hint="Search"></SearchBar>
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                                                 <ListView [items]="items" class="list-group">
                                                         <ng-template let-item="item">
@@ -64,16 +64,86 @@
                                                         </ng-template>
                                                 </ListView>
                                         </ScrollView>
-                                </GridLayout>
-                        </StackLayout>
+                                </StackLayout>
+                                <StackLayout row="1" orientation="horizontal" class="input-group">
+                                        <Button row="0" col="0" text="&#xf039;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="1" text="&#xf100;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="2" text="&#xf104;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="3" text="&#xf2f1;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="4" text="&#xf105;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="5" text="&#xf101;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                </StackLayout>
+                        </GridLayout>
                 </TabContentItem>
 
 
                 <TabContentItem class="daftar-tabcontent">
-                        <GridLayout>
-                                <Label text="Search Page Search Page Search Page Search Page "
-                                        horizontalAlignment="center" verticalAlignment="middle"></Label>
-                        </GridLayout>
+                <GridLayout rows="*, auto" width="100%">
+                        <StackLayout  row="0" orientation="vertical">
+                                <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                                        <StackLayout class="form">
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                    <Label class="label-2" text="Kode" textWrap="true"></Label>
+                                                    <TextField class="textfield"></TextField>
+                                            </StackLayout>
+
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                    <Label class="label-2" text="Deskripsi" textWrap="true"></Label>
+                                                    <TextField class="textfield"></TextField>
+                                            </StackLayout>
+
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                    <Label class="label-2" text="Satuan" textWrap="true"></Label>
+                                                    <TextField class="textfield"></TextField>
+                                            </StackLayout>
+
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                    <Label class="label-2" text="Harga" textWrap="true"></Label>
+                                                    <TextField class="textfield"></TextField>
+                                            </StackLayout>
+
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                    <Label class="label-2" text="Stok Awal" textWrap="true"></Label>
+                                                    <TextField class="textfield"></TextField>
+                                            </StackLayout>
+
+                                            <StackLayout orientation="horizontal" class="input-group">
+                                                    <Label class="label-2" text="Logo Slip" textWrap="true"></Label>
+                                                    <image class="img-user v-center" src="~/app/images/box-png-icon-22.png" width="80"> </image>
+                                                    <Label class="label-2 fas" text="&#xf00d;"></Label>
+                                                    <Label class="label fas" text="&#xf302;"></Label>
+                                            </StackLayout>
+
+                                            <StackLayout orientation="horizontal" horizontalAlignment="center">
+                                                <Label class="home-section-list2-item"
+                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                <Label class="home-section-list2-item"
+                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                <Label class="home-section-list2-item"
+                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                <Label class="home-section-list2-item"
+                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                </ScrollView>
+                        </StackLayout>
+                        <StackLayout row="1" orientation="horizontal" class="input-group">
+                                                <Button row="0" col="0" text="&#xf039;" width="15%" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="1" text="&#xf067;" width="35%" class="fas"
+                                                style="background-color: #FAEC16; border-radius: 1%;"></Button>
+                                        <Button row="0" col="2" text="&#xf0c7;" width="35%" class="fas"
+                                                style="background-color: #38B434; border-radius: 1%;"></Button>
+                                        <Button row="0" col="3" text="&#xf2ed;" width="15%" class="fas"
+                                                style="background-color: #CD2222; border-radius: 1%;"></Button>
+                                            </StackLayout>
+                </GridLayout>
                 </TabContentItem>
 
 
@@ -93,20 +163,7 @@
         <!-- bottomNavigation -->
         <!-- ================================================== -->
         <!-- ================================================== -->
-        <GridLayout row="2" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
-                 <Button row="0" col="0" text="&#xf039;" class="fas"
-                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                <Button row="0" col="1" text="&#xf100;" class="fas"
-                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                <Button row="0" col="2" text="&#xf104;" class="fas"
-                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                <Button row="0" col="3" text="&#xf2f1;" class="fas"
-                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                <Button row="0" col="4" text="&#xf105;" class="fas"
-                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                <Button row="0" col="5" text="&#xf101;" class="fas"
-                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-        </GridLayout>
+        
 
 
 </GridLayout>
