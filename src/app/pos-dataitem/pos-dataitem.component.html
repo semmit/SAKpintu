@@ -43,8 +43,8 @@
 
 
                <TabContentItem class="form-tabcontent" style="background-color: seashell; color: olive;">
-                        <GridLayout rows="*, auto" width="100%">
-                                <StackLayout  row="0" orientation="vertical">
+                        <GridLayout rows="*, auto" columns="*" width="100%">
+                                <StackLayout  row="0" col="0" orientation="vertical">
                                         <SearchBar hint="Search"></SearchBar>
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                                                 <ListView [items]="items" class="list-group">
@@ -65,7 +65,7 @@
                                                 </ListView>
                                         </ScrollView>
                                 </StackLayout>
-                                <StackLayout row="1" orientation="horizontal" class="input-group">
+                                <GridLayout row="1" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
                                         <Button row="0" col="0" text="&#xf039;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                                         <Button row="0" col="1" text="&#xf100;" class="fas"
@@ -78,7 +78,7 @@
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                                         <Button row="0" col="5" text="&#xf101;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                                </StackLayout>
+                                </GridLayout>
                         </GridLayout>
                 </TabContentItem>
 
