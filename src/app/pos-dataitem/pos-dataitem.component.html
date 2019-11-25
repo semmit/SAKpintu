@@ -1,4 +1,118 @@
-<ActionBar class="action-bar">
+<GridLayout rows="auto,*,auto,auto" columns="*" style="background-color: #008080;">
+
+
+        <!-- ================================================== -->
+        <!-- ================================================== -->
+        <!-- topNavigation -->
+        <!-- ================================================== -->
+        <!-- ================================================== -->
+        <GridLayout row="0" col="0" rows="auto" columns="*,*,*,*" orientation="horizontal" class="mt-5">
+                <Button row="0" col="0" text="&#xf039;" class="fas text-light"
+                        style="background-color: #787184; border-radius: 1%;"></Button>
+                <Button row="0" col="1" text="&#xf039;" class="fas text-light" (tap)="changeTabs(0)"
+                        style="background-color: #787184; border-radius: 1%;"></Button>
+                <Button row="0" col="2" text="&#xf039;" class="fas text-light" (tap)="changeTabs(1)"
+                        style="background-color: #787184; border-radius: 1%;"></Button>
+                <Button row="0" col="3" text="&#xf039;" class="fas text-light" (tap)="changeTabs(2)"
+                        style="background-color: #787184; border-radius: 1%;"></Button>
+        </GridLayout>
+
+
+        <!-- ================================================== -->
+        <!-- ================================================== -->
+        <!-- tabs -->
+        <!-- ================================================== -->
+        <!-- ================================================== -->
+        <Tabs id="mainTabs" row="1" col="0" selectedIndex="0" class="topNavigation">
+
+
+                <!-- <TabStrip> -->
+                <!-- <TabStripItem class="tabstripitem"> -->
+                <!-- <Label text="Home"></Label> -->
+                <!-- <Image src="font://&#xf015;" class="fas"></Image> -->
+                <!-- </TabStripItem> -->
+                <!-- <TabStripItem class="tabstripitem"> -->
+                <!-- <Label text="Account"></Label> -->
+                <!-- <Image src="font://&#xf007;" class="fas"></Image> -->
+                <!-- </TabStripItem> -->
+                <!-- <TabStripItem class="tabstripitem"> -->
+                <!-- <Label text="Search"></Label> -->
+                <!-- <Image src="font://&#xf00e;" class="fas"></Image> -->
+                <!-- </TabStripItem> -->
+                <!-- </TabStrip> -->
+
+
+                <TabContentItem class="form-tabcontent" style="background-color: seashell; color: olive;">
+                        <StackLayout>
+                                <SearchBar hint="Search"></SearchBar>
+                                <GridLayout>
+                                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                                                <ListView [items]="items" class="list-group">
+                                                        <ng-template let-item="item">
+                                                                <GridLayout columns="*, *" rows="auto, auto"
+                                                                        class="list-group-item">
+                                                                        <Label row="0" col="0" [text]="item.name"
+                                                                                class="item-left"></Label>
+                                                                        <Label row="0" col="1" [text]="'Rp '+item.price"
+                                                                                class="item-right"></Label>
+                                                                        <Label row="1" col="0" [text]="item.desc"
+                                                                                class="item-left"></Label>
+                                                                        <Label row="1" col="1"
+                                                                                [text]="'Stok '+item.stock"
+                                                                                class="item-right"></Label>
+                                                                </GridLayout>
+                                                        </ng-template>
+                                                </ListView>
+                                        </ScrollView>
+                                </GridLayout>
+                        </StackLayout>
+                </TabContentItem>
+
+
+                <TabContentItem class="daftar-tabcontent">
+                        <GridLayout>
+                                <Label text="Search Page Search Page Search Page Search Page "
+                                        horizontalAlignment="center" verticalAlignment="middle"></Label>
+                        </GridLayout>
+                </TabContentItem>
+
+
+                <TabContentItem class="setting-tabcontent">
+                        <GridLayout>
+                                <Label text="Search Page Search Page Search Page Search Page "
+                                        horizontalAlignment="center" verticalAlignment="middle"></Label>
+                        </GridLayout>
+                </TabContentItem>
+
+
+        </Tabs>
+
+
+        <!-- ================================================== -->
+        <!-- ================================================== -->
+        <!-- bottomNavigation -->
+        <!-- ================================================== -->
+        <!-- ================================================== -->
+        <GridLayout row="2" col="0" rows="auto" columns="*,*,*,*,*" orientation="horizontal">
+                <Button row="0" col="0" text="&#xf039;" class="fas"
+                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                <Button row="0" col="1" text="&#xf100;" class="fas"
+                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                <Button row="0" col="2" text="&#xf104;" class="fas"
+                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                <Button row="0" col="3" text="&#xf105;" class="fas"
+                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                <Button row="0" col="4" text="&#xf101;" class="fas"
+                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+        </GridLayout>
+
+
+</GridLayout>
+
+
+
+
+<!-- <ActionBar class="action-bar">
         <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
                 <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
                         class="fas v-center"></Label>
@@ -113,4 +227,4 @@
                         </ScrollView>
                 </StackLayout>
         </TabView>
-</StackLayout>
+</StackLayout> -->

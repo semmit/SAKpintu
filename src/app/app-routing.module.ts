@@ -23,7 +23,7 @@ import { MarketplaceUserKeranjangComponent } from "./marketplace-user-keranjang/
 import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftarorder/marketplace-user-daftarorder.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/pos_csmsitem_daftar", pathMatch: "full" },
+    { path: "", redirectTo: "/pos-dataitem", pathMatch: "full" },
     { path: "pos-dashboard", component: PosDashboardComponent },
     { path: "pos_csmsitem_daftar", component: pos_csmsitem_daftar },
     { path: "pos_csmsitem_form/:id", component: pos_csmsitem_form },
