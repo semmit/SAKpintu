@@ -6,15 +6,16 @@
         <!-- topNavigation -->
         <!-- ================================================== -->
         <!-- ================================================== -->
-        <GridLayout row="0" col="0" rows="auto" columns="*,*,*,*" orientation="horizontal" class="mt-5">
+        <GridLayout row="0" col="0" rows="auto" columns="50,*,*,50" orientation="horizontal" class="mt-5">
                 <Button row="0" col="0" text="&#xf104;" class="fas text-light"
-                        style="background-color: #787184; border-radius: 1%;" [nsRouterLink]="['/pos-dashboard']" pageTransition="slide"></Button>
+                        style="background-color: #787184; border-radius: 1%;" [nsRouterLink]="['/pos-dashboard']"
+                        pageTransition="slide"></Button>
                 <Button row="0" col="1" text="&#xf03a; LIST" class="fas text-light" (tap)="changeTabs(0)"
-                        style="background-color: #787184; border-radius: 1%;"></Button>
+                        style="background-color: #787184; border-radius: 1%; border-left-width: 1; border-left-color: #9891a4;"></Button>
                 <Button row="0" col="2" text="&#xf46d; FORM" class="fas text-light" (tap)="changeTabs(1)"
-                        style="background-color: #787184; border-radius: 1%;"></Button>
+                        style="background-color: #787184; border-radius: 1%; border-left-width: 1; border-left-color: #9891a4;"></Button>
                 <Button row="0" col="3" text="&#xf58e;" class="fas text-light" (tap)="changeTabs(2)"
-                        style="background-color: #787184; border-radius: 1%;"></Button>
+                        style="background-color: #787184; border-radius: 1%; border-left-width: 1; border-left-color: #9891a4;"></Button>
         </GridLayout>
 
 
@@ -42,28 +43,33 @@
                 <!-- </TabStrip> -->
 
 
-               <TabContentItem class="form-tabcontent" style="background-color: seashell; color: olive;">
+                <TabContentItem class="form-tabcontent" style="background-color: seashell; color: olive;">
                         <GridLayout rows="*, auto" columns="*" width="100%">
-                                <StackLayout  row="0" col="0" orientation="vertical">
+                                <StackLayout row="0" col="0" orientation="vertical">
                                         <SearchBar hint="Search"></SearchBar>
-                                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
-                                                <ListView [items]="items" class="list-group">
-                                                        <ng-template let-item="item">
-                                                                <GridLayout columns="*, *" rows="auto, auto"
-                                                                        class="list-group-item">
-                                                                        <Label row="0" col="0" [text]="item.name"
-                                                                                class="item-left"></Label>
-                                                                        <Label row="0" col="1" [text]="'Rp '+item.price"
-                                                                                class="item-right"></Label>
-                                                                        <Label row="1" col="0" [text]="item.desc"
-                                                                                class="item-left"></Label>
-                                                                        <Label row="1" col="1"
-                                                                                [text]="'Stok '+item.stock"
-                                                                                class="item-right"></Label>
-                                                                </GridLayout>
-                                                        </ng-template>
-                                                </ListView>
-                                        </ScrollView>
+                                        <GridLayout>
+                                                <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                                                        <ListView [items]="items" class="list-group">
+                                                                <ng-template let-item="item">
+                                                                        <GridLayout columns="*, *" rows="auto, auto"
+                                                                                class="list-group-item">
+                                                                                <Label row="0" col="0"
+                                                                                        [text]="item.name"
+                                                                                        class="item-left"></Label>
+                                                                                <Label row="0" col="1"
+                                                                                        [text]="'Rp '+item.price"
+                                                                                        class="item-right"></Label>
+                                                                                <Label row="1" col="0"
+                                                                                        [text]="item.desc"
+                                                                                        class="item-left"></Label>
+                                                                                <Label row="1" col="1"
+                                                                                        [text]="'Stok '+item.stock"
+                                                                                        class="item-right"></Label>
+                                                                        </GridLayout>
+                                                                </ng-template>
+                                                        </ListView>
+                                                </ScrollView>
+                                        </GridLayout>
                                 </StackLayout>
                                 <GridLayout row="1" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
                                         <Button row="0" col="0" text="&#xf039;" class="fas"
@@ -84,57 +90,66 @@
 
 
                 <TabContentItem class="daftar-tabcontent">
-                <GridLayout rows="*, auto" width="100%">
-                        <StackLayout  row="0" orientation="vertical">
-                                <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
-                                        <StackLayout class="form">
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                    <Label class="label-2" text="Kode" textWrap="true"></Label>
-                                                    <TextField class="textfield"></TextField>
-                                            </StackLayout>
+                        <GridLayout rows="*, auto" width="100%">
+                                <StackLayout row="0" orientation="vertical">
+                                        <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
+                                                <StackLayout class="form">
+                                                        <StackLayout orientation="horizontal" class="input-group">
+                                                                <Label class="label-2" text="Kode"
+                                                                        textWrap="true"></Label>
+                                                                <TextField class="textfield"></TextField>
+                                                        </StackLayout>
 
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                    <Label class="label-2" text="Deskripsi" textWrap="true"></Label>
-                                                    <TextField class="textfield"></TextField>
-                                            </StackLayout>
+                                                        <StackLayout orientation="horizontal" class="input-group">
+                                                                <Label class="label-2" text="Deskripsi"
+                                                                        textWrap="true"></Label>
+                                                                <TextField class="textfield"></TextField>
+                                                        </StackLayout>
 
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                    <Label class="label-2" text="Satuan" textWrap="true"></Label>
-                                                    <TextField class="textfield"></TextField>
-                                            </StackLayout>
+                                                        <StackLayout orientation="horizontal" class="input-group">
+                                                                <Label class="label-2" text="Satuan"
+                                                                        textWrap="true"></Label>
+                                                                <TextField class="textfield"></TextField>
+                                                        </StackLayout>
 
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                    <Label class="label-2" text="Harga" textWrap="true"></Label>
-                                                    <TextField class="textfield"></TextField>
-                                            </StackLayout>
+                                                        <StackLayout orientation="horizontal" class="input-group">
+                                                                <Label class="label-2" text="Harga"
+                                                                        textWrap="true"></Label>
+                                                                <TextField class="textfield"></TextField>
+                                                        </StackLayout>
 
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                    <Label class="label-2" text="Stok Awal" textWrap="true"></Label>
-                                                    <TextField class="textfield"></TextField>
-                                            </StackLayout>
+                                                        <StackLayout orientation="horizontal" class="input-group">
+                                                                <Label class="label-2" text="Stok Awal"
+                                                                        textWrap="true"></Label>
+                                                                <TextField class="textfield"></TextField>
+                                                        </StackLayout>
 
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                    <Label class="label-2" text="Logo Slip" textWrap="true"></Label>
-                                                    <image class="img-user v-center" src="~/app/images/box-png-icon-22.png" width="80"> </image>
-                                                    <Label class="label-2 fas" text="&#xf00d;"></Label>
-                                                    <Label class="label fas" text="&#xf302;"></Label>
-                                            </StackLayout>
+                                                        <StackLayout orientation="horizontal" class="input-group">
+                                                                <Label class="label-2" text="Logo Slip"
+                                                                        textWrap="true"></Label>
+                                                                <image class="img-user v-center"
+                                                                        src="~/app/images/box-png-icon-22.png"
+                                                                        width="80"> </image>
+                                                                <Label class="label-2 fas" text="&#xf00d;"></Label>
+                                                                <Label class="label fas" text="&#xf302;"></Label>
+                                                        </StackLayout>
 
-                                            <StackLayout orientation="horizontal" horizontalAlignment="center">
-                                                <Label class="home-section-list2-item"
-                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
-                                                <Label class="home-section-list2-item"
-                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
-                                                <Label class="home-section-list2-item"
-                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
-                                                <Label class="home-section-list2-item"
-                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
-                                            </StackLayout>
-                                        </StackLayout>
-                                </ScrollView>
-                        </StackLayout>
-                        <StackLayout row="1" orientation="horizontal" class="input-group">
-                                                <Button row="0" col="0" text="&#xf039;" width="15%" class="fas"
+                                                        <StackLayout orientation="horizontal"
+                                                                horizontalAlignment="center">
+                                                                <Label class="home-section-list2-item"
+                                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                                <Label class="home-section-list2-item"
+                                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                                <Label class="home-section-list2-item"
+                                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                                <Label class="home-section-list2-item"
+                                                                        style="background-image: url('~/app/images/box-png-icon-22.png'); background-size: cover; background-color: #FFF000; border-width: 1;border-color: #888;"></Label>
+                                                        </StackLayout>
+                                                </StackLayout>
+                                        </ScrollView>
+                                </StackLayout>
+                                <StackLayout row="1" orientation="horizontal" class="input-group">
+                                        <Button row="0" col="0" text="&#xf039;" width="15%" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                                         <Button row="0" col="1" text="&#xf067;" width="35%" class="fas"
                                                 style="background-color: #FAEC16; border-radius: 1%;"></Button>
@@ -142,8 +157,8 @@
                                                 style="background-color: #38B434; border-radius: 1%;"></Button>
                                         <Button row="0" col="3" text="&#xf2ed;" width="15%" class="fas"
                                                 style="background-color: #CD2222; border-radius: 1%;"></Button>
-                                            </StackLayout>
-                </GridLayout>
+                                </StackLayout>
+                        </GridLayout>
                 </TabContentItem>
 
 
@@ -163,7 +178,7 @@
         <!-- bottomNavigation -->
         <!-- ================================================== -->
         <!-- ================================================== -->
-        
+
 
 
 </GridLayout>
