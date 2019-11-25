@@ -40,17 +40,18 @@
                                 </GridLayout>
                             </ng-template>
                         </ListView>
-                                <StackLayout>
-                                        <MDBFooter>
-                                            <StackLayout orientation="horizontal" class="input-group">
-                                                <Label class="fas v-center" text="&#xf039;" width="10%" height="100px" backgroundColor="lightgray"></Label>
-                                                <Label class="fas v-center" text="&#xf100;" width="30%" height="100px" backgroundColor="lightgray"></Label>
-                                                <Label class="fas v-center" text="&#xf104;" width="30%" height="100px" backgroundColor="lightgray"></Label>
-                                                <Label class="fas v-center" text="&#xf105;" width="30%" height="100px" backgroundColor="lightgray"></Label>
-                                                <Label class="fas v-center" text="&#xf101;" width="10%" height="100px" backgroundColor="lightgray" [nsRouterLink]="['/items']"></Label>
-                                            </StackLayout>
-                                        </MDBFooter>
-                                    </StackLayout>
+                                <GridLayout row="2" col="0" rows="auto" columns="*,*,*,*,*" orientation="horizontal">
+                                        <Button row="0" col="0" text="&#xf039;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="1" text="&#xf100;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="2" text="&#xf104;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="3" text="&#xf105;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="4" text="&#xf101;" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                </GridLayout>
                 </StackLayout>
                 <StackLayout *tabItem="{title: '&#xf46d; FORM', textTransform: 'lowercase'}">
 
@@ -94,13 +95,17 @@
                                                 <TextField class="textfield"></TextField>
                                         </StackLayout>
 
-                                        <StackLayout>
+                                       <StackLayout>
                                         <MDBFooter>
                                             <StackLayout orientation="horizontal" class="input-group">
-                                                <Label class="fas v-center" text="&#xf039;" width="10%" height="100px" backgroundColor="lightgray"></Label>
-                                                <Label class="fas v-center" text="&#xf067;" width="40%" height="100px" backgroundColor="yellow"></Label>
-                                                <Label class="fas v-center" text="&#xf0c7;" width="40%" height="100px" backgroundColor="green"></Label>
-                                                <Label class="fas v-center" text="&#xf2ed;" width="10%" height="100px" backgroundColor="red" [nsRouterLink]="['/items']"></Label>
+                                                <Button row="0" col="0" text="&#xf039;" width="15%" class="fas"
+                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                                        <Button row="0" col="1" text="&#xf067;" width="35%" class="fas"
+                                                style="background-color: #FAEC16; border-radius: 1%;"></Button>
+                                        <Button row="0" col="2" text="&#xf0c7;" width="35%" class="fas"
+                                                style="background-color: #38B434; border-radius: 1%;"></Button>
+                                        <Button row="0" col="3" text="&#xf2ed;" width="15%" class="fas"
+                                                style="background-color: #CD2222; border-radius: 1%;"></Button>
                                             </StackLayout>
                                         </MDBFooter>
                                     </StackLayout>
