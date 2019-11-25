@@ -7,13 +7,13 @@
         <!-- ================================================== -->
         <!-- ================================================== -->
         <GridLayout row="0" col="0" rows="auto" columns="*,*,*,*" orientation="horizontal" class="mt-5">
-                <Button row="0" col="0" text="&#xf039;" class="fas text-light"
+                <Button row="0" col="0" text="&#xf104;" class="fas text-light"
+                        style="background-color: #787184; border-radius: 1%;" [nsRouterLink]="['/pos-dashboard']" pageTransition="slide"></Button>
+                <Button row="0" col="1" text="&#xf03a; LIST" class="fas text-light" (tap)="changeTabs(0)"
                         style="background-color: #787184; border-radius: 1%;"></Button>
-                <Button row="0" col="1" text="&#xf039;" class="fas text-light" (tap)="changeTabs(0)"
+                <Button row="0" col="2" text="&#xf46d; FORM" class="fas text-light" (tap)="changeTabs(1)"
                         style="background-color: #787184; border-radius: 1%;"></Button>
-                <Button row="0" col="2" text="&#xf039;" class="fas text-light" (tap)="changeTabs(1)"
-                        style="background-color: #787184; border-radius: 1%;"></Button>
-                <Button row="0" col="3" text="&#xf039;" class="fas text-light" (tap)="changeTabs(2)"
+                <Button row="0" col="3" text="&#xf58e;" class="fas text-light" (tap)="changeTabs(2)"
                         style="background-color: #787184; border-radius: 1%;"></Button>
         </GridLayout>
 
@@ -93,17 +93,19 @@
         <!-- bottomNavigation -->
         <!-- ================================================== -->
         <!-- ================================================== -->
-        <GridLayout row="2" col="0" rows="auto" columns="*,*,*,*,*" orientation="horizontal">
-                <Button row="0" col="0" text="&#xf039;" class="fas"
-                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+        <GridLayout row="2" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
+                 <Button row="0" col="0" text="&#xf039;" class="fas"
+                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                 <Button row="0" col="1" text="&#xf100;" class="fas"
-                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                 <Button row="0" col="2" text="&#xf104;" class="fas"
-                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
-                <Button row="0" col="3" text="&#xf105;" class="fas"
-                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
-                <Button row="0" col="4" text="&#xf101;" class="fas"
-                        style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                <Button row="0" col="3" text="&#xf2f1;" class="fas"
+                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                <Button row="0" col="4" text="&#xf105;" class="fas"
+                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
+                <Button row="0" col="5" text="&#xf101;" class="fas"
+                        style="background-color: #7B7B7B; border-radius: 1%;"></Button>
         </GridLayout>
 
 
