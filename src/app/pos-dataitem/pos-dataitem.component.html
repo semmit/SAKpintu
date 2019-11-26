@@ -6,7 +6,7 @@
         <!-- topNavigation -->
         <!-- ================================================== -->
         <!-- ================================================== -->
-        <GridLayout row="0" col="0" rows="auto" columns="50,*,*,50" orientation="horizontal" class="mt-5">
+        <GridLayout row="0" col="0" rows="auto" columns="60,*,*,60" orientation="horizontal" class="mt-5">
                 <Button row="0" col="0" text="&#xf104;" class="fas text-light"
                         style="background-color: #787184; border-radius: 1%;" [nsRouterLink]="['/pos-dashboard']"
                         pageTransition="slide"></Button>
@@ -34,7 +34,7 @@
                 <!-- ================================================== -->
                 <TabContentItem class="form-tabcontent" style="background-color: #9DDFD3; color: #777777;">
                         <GridLayout rows="*, auto" width="100%">
-                                <StackLayout row="0" orientation="vertical">
+                                <StackLayout row="0" col="0" orientation="vertical">
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                                                 <StackLayout class="Dorm">
                                                         <StackLayout orientation="horizontal" class="input-group">
@@ -94,16 +94,16 @@
                                 <!-- ================================================== -->
                                 <!-- bottomNavigation -->
                                 <!-- ================================================== -->
-                                <StackLayout row="1" orientation="horizontal" class="input-group">
-                                        <Button row="0" col="0" text="&#xf039;" width="15%" class="fas"
-                                                style="background-color: #7B7B7B; border-radius: 1%;"></Button>
-                                        <Button row="0" col="1" text="&#xf067;" width="35%" class="fas"
-                                                style="background-color: #FAEC16; border-radius: 1%;"></Button>
-                                        <Button row="0" col="2" text="&#xf0c7;" width="35%" class="fas"
-                                                style="background-color: #38B434; border-radius: 1%;"></Button>
-                                        <Button row="0" col="3" text="&#xf2ed;" width="15%" class="fas"
-                                                style="background-color: #CD2222; border-radius: 1%;"></Button>
-                                </StackLayout>
+                                <GridLayout row="1" col="0" rows="auto" columns="60,*,*,60">
+                                        <Button row="0" col="0" text="&#xf039;" class="fas text-light"
+                                                style="background-color: #17A2B8; border-radius: 1%;"></Button>
+                                        <Button row="0" col="1" text="&#xf067;" class="fas text-light"
+                                                style="background-color: #FFC107; border-radius: 1%;"></Button>
+                                        <Button row="0" col="2" text="&#xf0c7;" class="fas text-light"
+                                                style="background-color: #28A745; border-radius: 1%;"></Button>
+                                        <Button row="0" col="3" text="&#xf2ed;" class="fas text-light"
+                                                style="background-color: #DC3545; border-radius: 1%;"></Button>
+                                </GridLayout>
                         </GridLayout>
                 </TabContentItem>
 
@@ -144,18 +144,18 @@
                                 <!-- ================================================== -->
                                 <!-- bottomNavigation -->
                                 <!-- ================================================== -->
-                                <GridLayout row="1" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
-                                        <Button row="0" col="0" text="&#xf039;" class="fas"
+                                <GridLayout row="1" col="0" rows="auto" columns="*,*,*,*,*,*">
+                                        <Button row="0" col="0" text="&#xf039;" class="fas text-light"
                                                 style="background-color: #17A2B8; border-radius: 1%;"></Button>
-                                        <Button row="0" col="1" text="&#xf100;" class="fas"
+                                        <Button row="0" col="1" text="&#xf100;" class="fas text-light"
                                                 style="background-color: #17A2B8; border-radius: 1%; border-left-width: 1; border-left-color: #37C2D8;"></Button>
-                                        <Button row="0" col="2" text="&#xf104;" class="fas"
+                                        <Button row="0" col="2" text="&#xf104;" class="fas text-light"
                                                 style="background-color: #17A2B8; border-radius: 1%; border-left-width: 1; border-left-color: #37C2D8;"></Button>
-                                        <Button row="0" col="3" text="&#xf2f1;" class="fas"
+                                        <Button row="0" col="3" text="&#xf2f1;" class="fas text-light"
                                                 style="background-color: #17A2B8; border-radius: 1%; border-left-width: 1; border-left-color: #37C2D8;"></Button>
-                                        <Button row="0" col="4" text="&#xf105;" class="fas"
+                                        <Button row="0" col="4" text="&#xf105;" class="fas text-light"
                                                 style="background-color: #17A2B8; border-radius: 1%; border-left-width: 1; border-left-color: #37C2D8;"></Button>
-                                        <Button row="0" col="5" text="&#xf101;" class="fas"
+                                        <Button row="0" col="5" text="&#xf101;" class="fas text-light"
                                                 style="background-color: #17A2B8; border-radius: 1%; border-left-width: 1; border-left-color: #37C2D8;"></Button>
                                 </GridLayout>
                         </GridLayout>
@@ -167,7 +167,7 @@
                 <!-- setting-tabcontent -->
                 <!-- ================================================== -->
                 <!-- ================================================== -->
-                <TabContentItem class="setting-tabcontent">
+                <TabContentItem class="setting-tabcontent" style="background-color: #9DDFD3; color: #777777;">
                         <GridLayout>
                                 <Label text="Search Page Search Page Search Page Search Page "
                                         horizontalAlignment="center" verticalAlignment="middle"></Label>
