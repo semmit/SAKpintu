@@ -49,11 +49,12 @@
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                                             <ListView [items]="datalist" class="list-group">
                                                 <ng-template let-item="item">
-                                                    <GridLayout columns="*, *" rows="auto, auto" class="list-group-item">
-                                                            <Label row="0" col="0" [text]="item.name" class="item-left"></Label>
-                                                            <Label row="0" col="1" [text]="'Rp '+item.price" class="item-right"></Label>
-                                                            <Label row="1" col="0" [text]="item.desc" class="item-left"></Label>
-                                                            <Label row="1" col="1" [text]="'Stok '+item.stock" class="item-right"></Label>
+                                                    <GridLayout columns="auto, auto, auto" rows="auto, *" class="list-group-item">
+                                                            <Image row="0" col="0" rowSpan="1" [src]="item.src" class="img-rounded" style="width: 80; height: 80;"></Image>
+                                                            <Label row="0" col="1" [text]="item.name" class="item-left"></Label>
+                                                            <Label row="0" col="2" [text]="'Stok '+item.stock" class="item-right"></Label>
+                                                            <Label row="1" col="1" [text]="item.desc" class="item-left"></Label>
+                                                            <Label row="1" col="2" [text]="'Rp '+item.price" class="item-right"></Label>
                                                     </GridLayout>
                                                 </ng-template>
                                             </ListView>
