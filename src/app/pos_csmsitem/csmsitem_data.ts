@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 
 export interface csmsitem_dataset {
     id: number;
+    src: string;
     name: string;
     desc: string;
     satuan: string;
