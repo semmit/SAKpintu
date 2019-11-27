@@ -5,11 +5,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FocusDirective } from "./shared/FocusDirective";
 
-import { pos_csmsitem_daftar } from "./pos_csmsitem/pos_csmsitem_daftar.component";
-import { pos_csmsitem_form } from "./pos_csmsitem/pos_csmsitem_form.component";
 import { PosDashboardComponent } from './pos-dashboard/pos-dashboard.component';
 import { PosCustomerComponent } from './pos-customer/pos-customer.component';
 import { PosDataItemComponent } from './pos-dataitem/pos-dataitem.component';
+import { pos_csmsitem } from './pos_csmsitem/pos_csmsitem.component';
 
 import { NativeScriptMaterialCardViewModule } from 'nativescript-material-cardview/angular';
 import { LoginPosComponent } from './login-pos/login-pos.component';
@@ -54,11 +53,10 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
     declarations: [
         AppComponent,
         FocusDirective,
-        pos_csmsitem_daftar,
-        pos_csmsitem_form,
         PosDashboardComponent,
         PosCustomerComponent,
         PosDataItemComponent,
+        pos_csmsitem,
         LoginPosComponent,
         LoginMarketplaceComponent,
         MarketplaceComponent,
