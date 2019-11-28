@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Page, getViewById } from 'tns-core-modules/ui/page';
 import { WebView, LoadEventData } from "tns-core-modules/ui/web-view";
 
@@ -6,7 +6,7 @@ import { WebView, LoadEventData } from "tns-core-modules/ui/web-view";
     selector: "Home",
     templateUrl: "./home.component.html"
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 webViewSrc = "https://sp.haloteman.com/";
 	
 	constructor(private page: Page) { 
