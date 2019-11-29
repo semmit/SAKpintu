@@ -1,6 +1,42 @@
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
+}
+
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
+}
+
+.sideStackLayout {
+    background-color: gray;
+}
+
+.sideTitleStackLayout {
+    text-align: left;
+    vertical-align: left;
+}
+
+.sideLabel {
+    padding: 10;
+}
+
+.sideLightGrayLabel {
+    background-color: lightgray;
+}
+
 .fa {
     width:12%;
     margin-right: 80%;
+}
+.fas {
+    font-family: "Font Awesome 5 Solid", "fa-solid-900";
+    font-size: 18px;
 }
 .fa-text{
         font-size: 18;
@@ -47,6 +83,11 @@ ActionBar .action-bar-title {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+.right{
+    text-align: right;
     vertical-align: middle;
     color: #FFFFFF;
 }
