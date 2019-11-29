@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Page, getViewById } from 'tns-core-modules/ui/page';
 import { WebView, LoadEventData } from "tns-core-modules/ui/web-view";
 import { isAndroid } from "tns-core-modules/platform";
+import * as statusBar from 'nativescript-status-bar'
 
 @Component({
     selector: "Home",
@@ -12,6 +13,7 @@ export class HomeComponent {
 
 	constructor( private page: Page) { 
     this.page.actionBarHidden = true;
+    statusBar.hide();
     }
 	//function untuk mengatur gestures zoom in zoom out
     onWebViewLoaded(webargs) {
