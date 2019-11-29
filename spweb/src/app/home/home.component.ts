@@ -1,18 +1,27 @@
 import { Component } from "@angular/core";
 import { Page, getViewById } from 'tns-core-modules/ui/page';
 import { WebView, LoadEventData } from "tns-core-modules/ui/web-view";
+import { isAndroid } from "tns-core-modules/platform";
 
 @Component({
     selector: "Home",
     templateUrl: "./home.component.html"
 })
 export class HomeComponent {
-webViewSrc = "https://sp.haloteman.com/";
-	
-	constructor(private page: Page) { 
+	webViewSrc = "https://sp.haloteman.com/";
+
+	constructor( private page: Page) { 
     this.page.actionBarHidden = true;
     }
 
+    onWebViewLoaded(webargs) {
+        const webview = webargs.object;
+        if (isAndroid) {
+            // Disabled the native zoom control (to enable gestures on Android)
+            webview.android.getSettings().setDisplayZoomControls(false);
+        }
+    }
+    
     onLoadStarted(args: LoadEventData) {
         const webView = args.object as WebView;
 
