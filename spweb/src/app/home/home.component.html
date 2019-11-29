@@ -1,4 +1,5 @@
 <WebView [src]="webViewSrc" 
+         (loaded)="onWebViewLoaded($event)"
          (loadStarted)="onLoadStarted($event)" 
          (loadFinished)="onLoadFinished($event)">
 </WebView>
