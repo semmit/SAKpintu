@@ -1,6 +1,9 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
+import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FocusDirective } from "./shared/FocusDirective";
@@ -42,6 +45,8 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
     imports: [
         NativeScriptModule,
         AppRoutingModule,
+        NativeScriptUISideDrawerModule,
+        NativeScriptRouterModule,
         NativeScriptMaterialCardViewModule,
         FontAwesomeModule,
 
@@ -79,3 +84,4 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
 Pass your application module to the bootstrapModule function located in main.ts to start your app
 */
 export class AppModule { }
+export class SideDrawerExamplesModule { }
