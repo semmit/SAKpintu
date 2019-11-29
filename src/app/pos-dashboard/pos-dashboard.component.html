@@ -1,27 +1,39 @@
-<ActionBar class="action-bar">
-    <GridLayout>
-        <Image col="0" src="~/app/images/gmbr.png" class="SP"></Image>
-        <Label col="1" class="tittle" text="P O S"></Label>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Image src="~/app/images/gmbr.png" width="50"></Image>
+            <Label text="SAK PINTU"></Label>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout">
+                <Label text="&#xf2f5; Logout" class="fas sideLabel sideLightGrayLabel"></Label>
+            </StackLayout>
+        </ScrollView>
     </GridLayout>
-    <ActionItem [nsRouterLink]="['/marketplace']" text="Marketplace" android.position="popup"></ActionItem>
-    <ActionItem [nsRouterLink]="['/pos-dashboard']" text="POS Dashboard" android.position="popup"></ActionItem>
+    
+    <ActionBar class="action-bar">
+    <GridLayout>
+        <Image col="0" src="~/app/images/gmbr.png" class="SP" ></Image>           
+        <Label col="1" class="tittle" text="P O S"></Label>
+        <Label col="2" class="fas right" text="&#xf58e;" (tap)="openDrawer()"></Label>
+        </GridLayout>
 </ActionBar>
 
-<StackLayout class="bg-full">
+<StackLayout  tkMainContent class="fullscreen">
     <GridLayout class="bckuser">
-        <Image col="0" src="~/app/images/app_user.png" class="User"></Image>
+    <Image col="0" src="~/app/images/app_user.png" class="User"></Image>
     </GridLayout>
     <Label class="h1" text="Nama Toko"></Label>
     <Label class="h2" text="Nama user"></Label>
-    <GridLayout class="my-button" [nsRouterLink]="['/pos_csmsitem_daftar']">
+    <GridLayout class="my-button" [nsRouterLink]="['/pos_csmsitem']" pageTransition="slide" >
         <Image col="0" src="~/app/images/app_ico_item.png" class="fa"></Image>
         <Label col="1" text="ITEM" class="fa-text"></Label>
     </GridLayout>
-    <GridLayout class="my-button2" [nsRouterLink]="['/pos-customer']">
+    <GridLayout class="my-button2" [nsRouterLink]="['/pos-customer']" pageTransition="slide">
         <Image col="0" src="~/app/images/app_ico_customer.png" class="fa"></Image>
         <Label col="1" text="CUSTOMER" class="fa-text"></Label>
     </GridLayout>
-    <GridLayout class="my-button3" [nsRouterLink]="['/pos-dataitem']">
+    <GridLayout class="my-button3" [nsRouterLink]="['/pos-dataitem']" pageTransition="slide">
         <Image col="0" src="~/app/images/app_ico_penjualan.png" class="fa"></Image>
         <Label col="1" text="PENJUALAN" class="fa-text"></Label>
     </GridLayout>
@@ -30,3 +42,5 @@
         <Label col="1" text="SETTING" class="fa-text"></Label>
     </GridLayout>
 </StackLayout>
+
+</RadSideDrawer>
