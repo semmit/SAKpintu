@@ -13,7 +13,7 @@ export class HomeComponent {
 	constructor( private page: Page) { 
     this.page.actionBarHidden = true;
     }
-
+	//function untuk mengatur gestures zoom in zoom out
     onWebViewLoaded(webargs) {
         const webview = webargs.object;
         if (isAndroid) {
