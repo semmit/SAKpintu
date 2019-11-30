@@ -31,9 +31,12 @@ export class HomeComponent {
             console.log("exit");
             exit();
         } else {
-            this._ngZone.run(() => {
-                this.router.navigate(['/home']);
-            });
+            // if (this.webView.canGoBack) //if webview can go back
+            const webView = <WebView>this.page.getViewById("mainWebView");
+            webView.goBack();
+            // this._ngZone.run(() => {
+            //     this.router.navigate(['/home']);
+            // });
             this.lastPress = date.valueOf();
         }
     }
