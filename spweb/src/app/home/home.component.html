@@ -1,5 +1,9 @@
-<WebView [src]="webViewSrc" 
+<WebView id="mainWebView" [src]="webViewSrc" 
          (loaded)="onWebViewLoaded($event)"
          (loadStarted)="onLoadStarted($event)" 
          (loadFinished)="onLoadFinished($event)">
 </WebView>
+
+<AbsoluteLayout>
+    <Label text="Tekan tombol Back 2x untuk keluar dari aplikasi" backgroundColor="red" padding="20" textWrap="true"></Label>
+</AbsoluteLayout>
