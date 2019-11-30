@@ -67,17 +67,18 @@
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                                             <ListView [items]="items" class="list-group">
                                                 <ng-template let-item="item">
-                                                    <GridLayout rows="auto, auto" [nsRouterLink]="['./item', item.id]" class="list-group-item">
-                                                        <Label row="0" [text]="item.namatoko" class="item-left"></Label>
-                                                        <Label row="1" [text]="item.namalengkap" class="item-left"></Label>
-                                                        <Label row="2" [text]="item.nohandphone" class="item-left"></Label>
+                                                    <GridLayout columns="auto, auto" rows="auto, *, *" [nsRouterLink]="['./item', item.id]" class="list-group-item">
+                                                        <Image row="0" col="0" rowSpan="2" [src]="item.src" class="img-rounded" style="width: 80; height: 80;"></Image>
+                                                        <Label row="0" col="1" [text]="item.namatoko" class="item-left"></Label>
+                                                        <Label row="1" col="1" [text]="item.namalengkap" class="item-left"></Label>
+                                                        <Label row="2" col="1" [text]="item.nohandphone" class="item-left"></Label>
                                                     </GridLayout>
                                                 </ng-template>
                                             </ListView>
                                         </ScrollView>
                                 </StackLayout>
                                 <GridLayout row="1" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
-                                        <Button row="0" col="0" text="&#xf039;" class="fas"
+                                        <Button (tap)="openDrawer()" row="0" col="0" text="&#xf039;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                                         <Button row="0" col="1" text="&#xf100;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
