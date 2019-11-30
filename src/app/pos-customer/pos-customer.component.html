@@ -67,12 +67,12 @@
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton>
                                             <ListView [items]="items" class="list-group">
                                                 <ng-template let-item="item">
-                                                    <GridLayout columns="auto, auto, auto" rows="auto, *, *, *" [nsRouterLink]="['./item', item.id]" class="list-group-item">
+                                                    <GridLayout columns="auto, auto, auto, auto" rows="auto, *, *, *" [nsRouterLink]="['./item', item.id]" class="list-group-item">
                                                         <Image row="0" col="0" rowSpan="2" [src]="item.src" class="img-rounded" style="width: 80; height: 80;"></Image>
                                                         <Label row="0" col="1" [text]="item.namatoko" class="item-left"></Label>
                                                         <Label row="1" col="1" [text]="item.namalengkap" class="item-left"></Label>
                                                         <Label row="2" col="1" [text]="'&#xf879; '+item.nohandphone" class="fas item-left"></Label>
-                                                        <Label row="2" col="2" [text]="item.kotakabupaten" class="item-left"></Label>
+                                                        <Label row="2" col="3" [text]="item.kotakabupaten" class="item-left"></Label>
                                                     </GridLayout>
                                                 </ng-template>
                                             </ListView>
