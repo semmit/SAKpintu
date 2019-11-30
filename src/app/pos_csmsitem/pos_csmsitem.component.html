@@ -1,4 +1,22 @@
-<GridLayout rows="auto,*,auto,auto" columns="*" style="background-color: #008080;">
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Image src="~/app/images/LOGO_SP_1080.png" class="sidelogo"></Image>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout">
+                <Label text="SAK PINTU" class="sideLabel sideText"></Label>
+                <Label text="&#xf201; Dashboard" class="fas sideLabel sideText" [nsRouterLink]="['/pos-dashboard']"></Label>
+                <Label text="&#xf187; Item" class="fas sideLabel sideText"></Label>
+                <Label text="&#xf0c0; Costumer" class="fas sideLabel sideText" [nsRouterLink]="['/pos-costumer']"></Label>
+                <Label text="&#xf788; Penjualan" class="fas sideLabel sideText" [nsRouterLink]="['/pos-dataitem']"></Label>
+                <Label text="&#xf085; Setting" class="fas sideLabel sideText"></Label>
+                <Label text="&#xf2f5; Logout" class="fas sideLabel sideText" [nsRouterLink]="['/marketplace']"></Label>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+<GridLayout tkMainContent rows="auto,*,auto,auto" columns="*" style="background-color: #008080;">
 
 
         <!-- ================================================== -->
@@ -61,7 +79,7 @@
                                         </ScrollView>
                                 </StackLayout>
                                 <GridLayout row="1" col="0" rows="auto" columns="*,*,*,*,*,*" orientation="horizontal">
-                                        <Button row="0" col="0" text="&#xf039;" class="fas"
+                                        <Button (tap)="openDrawer()" row="0" col="0" text="&#xf039;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
                                         <Button row="0" col="1" text="&#xf100;" class="fas"
                                                 style="background-color: #7B7B7B; border-radius: 1%;"></Button>
@@ -162,3 +180,4 @@
 
 
 </GridLayout>
+</RadSideDrawer>
