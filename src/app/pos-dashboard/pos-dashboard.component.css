@@ -30,6 +30,11 @@ button {
     background-color: lightgray;
 }
 
+.sideText{
+    font-size: 18;
+    color: #fff;
+}
+
 .fa {
     width:12%;
     margin-right: 80%;
