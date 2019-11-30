@@ -1,12 +1,13 @@
 <RadSideDrawer tkExampleTitle tkToggleNavButton>
     <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
-            <Image src="~/app/images/gmbr.png" width="50"></Image>
+            <Image src="~/app/images/LOGO_SP_1080.png"></Image>
             <Label text="SAK PINTU"></Label>
         </StackLayout>
         <ScrollView row="1">
             <StackLayout class="sideStackLayout">
-                <Label text="&#xf2f5; Logout" class="fas sideLabel sideLightGrayLabel"></Label>
+                <Label text="SAK PINTU" class="sideLabel sideText"></Label>
+                <Label text="&#xf2f5; Logout" class="fas sideLabel sideLightGrayLabel" [nsRouterLink]="['/marketplace']"></Label>
             </StackLayout>
         </ScrollView>
     </GridLayout>
