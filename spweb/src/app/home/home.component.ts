@@ -1,21 +1,44 @@
-import { Component } from "@angular/core";
-import { Page, getViewById } from 'tns-core-modules/ui/page';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { Router } from "@angular/router";
+import { Page, getViewById, EventData } from 'tns-core-modules/ui/page';
+import * as application from "tns-core-modules/application";
 import { WebView, LoadEventData } from "tns-core-modules/ui/web-view";
 import { isAndroid } from "tns-core-modules/platform";
 import * as statusBar from 'nativescript-status-bar'
+import { exit } from "nativescript-exit"
+
 
 @Component({
     selector: "Home",
     templateUrl: "./home.component.html"
 })
 export class HomeComponent {
-	webViewSrc = "https://sp.haloteman.com/";
+    webViewSrc = "https://sp.haloteman.com/";
+    lastPress = 0;
 
-	constructor( private page: Page) { 
-    this.page.actionBarHidden = true;
-    statusBar.hide();
+    constructor(private router: Router, private page: Page, private _ngZone: NgZone) {
+        this.page.actionBarHidden = true;
+        statusBar.hide();
+        this.page.on(application.AndroidApplication.activityBackPressedEvent, this.onBackButtonTap, this);
     }
-	//function untuk mengatur gestures zoom in zoom out
+
+    onBackButtonTap(data: EventData) {
+        console.log(data.eventName);
+        var date = new Date();
+        var timeDelay = 500;
+
+        if (date.valueOf() - this.lastPress < timeDelay) {
+            console.log("exit");
+            exit();
+        } else {
+            this._ngZone.run(() => {
+                this.router.navigate(['/home']);
+            });
+            this.lastPress = date.valueOf();
+        }
+    }
+
+    //function untuk mengatur gestures zoom in zoom out
     onWebViewLoaded(webargs) {
         const webview = webargs.object;
         if (isAndroid) {
@@ -23,7 +46,7 @@ export class HomeComponent {
             webview.android.getSettings().setDisplayZoomControls(false);
         }
     }
-    
+
     onLoadStarted(args: LoadEventData) {
         const webView = args.object as WebView;
 
@@ -51,4 +74,5 @@ export class HomeComponent {
             console.log(`Error: ${args.error}`);
         }
     }
+
 }
