@@ -34,7 +34,6 @@ export class HomeComponent {
         };
 
         if (date.valueOf() - this.lastPress < timeDelay) {
-            alert(options);
             console.log("exit");
             exit();
         } else {
@@ -44,6 +43,7 @@ export class HomeComponent {
             // this._ngZone.run(() => {
             //     this.router.navigate(['/home']);
             // });
+            alert(options);
             this.lastPress = date.valueOf();
         }
     }
