@@ -4,7 +4,7 @@ import { Page, getViewById, EventData } from 'tns-core-modules/ui/page';
 import * as application from "tns-core-modules/application";
 import { WebView, LoadEventData } from "tns-core-modules/ui/web-view";
 import { isAndroid } from "tns-core-modules/platform";
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import * as Toast from 'nativescript-toast';
 import * as statusBar from 'nativescript-status-bar'
 import { exit } from "nativescript-exit"
 
@@ -43,7 +43,7 @@ export class HomeComponent {
             // this._ngZone.run(() => {
             //     this.router.navigate(['/home']);
             // });
-            alert(options);
+            Toast.makeText("Tekan Tombol Back Lagi Untuk Exit Aplikasi", "long").show();
             this.lastPress = date.valueOf();
         }
     }
