@@ -1,3 +1,41 @@
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+<GridLayout tkDrawerContent rows="auto, *" class="bg-full">
+        <StackLayout row="0" class="sideTitleStackLayout" >
+            <Image src="~/app/images/app_user.png" class="drawerContentText sidedrawer-list-item"></Image>
+            <Label class="fas drawerContentText sidedrawer-list-item" text="Namas Toko"></Label>
+            <Label class="footnote sidedrawer-list-item" text="Nama user"></Label>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout">
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-datatakun']" text="&#xf4fe; Atur Data Akun" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-datatoko']" text="&#xf54e; Atur Data Toko" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-keranjang']" text="&#xf07a; Keranjang" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-daftarorder']" text="&#xf005; Daftar Order" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/login-marketplace']" text="&#xf086; Bantuan" class="fas p-r-10"></Label>
+                </GridLayout>
+    
+                <StackLayout class="hr-light"></StackLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label text="&#xf2f5; Logout" (tap)=tap_btnLogout() [nsRouterLink]="['/login-marketplace']" class="fas p-r-10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
 <ActionBar class="action-bar">
     <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="10">
         <Image col="0" src="~/app/images/gmbr.png" width="60" style="padding: 10 15 10 5;"></Image>
@@ -11,17 +49,7 @@
             focus="#FFF100"
             style="font-size: 16px; padding: 5 7; margin-left: 10; background-color: rgba(255,255,255,0.1); border-width: 1;border-color: #888; border-radius: 50%;"></Label>
     </GridLayout>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatakun']" text="Atur Data Akun"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-datatoko']" text="Atur Data Toko"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-keranjang']" text="Keranjang"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/marketplace-user-daftarorder']" text="Daftar Order"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" [nsRouterLink]="['/login-marketplace']" text="Bantuan"
-        android.position="popup"></ActionItem>
-    <ActionItem *ngIf="display_membermenu" text="Logout" android.position="popup" (tap)=tap_btnLogout()></ActionItem>
+    <ActionItem *ngIf="display_membermenu" text="&#xf142;" class="fas text-light" (tap)="openDrawer()"></ActionItem>
 </ActionBar>
 
 <ScrollView orientation="vertical">
