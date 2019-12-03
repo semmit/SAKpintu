@@ -96,56 +96,55 @@ sidedrawer
 ==================================================
 */
 
-.sidedrawer.sidedrawer-left {
-    background-color: blue;
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
 }
 
-.sidedrawer.sidedrawer-left .sidedrawer-header-image {
-    color: black;
-    height: 60;
-    width: 60;
-    font-size: 60;
-    padding: 0;
-    margin-bottom: 5;
-    margin-top: 20;
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: center;
 }
 
-.sidedrawer.sidedrawer-left .footnote {
-    color: rgba(0, 0, 255, 0.5);
-}
-
-.sidedrawer .sidedrawer-header {
-    background-color: black;
-}
-
-.sidedrawer .sidedrawer-header .sidedrawer-header-brand {
-    color: blue;
-}
-
-.sidedrawer .sidedrawer-content {
-    background-color: blue;
-}
-
-.sidedrawer .sidedrawer-content .sidedrawer-list-item {
-    padding-left: 15;
-}
-
-.sidedrawer .sidedrawer-content .sidedrawer-list-item Label {
+.sideTextLayout {
     vertical-align: center;
-    color: darkblue;
+    text-align:center;
 }
 
-.sidedrawer .sidedrawer-content .sidedrawer-list-item .fa {
-    width: 20;
-    margin-right: 10;
-}
-
-.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected {
+.sideTextLayout-2 {
     background-color: gray;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
 }
 
-.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected Label {
-    color: yellow;
+.sideTitleStackLayout {
+    margin-top:10%;
+    text-align: left;
+    vertical-align: left;
+}
+
+.sidedrawer-list-item{
+    margin-top:5%;
+    vertical-align: center;
+    text-align:center;
+}
+
+.sideLabel {
+    padding: 10;
+}
+
+.sideLightGrayLabel {
+    background-color: lightgray;
+}
+
+.sideText{
+    font-size: 18;
+    color: #fff;
+}
+.sidelogo{
+    width:100%;
+    margin-right: 50%;
 }
 
 /* 
