@@ -1,14 +1,14 @@
 <RadSideDrawer tkExampleTitle tkToggleNavButton>
-    <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
-        <StackLayout class="sideTitleStackLayout">
+    <GridLayout tkDrawerContent rows="56, *" class="sideTextLayout-2">
+        <StackLayout class="sideStackLayout">
             <Image src="~/app/images/LOGO_SP_1080.png" class="sidelogo"></Image>
         </StackLayout>
         <ScrollView row="1">
             <StackLayout class="sideStackLayout">
                 <Label text="SAK PINTU" class="sideLabel sideText"></Label>
                 <Label text="&#xf201; Dashboard" class="fas sideLabel sideText" [nsRouterLink]="['/pos-dashboard']"></Label>
-                <Label text="&#xf187; Item" class="fas sideLabel sideText" [nsRouterLink]="['/pos_csmsitem']"></Label>
-                <Label text="&#xf0c0; Costumer" class="fas sideLabel sideText" ></Label>
+                <Label text="&#xf187; Item" class="fas sideLabel sideText"></Label>
+                <Label text="&#xf0c0; Costumer" class="fas sideLabel sideText" [nsRouterLink]="['/pos-costumer']"></Label>
                 <Label text="&#xf788; Penjualan" class="fas sideLabel sideText" [nsRouterLink]="['/pos-dataitem']"></Label>
                 <Label text="&#xf085; Setting" class="fas sideLabel sideText"></Label>
                 <Label text="&#xf2f5; Logout" class="fas sideLabel sideText" [nsRouterLink]="['/marketplace']"></Label>
