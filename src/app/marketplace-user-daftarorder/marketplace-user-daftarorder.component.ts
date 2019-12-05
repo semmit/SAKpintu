@@ -4,7 +4,7 @@ import { DataService, IDataItem } from "../shared/data.service";
 @Component({
     selector: 'ns-marketplace-user-daftarorder',
   	templateUrl: './marketplace-user-daftarorder.component.html',
-  	styleUrls: ['./marketplace-user-daftarorder.component.css']
+  	styleUrls: ['./../_css/base.component.css']
 })
 export class MarketplaceUserDaftarOrderComponent implements OnInit {
     items: Array<IDataItem>;
