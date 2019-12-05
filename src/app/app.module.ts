@@ -3,6 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { BarcodeScanner } from 'nativescript-barcodescanner';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -75,7 +76,7 @@ import { MarketplaceUserDaftarOrderComponent } from "./marketplace-user-daftaror
         MarketplaceUserKeranjangComponent,
         MarketplaceUserDaftarOrderComponent
     ],
-    providers: [],
+    providers: [BarcodeScanner],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
