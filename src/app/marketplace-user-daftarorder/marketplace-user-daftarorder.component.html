@@ -1,11 +1,13 @@
 <ActionBar class="action-bar">
-<NavigationButton [nsRouterLink]="['/marketplace-user']" android.systemIcon="ic_menu_back"></NavigationButton>
-    <GridLayout>
-    <label col="0" class="act font-weight-bold" text="Daftar Order"></label>
-        <Image col="1" src="~/app/images/gmbr.png" class="SP"></Image>
+    <GridLayout rows="auto" columns="auto, *, auto" paddingRight="15">
+        <Label col="0" text="&#xf104;" [nsRouterLink]="['/marketplace']" pageTransition="slide"
+            class="fas v-center"></Label>
+        <Label col="1" text="Daftar Order" style="font-size: 16px; vertical-align: middle; padding-left: 10;"></Label>
+        <Image col="2" src="~/app/images/gmbr.png" width="60"></Image>
     </GridLayout>
 </ActionBar>
-<StackLayout class="bg-full">
+
+<StackLayout class="bg-full-2">
 <TabView selectedTabTextColor="white" 
          tabBackgroundColor="#6A6A6A"
          tabTextFontSize="16"
@@ -20,7 +22,9 @@
             </StackLayout>
         </ng-template>
     </ListView>
-    <Button class="my-button" text="KEMBALI"></Button> 
+    <StackLayout row="8" class="jarak">
+                <Button class="btn" text="KEMBALI" pageTransition="slide"></Button>
+    </StackLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Menunggu Pembayaran'}">
           <ListView [items]="items" class="list-group">
@@ -32,7 +36,9 @@
             </StackLayout>
         </ng-template>
     </ListView>
-                <Button class="my-button" text="KEMBALI"></Button> 
+    <StackLayout row="8" class="jarak">
+                <Button class="btn" text="KEMBALI" pageTransition="slide"></Button>
+    </StackLayout> 
     </StackLayout>
     <StackLayout *tabItem="{title: 'Dalam Proses'}">
         <ListView [items]="items" class="list-group">
@@ -44,7 +50,9 @@
             </StackLayout>
         </ng-template>
     </ListView>
-                <Button class="my-button" text="KEMBALI"></Button> 
+    <StackLayout row="8" class="jarak">
+                <Button class="btn" text="KEMBALI" pageTransition="slide"></Button>
+    </StackLayout> 
     </StackLayout>
     <StackLayout *tabItem="{title: 'Selesai'}">
         <ListView [items]="items" class="list-group">
@@ -56,7 +64,9 @@
             </StackLayout>
         </ng-template>
     </ListView>
-                <Button class="my-button" text="KEMBALI"></Button> 
+    <StackLayout row="8" class="jarak">
+                <Button class="btn" text="KEMBALI" pageTransition="slide"></Button>
+    </StackLayout> 
     </StackLayout>
     <StackLayout *tabItem="{title: 'Batal'}">
        <ListView [items]="items" class="list-group">
@@ -68,7 +78,9 @@
             </StackLayout>
         </ng-template>
     </ListView>
-                <Button class="my-button" text="KEMBALI"></Button> 
+    <StackLayout row="8" class="jarak">
+                <Button class="btn" text="KEMBALI" pageTransition="slide"></Button>
+    </StackLayout> 
     </StackLayout>
 </TabView>       
 </StackLayout>
