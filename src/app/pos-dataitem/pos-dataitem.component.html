@@ -55,21 +55,26 @@
                                             </GridLayout>
                                         </StackLayout>
 
-                                                <StackLayout orientation="horizontal" class="input-group mt-1">
-                                                    <GridLayout columns="*, *" rows="auto" class="v-center">
-                                                        <Label row ="0" col="0" text="Nama Toko | Nama Lengkap" class="textfield"></Label>
-                                                        <Label row ="0" col="1" class="fas label-2" text="&#xf007;" textWrap="true"></Label>
-                                                    </GridLayout>
-                                                </StackLayout>
+                                        <StackLayout orientation="horizontal" class="input-group">
+                                                <Label class="fas label-2" text="&#xf007;" textWrap="true"></Label>
+                                                <TextField text="Nama Toko | Nama Lengkap" class="textfield"></TextField>
+                                        </StackLayout>
 
                                         <StackLayout orientation="horizontal" class="v-center mt-2">
                                                 <Button row="0" col="0" text="&#xf067; ITEM" width="35%" class="fas"
                                                         style="background-color: #1283BF; border-radius: 1%;"></Button>
-                                                <Button row="0" col="0" text="&#xf067; SCAN" width="35%" class="fas"
+                                                <Button row="0" col="0" text="&#xf067; SCAN" (tap)="onScan()" width="35%" class="fas"
                                                         style="background-color: #1283BF; border-radius: 1%;"></Button>
                                                 <Button row="0" col="1" text="&#xf067; LAIN" width="35%" class="fas"
                                                         style="background-color: #1283BF; border-radius: 1%;"></Button>
                                         </StackLayout>
+
+                                        <StackLayout  orientation="horizontal" class="input-group">
+                                                <Label class="label-2" text="Result :" textWrap="true"></Label>
+                                                <TextView id="txt_result" class="textfield"></TextView>
+                                        </StackLayout>
+
+                                         <Button text="UPLOAD" (tap)="onUpload()" class="btn pr-1"></Button>
 
                                         <ScrollView orientation="vertical" sdkExampleTitle sdkToggleNavButton class="mt-3">
                                                 <ListView [items]="items" class="list-group-2">
