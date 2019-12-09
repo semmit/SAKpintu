@@ -1,25 +1,82 @@
-<ActionBar class="action-bar">
-<NavigationButton [nsRouterLink]="['/marketplace']" android.systemIcon="ic_menu_back"></NavigationButton>
-    <GridLayout>
-        <Image col="0" src="~/app/images/gmbr.png" class="SP"></Image>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+<GridLayout tkDrawerContent rows="auto, *" class="bg-full">
+        <StackLayout row="0" class="sideTitleStackLayout" >
+            <Image src="~/app/images/app_user.png" class="drawerContentText sidedrawer-list-item"></Image>
+            <Label class="fas drawerContentText sidedrawer-list-item" text="Namas Toko"></Label>
+            <Label class="footnote sidedrawer-list-item" text="Nama user"></Label>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout">
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-datatakun']" text="&#xf4fe; Atur Data Akun" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-datatoko']" text="&#xf54e; Atur Data Toko" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-keranjang']" text="&#xf07a; Keranjang" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/marketplace-user-daftarorder']" text="&#xf005; Daftar Order" class="fas p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label [nsRouterLink]="['/login-marketplace']" text="&#xf086; Bantuan" class="fas p-r-10"></Label>
+                </GridLayout>
+    
+                <StackLayout class="hr-light"></StackLayout>
+
+                <GridLayout class="sidedrawer-list-item">
+                    <Label text="&#xf2f5; Logout" (tap)=tap_btnLogout() [nsRouterLink]="['/login-marketplace']" class="fas p-r-10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
     </GridLayout>
+
+
+<ActionBar class="action-bar">
+    <GridLayout rows="auto" columns="auto, *, auto, auto" paddingRight="10">
+        <Image col="0" src="~/app/images/gmbr.png" width="60" style="padding: 10 15 10 5;"></Image>
+        <!-- LOGO di KIRI -->
+        <Label col="1" text="&#xf002;" (tap)=tap_btnSearch() class="fas v-center text-right"
+            style="padding: 5 7; margin-left: 15; "></Label>
+        <Label col="2" *ngIf="!display_membermenu" [nsRouterLink]="['/register-marketplace']" text="Daftar"
+            class="v-center"
+            style="font-size: 16px; padding: 5 7; margin-left: 15; background-color: rgba(255,255,255,0.1); border-width: 1; border-color: #888; border-radius: 50%;"></Label>
+        <Label col="3" *ngIf="!display_membermenu" [nsRouterLink]="['/login-marketplace']" text="Login" class="v-center"
+            focus="#FFF100"
+            style="font-size: 16px; padding: 5 7; margin-left: 10; background-color: rgba(255,255,255,0.1); border-width: 1;border-color: #888; border-radius: 50%;"></Label>
+    </GridLayout>
+    <ActionItem *ngIf="display_membermenu" text="&#xf142;" class="fas text-light" (tap)="openDrawer()"></ActionItem>
 </ActionBar>
-    <StackLayout class="bck"> 
-    <StackLayout>  
-        <GridLayout class="list">
-            <Label class="bar-namatoko" text="PENJUAL :"></Label>
-            <Label class="bar-kota" text="Gihon Sukses Makmur.Semarang"></Label>
-            <Image src="~/app/images/app_user.png" class="User"></Image>
-        </GridLayout>
+
+<ScrollView tkMainContent orientation="vertical">
+    <StackLayout class="bg-full"> 
+
+    <StackLayout sdkExampleTitle sdkToggleNavButton class="search" *ngIf="display_search">
+            <SearchBar row="0" hint="Masukkan pencarian"></SearchBar>
     </StackLayout>
-    <GridLayout class="judul">
-        <Label col="0" class="item" text="item 1"></Label>
-        <Label col="1" class="item2" text="Lokasi : Semarang"></Label>
-        <Label col="2" class="item3" text="Nama Produk"></Label>
-        <Label col="3" class="item4" text="Satuan"></Label>
-        <Label col="4" class="item5" text="Rp. 999.999,-"></Label>
+
+    <GridLayout columns="auto, auto, auto" rows="auto, *" class="home-section-titlebar">
+            <Label row="0" col="0" rowSpan="2" class="fas text-light" text="&#xf104;" [nsRouterLink]="['/marketplace']"></Label>
+            <Label row="0" col="1" class="text-light" text="PENJUAL :"></Label>
+            <Label row="1" col="1" class="text-light" text="Gihon Sukses Makmur, Semarang"></Label>
+            <image row="0" col="2" rowSpan="2" class="img-rounded" style="width: 30;" src="~/app/images/app_user.png"></image>
+    </GridLayout>
+
+    <GridLayout columns="auto, auto, auto" rows="auto, *, *, *" orientation="horizontal" class="text-center v-center ">
+        <image row ="0" col="0" rowSpan="3" class="img-user" src="~/app/images/app_user.png" width="60"> </image>
+        <Label row ="0" col="1" class="text-small" text="Lokasi : Semarang"></Label>
+        <Label row ="1" col="1" class="fw-bold text-big" text="Nama Produk"></Label>
+        <Label row ="2" col="1" class="text-small" text="Satuan"></Label>
+        <Label row ="3" col="1" class="fw-bold text-medium" text="Rp. 999.999,-"></Label>
     </GridLayout> 
-    <Label class="fa-text2" textWrap="true" text="Lorem ipsum dolor sit amet, consectetur
+
+
+     <Label textWrap="true" class="text-medium text-center" text="Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Duis sollicitudin rutrum
 lobortis. Nullam imperdiet erat sed tortor
 accumsan tempus. Nam non ultrices sem, id
@@ -31,14 +88,16 @@ iaculis. Morbi risus diam, dignissim eu mi eu,
 varius interdum sem. Proin commodo urna
 lacinia venenatis cursus. Phasellus in ligula
 condimentum, aliquet turpis dictum, dictum
-nisi. Nulla placerat porta lectus."></Label>   
-    <GridLayout>
-        <GridLayout class="my-button"> 
-            <Label [nsRouterLink]="['/login-marketplace']" text="LOGIN" class="fa-text"></Label>   
-        </GridLayout>               
-        <GridLayout class="my-button2"> 
-            <Label [nsRouterLink]="['/register-marketplace']" text="DAFTAR" class="fa-text"></Label>   
-        </GridLayout> 
-    </GridLayout>         
+nisi. Nulla placerat porta lectus."></Label>
+
+
+
+    <StackLayout row="8" orientation="horizontal" class="text-center v-center ">
+            <Button class="btn" text="DAFTAR" pageTransition="slide"></Button>
+            <Button class="btn" text="LOGIN" pageTransition="slide"></Button>
+    </StackLayout>  
+         
 </StackLayout>
+</ScrollView>
+</RadSideDrawer>
      
